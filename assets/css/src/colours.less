@@ -1,0 +1,41 @@
+
+//This should be the same as @brand-primary in the local Bootstrap vars.
+@main: #428bca;
+@mainBorder: darken(@main, 5%);
+@mainDark: #246;
+
+@mainSoft: #e6eef7;
+@mainSoftBorder: darken(@mainSoft, 8%);
+
+@second: #246;
+@secondBorder: #024;
+@secondDarkest: #012;
+
+@nav: @second;
+@navHighlight: @secondBorder;
+@navMinor: @secondDarkest;
+
+@footer: @second;
+@footerHighlight: @secondBorder;
+@footerText: lighten(@second, 40%);
+@footerLink: @mainSoft;
+
+
+//Panel over-rides
+@panelDefault: lighten(@main, 40%);
+
+//Social media and icon colours
+@twitter: rgba(0, 132, 180, 0.8);
+@facebook: #45619d;
+@whatsapp: #25D366;
+@rss: #b45b4f;
+@mastodon: #6364ff;
+@gitlab: #e24329;
+
+//From Bootstrap vars - note duplicated and spelling fixed so I don't keep forgetting...
+@grey-base:              #000;
+@grey-darker:            lighten(@grey-base, 13.5%); // #222
+@grey-dark:              lighten(@grey-base, 20%);   // #333
+@grey:                   lighten(@grey-base, 33.5%); // #555
+@grey-light:             lighten(@grey-base, 46.7%); // #777
+@grey-lighter:           lighten(@grey-base, 93.5%); // #eee

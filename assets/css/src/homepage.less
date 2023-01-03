@@ -1,0 +1,201 @@
+.container .jumbotron {
+    background-color: @mainSoft;
+    font-size: 18px;
+    font-weight: 600;
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container .jumbotron {
+        padding: 48px;
+    }  
+}
+
+.intro {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 600;
+    .intro-text {
+        margin: 0 15px;
+        padding: 30px;
+        border-radius: 3px;
+        background-color: @mainSoft;
+        //text-align: justify;
+        //-moz-hyphens: auto;
+        //hyphens: auto;
+        margin-bottom: 20px;
+        p:first-child {
+            font-size: 16px;
+        }
+    }
+    .carousel {
+        margin: 0;
+    }
+    .carousel-inner {
+        border-radius: 3px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .intro {
+        background-color: @mainSoft;
+        border-radius: 3px;
+        .carousel-inner {
+            border-radius: 0 3px 3px 0;
+        }
+        .intro-text {
+            margin: 0;
+            background: transparent;
+        }
+    }  
+}
+
+@media screen and (min-width: 992px) {
+    .intro {
+        font-size: 16px;
+        .intro-text {
+            p {
+                margin-bottom: 30px;
+                &:first-child {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .intro .intro-text {
+        padding: 30px 45px;
+    }
+}
+
+//Specific changes for the 'Browse' panel on HP
+.panel-browse {
+    .list-group-item {
+        padding: 6px 15px;
+        span {
+            font-weight: 600;
+        }
+        .fas, .fab, .far {
+            color: #ccc;
+            margin-right: 10px;
+            &:hover {
+                color: #aaa;
+            }
+        }
+    }
+}
+
+.latest-changes h5 {
+    margin-bottom: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pa {
+    margin: 15px 0;
+    padding: 15px;
+    background: #dff0d8;
+    overflow: hidden;
+    .bg-icon {
+        color: #a1c2a1;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-icon {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    font-size: 10em;
+    color: #eee;
+    z-index: 1;
+}
+
+
+
+.otd { 
+    flex-direction: column; //On mobile, stack
+    min-height: 100px;
+}
+
+.otd.flex-row {
+    margin: 15px 0 30px;
+}
+
+.otd-entry {
+    padding: 0 15px;
+    & > a {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+        &:hover, &:focus {
+            text-decoration: none;
+            background: #f5f5f5;
+        }
+    }
+}
+
+.otd-extra {
+    padding: 0 15px;
+    h5 {
+        float: left;
+        padding: 5px 0;
+    }
+    ul {
+        list-style: none;
+        margin: 25px 0 0 65px;
+        padding: 0;
+        .fas, .far {
+            color: #ccc;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .otd {
+        flex-direction: row;
+    }
+    .otd-entry {
+        flex: 1;
+        border-left: 1px solid #ccc;
+        border-bottom: none;
+        &:first-child {
+            border-left: none;
+        }
+        & > a {
+            margin: 0 -15px;
+            padding: 0 15px;
+            border-bottom: none;
+        }
+    }
+    .otd-extra {
+        flex: 1;
+        border-left: 1px solid #ccc;
+        h5 {
+            float: none;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+        }
+    }
+
+}

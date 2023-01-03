@@ -1,0 +1,56 @@
+.list-group-item > .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2em;
+    padding: 8px 0;
+    width: 80px;
+    border-radius: 0 0 3px 0;
+    & + * {
+        margin-left: 80px;
+    }
+}
+
+.bordered > .label, .bordered > header .label {
+    position: absolute;
+    width: 90px;
+    top: -1px;
+    left: -1px;
+    border-radius: .25em 0 .25em 0;
+    font-size: 1.3em;
+    padding: 1em;
+    & + h1, & + h2, & + h3 {
+        margin-left: 90px;
+    }
+    & ~ header {
+        margin-left: 90px;
+    }
+}
+
+.otd-entry a > .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 3px 0;
+    font-size: 1em;
+    & + * {
+        margin-left: 65px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .otd-entry a > .label {
+        top: 0;
+        left: 0;
+        & + * {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+
+    article.bordered > .label, article.bordered > header .label {
+        & ~ section, & ~ footer {
+            margin-left: 90px;
+        }
+    }
+}

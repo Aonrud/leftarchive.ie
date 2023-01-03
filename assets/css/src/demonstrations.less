@@ -1,0 +1,376 @@
+@text: #d0d0dd;
+@link: @grey-lighter;
+@link-hover: @grey-light;
+@bg: @grey-dark;
+@border: @grey-dark;
+@border-hover: @grey-darker;
+@btn-bg: @grey;
+@btn-bg-hover: @grey-light;
+@btn-border-hover: @grey;
+@btn-bg-disabled: @grey-darker;
+@btn-shadow: @grey-dark;
+
+@gap-width: 7.5px;
+
+.heading-snapshots {
+    font-family: 'Bungee', sans-serif;
+    font-weight: 400;
+}
+
+.text-snapshots {
+    font-family: 'Jura', sans-serif;
+    font-weight: 500;
+}
+
+.snapshots-block() {
+    background: @bg;
+    color: @text;
+    h1, h2, h3, h4 {
+        .heading-snapshots;
+    }
+    .btn {
+        color: @grey-dark;
+        &:hover {
+            color: @grey;
+        }
+        .truncated {
+            & + span {
+                display: none;
+            }
+            &::after {
+                content: '…';
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        & .btn {
+            .truncated {
+                & + span {
+                    display: inline;
+                }
+                &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+.snapshots-tagline, .snapshots-subtitle {
+    .text-snapshots;
+    font-size: 1.25em;
+}
+
+.snapshots-banner {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    margin: 15px 0;
+    .snapshots-block();
+    color: @link;
+    h1 {
+        font-size: 2em;
+        margin-top: 0;
+    }
+    div {
+        padding: 2em;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    a.btn {
+        max-width: 300px;
+    }
+}
+
+.btn span.fa-bullhorn:first-child {
+    color: #aaa;
+}
+
+ul.snapshots-info-list {
+    .text-snapshots;
+    .delineated;
+    list-style: none;
+    height: 100%;
+    font-size: 1.285em;
+    padding-left: 0.833em;
+    li {
+        margin-left: 1.25em;
+        text-indent: -1.25em;
+    }
+}
+
+.snapshots-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > article {
+        max-width: 608px;
+    }
+    & > .snapshots-doc {
+        max-width: 400px;
+    }
+}
+
+.snapshots-doc .card {
+    background: @grey-lighter;
+    figure {
+        background: #ccc;
+    }
+    .caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.card.dark {
+    .snapshots-block();
+    border: @border;
+}
+
+.snapshots {
+    h1, h2, h3 {
+        .heading-snapshots;
+    }
+    .card {
+        .caption {
+            font-size: 1.25em;
+        }
+        &.dark {
+            .caption {
+                .text-snapshots;
+            }
+            figure {
+                background: @grey; //For image size variations, there can visible space in the figure
+            }
+        }
+    }
+    a.card {
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+        }
+    }
+    a.card.dark {
+        transition: all 0.5s ease;
+        * {
+            transition: all 0.5s ease;
+        }
+        .caption {
+            color: @link;
+            h1, h2, h3 {
+                color: @link;
+            }
+        }
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            border-color: @border-hover;
+            .caption {
+                color: @link-hover;
+                h1, h2, h3 {
+                    color: @link-hover;
+                }
+            }
+        }
+    }
+}
+
+.snapshots-section {
+    .snapshots-block();
+    padding: 0 15px;
+    margin-top: 15px;
+    .spaced {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    a {
+        color: @link;
+        display: inline-block;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            color: @link-hover;
+            img {
+                opacity: 0.85;
+            }
+        }
+    }
+    .scroller-wrapper {
+        background: @bg;
+        margin-bottom: 15px;
+        .scroller {
+            margin-bottom: 0;
+        }
+    }
+    .scroller {
+        margin-bottom: 15px;    //If scroller isn't needed, the wrapper isn't added
+        li {
+            max-height: max-content;
+        }
+        a {
+            .caption {
+                color: @link-hover;
+                opacity: 1;
+                transition: max-height 0.2s ease, color 0.5s ease;
+                max-height: 3em;
+                h4 {
+                    .heading-snapshots;
+                }
+                p {
+                    .text-snapshots;
+                }
+            }
+            img {
+                opacity: 1;
+                transition: opacity 0.5s ease;
+            }
+            &:hover {
+                .caption {
+                    color: @link;
+                    max-height: 100%;
+                }
+                img {
+                    opacity: 0.85;
+                }
+            }
+            
+        }
+    }
+    button.btn-scroller {
+        background: @btn-bg;
+        border: 1px solid @border;
+        color: @link;
+        &:hover {
+            background: @btn-bg-hover;
+            border: 1px solid @btn-border-hover;
+        }
+        &:disabled, &:disabled:hover {
+            background: @btn-bg-disabled;
+            border: 1px solid @btn-border-hover;
+        }
+    }
+    .scroller-left {
+        box-shadow: 5px 0 10px 0 @btn-shadow;
+    }
+    .scroller-right {
+        box-shadow: -5px 0 10px 0 @btn-shadow;
+    }
+    
+    .scroller-left, .scroller-right {
+        &:disabled {
+            box-shadow: none;
+        }
+    }
+}
+
+.snapshots-id-image {
+    max-width: ~"calc(100% + 30px)";
+    margin: 0 -15px;
+}
+
+a.snapshots-column, a.snapshots-banner {
+    transition: all 0.5s ease;
+    &:hover img {
+        opacity: 0.7;
+    }
+}
+
+.snapshots-aside {
+    .snapshots-block();
+    padding: 15px;
+    margin: 15px 0;
+    color: @grey-lighter;
+    a.btn {
+        margin-bottom: 15px;
+    }
+}
+
+.snapshots-list {
+    a {
+        transition: all 0.5s ease;
+    }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    h4 {
+        .heading-snapshots;
+    }
+    date {
+        .text-snapshots;
+    }
+}
+
+.snapshots-logos {
+    margin: 15px -5px;
+    display: flex;
+    flex-direction: row;
+    justify-self: baseline;
+    a {
+        margin: 0 5px;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    ul.snapshots-info-list {
+        padding-left: 0;
+    }
+    .snapshots-banner {
+        flex-direction: row;
+        height: 285px;
+        overflow: hidden;
+        h1 {
+            font-size: 2.285em;
+        }
+    }
+    .snapshots-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 0 -@gap-width;
+       & > article, & > .snapshots-doc {
+            max-width: 50%;
+            padding: @gap-width;
+            .card {
+                margin-bottom: 0;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .snapshots-banner {
+        h1 {
+            font-size: 3.2em;
+        }
+        .btn span.fa-bullhorn {
+            position: relative;
+            left: -12px;
+        }
+    }
+    .snapshots-section .snapshots-id-image {
+        margin: 0 0 0 -15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .snapshots-banner {
+        h1 {
+            font-size: 4em;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .snapshots {
+        .scroller a .caption {
+            transition: none;
+        }
+    }
+}

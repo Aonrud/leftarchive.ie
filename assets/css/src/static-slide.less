@@ -1,0 +1,44 @@
+/* Styles for slide-style image with text overlay */
+
+//Doesn't look like this is used anywhere?s
+
+.slide-wrap {
+    position: relative;
+    border: 1px solid @grey-light;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    a {
+        img:hover {
+        opacity: 1;
+        }
+        .slide-desc {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 10px;
+            background-color: @grey-dark;
+            -moz-transition: opacity 0.2s linear;
+            -webkit-transition: opacity 0.2s linear;
+            -o-transition: opacity 0.2s linear;
+            transition: opacity 0.2s linear;
+            color: #fff;
+            opacity: 0;
+        }
+        &:hover .slide-desc {
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .slide-wrap a {
+        .slide-desc {
+            opacity: 1;
+            position: static;
+        }
+        &:hover {
+            opacity: 0.85;
+            text-decoration: none;
+        }
+    }
+} 

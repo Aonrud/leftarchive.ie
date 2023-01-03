@@ -1,0 +1,83 @@
+#header {
+    height: 137px;
+    background-image: url('/workspace/assets/images/header-v4-720.png');
+    a.sitename {
+        margin: 0 0 0 30px;
+        padding: 27px 10px 10px;
+        color: #000;
+        font-weight: 700;
+        font-size: 42px;
+        font-family: 'Open Sans Condensed', sans-serif;
+        background-color: @main;
+        border: 1px solid @mainBorder;
+        border-top: 0;
+        display:inline-block;
+        -webkit-box-shadow: 1px 1px 2px @mainDark;
+        box-shadow: 1px 1px 2px @mainDark;
+        &:hover, &:active, &:focus {
+            text-decoration:none;
+            -webkit-box-shadow: 1px 1px 2px #000;
+            box-shadow: 1px 1px 2px #000;
+            border: 1px solid @mainDark;
+            border-top: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #header {
+        background-image: url('/workspace/assets/images/header-v4-940.png');
+        height: 179px;
+        a.sitename {
+            margin-left: 45px;
+            font-size: 48px;
+            padding: 52px 10px 10px;
+        }
+    }
+}
+
+@media (min-width: 1200px) { 
+    #header {
+        background-image: url('/workspace/assets/images/header-v4-1140.png');
+        height: 217px;
+        a.sitename {
+            margin-left: 45px;
+            font-size: 54px;
+            padding: 65px 10px 10px;
+        }
+    }
+}
+
+/* Header-minimal - for custom pages */
+#header.header-minimal {
+    height: 40px;
+    margin: 0 -15px 15px -15px;
+    background: #246;
+    -webkit-box-shadow: 0 1px 2px @mainDark;
+    box-shadow: 0 1px 2px @mainDark;
+    a.return {
+        padding: 36px 0 0 15px;
+        line-height: 24px;
+        display: inline;
+        color: #e6eef7;
+        background: none;
+        font-size: 14px;
+        border: none;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    a.sitename {
+        height: 35px;
+        margin: 0 5px;
+        padding: 5px;
+        font-size: 20px;
+    }
+    span.title {
+        font-weight: 700;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 20px;
+    }
+} 

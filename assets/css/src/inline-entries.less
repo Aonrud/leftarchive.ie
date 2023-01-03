@@ -1,0 +1,54 @@
+//TODO: migrate to generic card classes
+
+.inline-figure {
+    margin: 1em auto;
+    .caption {
+        color: #999;
+        text-align: center;
+    }
+}
+
+.inline-image {
+    max-width: 960px;
+}
+
+.inline-entry {
+	margin: auto;
+	max-width: 400px; //This is the full-width image size, for stacked on mobile.
+	.thumbnail {
+		.clearfix();
+	}
+}
+
+@media (min-width: 768px) {
+	.inline-entry {
+		max-width: 80%;
+		.thumbnail > img {
+			width: 50%;
+			float: left;
+		}
+		.thumbnail .caption, .thumbnail figcaption {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.inline-entry {
+		max-width: 50%;
+	}
+}
+
+//Copied over until proper BS source is used.
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+

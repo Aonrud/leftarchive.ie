@@ -1,0 +1,33 @@
+.share {
+	font-size: 1.5em;
+}
+
+.share a {
+	color: #999;
+	border-radius: 3px;
+	padding: 3px;
+	&:hover {
+		color: #fff;
+		background: #999;
+	}
+}
+
+.share.list-inline > li {
+	padding: 0 1px;
+}
+
+.share a[href*="toot.kytta.dev"]:hover {
+	background: @mastodon;
+}
+
+.share a[href*="facebook.com"]:hover {
+	background: @facebook;
+}
+
+.share a[href*="twitter.com"]:hover {
+	background: @twitter;
+}
+
+.share a[href^="whatsapp://"]:hover {
+	background: @whatsapp;
+}

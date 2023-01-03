@@ -1,0 +1,131 @@
+.carousel {
+	margin-bottom: 20px;
+}
+
+.carousel-inner > .item {
+	background: #111;
+	h4.label {
+		position: absolute;
+		opacity: 0.6;
+		background: #222;
+		font-size: 12px;
+		border-radius: 0 3px 3px 0;
+		z-index: 2;
+		margin: 10px 0;
+	}
+}
+
+.carousel-control.left, .carousel-control.right {
+	z-index: 2;
+	opacity: 0;
+	filter: alpha(opacity=00);
+	&:hover, &:focus {
+		opacity: 0.9;
+		filter: alpha(opacity=90);
+	}
+		
+}
+
+.carousel-control .fas {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+.carousel-control .fa-chevron-left {
+  left: 50%;
+}
+.carousel-control .fa-chevron-right {
+  right: 50%;
+}
+
+.carousel-indicators {
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    margin: 0;
+    width: max-content;
+    li {
+        border-color: #555;
+        background-color: #555;
+        &.active {
+            background-color: #999;
+        }
+    }
+}
+
+/* Slide Types */
+.carousel-inner > .item > a > img:hover {
+    opacity: 1;
+}
+
+.carousel-inner > .item.type-portrait > a > img {
+	max-width: 50%;
+}
+
+.carousel-inner > .item.type-landscape > a > img {
+    width: 100%;
+}
+
+.item {
+    .carousel-caption {
+        background-color: #111;
+        padding: 15px;
+        z-index: 1;
+        h3 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    }
+    &.type-portrait .carousel-caption {
+        background-color: #333;
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+    &.type-landscape .carousel-caption {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding-bottom: 2em;
+        opacity: 0.85;
+    }
+}
+
+.type-landscape .carousel-caption h3 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+
+    .item.type-portrait .carousel-caption {
+        padding: 30px;
+    }
+
+    .carousel-control .fa-chevron-left, .carousel-control .fa-chevron-right {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+    }
+
+    .item .carousel-caption h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .item { 
+        .carousel-caption h3 {
+            font-size: 24px;
+        }
+        
+        &.type-portrait .carousel-caption h3 {
+            margin: 20px 0 30px;
+        }
+    }
+}
