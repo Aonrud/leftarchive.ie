@@ -65,7 +65,7 @@
 	<ul class="footer-icons list-unstyled">
 		<li><a href="/rss/" title="New Additions RSS feed" class="rss"><span class="fas fa-rss fa-fw"></span></a></li>
 		<li><a href="{$ila-activitypub-url}" rel="me" title="Irish Left Archive on Mastodon" class="mastodon"><span class="fab fa-mastodon fa-fw"></span></a></li>
-		<li><a href="{$ila-git-url}" rel="me" title="Irish Left Archive on Gitlab" class="gitlab"><span class="fab fa-gitlab fa-fw"></span></a></li>
+		<li><a href="{$ila-git-url}" rel="me" title="Irish Left Archive Git Repositories" class="github"><span class="fab fa-github fa-fw"></span></a></li>
 	</ul>	
 
 </div><!--end col-->

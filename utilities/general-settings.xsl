@@ -5,6 +5,6 @@
 
 <xsl:variable name="ila-activitypub-url">https://posts.leftarchive.ie</xsl:variable>
 
-<xsl:variable name="ila-git-url">https://gitlab.com/irish-left-archive</xsl:variable>
+<xsl:variable name="ila-git-url">https://github.com/stars/Aonrud/lists/irish-left-archive</xsl:variable>
 
 </xsl:stylesheet>
