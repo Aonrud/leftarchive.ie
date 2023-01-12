@@ -79,11 +79,22 @@
 			</table>
 		</div>
 		<div class="col-md-6">
-			<img src="/image/4/600/600{image/@path}/{image/filename}" class="img-responsive center-block viewer" data-full="/image/0{image/@path}/{image/filename}" alt="{caption}" />
-			<p class="hidden caption"><xsl:value-of select="caption" /></p>
+			<xsl:apply-templates select="image" />
 		</div>
 	</div>
 	<hr />
+</xsl:template>
+
+<xsl:template match="extracts-list/entry/image">
+	<img src="/image/4/600/600{@path}/{filename}" class="img-responsive center-block viewer" data-full="/image/0{@path}/{filename}" alt="{../caption}" />
+	<p class="hidden caption"><xsl:value-of select="../caption" /></p>
+</xsl:template>
+
+<xsl:template match="extracts-list/entry[document/item]/image">
+	<a href="/document/view/{../document/item/@id}/?page={../document-page}">
+		<img src="/image/4/600/600{@path}/{filename}" class="img-responsive center-block viewer" data-full="/image/0{@path}/{filename}" alt="{../caption}" />
+		<p class="hidden caption"><xsl:value-of select="../caption" /></p>
+	</a>
 </xsl:template>
 
 <xsl:template match="collections-list/entry|articles-intro/entry">
