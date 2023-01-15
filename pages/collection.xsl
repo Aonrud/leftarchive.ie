@@ -60,6 +60,7 @@
 				</section>
 				
 				<xsl:apply-templates select="collection-single/entry/related[item]" />
+				<xsl:call-template name="sidecolumn-fediverse" />
 			</aside>
 		</div>
 	</article>

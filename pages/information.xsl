@@ -5,6 +5,7 @@
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/general-datetime.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/layout-information-menu.xsl"/>
 
 <xsl:output method="html" omit-xml-declaration="yes" indent="no" />
@@ -45,9 +46,10 @@
 </xsl:if>
 </div>
 
-<div class="col-sm-3">
+<aside class="col-sm-3">
     <xsl:call-template name="information-menu" />
-</div>
+    <xsl:call-template name="sidecolumn-fediverse" />
+</aside>
 
 </div>
 </article>

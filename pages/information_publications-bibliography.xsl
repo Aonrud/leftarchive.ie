@@ -6,6 +6,7 @@
 
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/entry.xsl"/>
+<xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/layout-information-menu.xsl"/>
 <xsl:import href="../utilities/section-publications.xsl"/>
 
@@ -24,9 +25,10 @@
 			<p>If you were involved in or have examples of any of the publications that aren't available in our collection or elsewhere, please <a href="/submit/">get in touch with us</a>.</p>
 			<xsl:apply-templates select="publications-list-all" />
 		</section>
-		<div class="col-sm-3">
+		<aside class="col-sm-3">
 			<xsl:call-template name="information-menu" />
-		</div>
+			<xsl:call-template name="sidecolumn-fediverse" />
+		</aside>
 	</div>
 </xsl:template>
 

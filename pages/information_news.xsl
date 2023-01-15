@@ -5,6 +5,7 @@
 	exclude-result-prefixes="content">
 
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/layout-information-menu.xsl"/>
 <xsl:import href="../utilities/general-strings.xsl"/>
 
@@ -22,9 +23,10 @@
 			</p>
 		</div>
 
-		<div class="col-sm-3">
+		<aside class="col-sm-3">
 			<xsl:call-template name="information-menu" />
-		</div><!--End col-->
+			<xsl:call-template name="sidecolumn-fediverse" />
+		</aside>
 
 	</div>
 </xsl:template>

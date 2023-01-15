@@ -27,12 +27,13 @@
 	<div class="visible-sm">
 		<xsl:call-template name="search-small" />
 	</div>
-	<xsl:call-template name="sidecolumn-personal-accounts" />
+	<xsl:call-template name="sidecolumn-fediverse" />
 	<xsl:if test="not(/data/demonstrations-document/entry)">
         <xsl:call-template name="sidecolumn-snapshots" />
 	</xsl:if>
 	<xsl:call-template name="sidecolumn-related" />
 	<xsl:call-template name="sidecolumn-podcast" />
+	<xsl:call-template name="sidecolumn-personal-accounts" />
 	<xsl:call-template name="sidecolumn-comments" />
 </xsl:template>
 
@@ -85,6 +86,23 @@
 -->
 <xsl:template name="sidecolumn-clr">
 	<xsl:apply-templates select="/data/clr" />
+</xsl:template>
+
+<!--# Link to Microblog.pub instance to follow
+-->
+<xsl:template name="sidecolumn-fediverse">
+    <div class="card">
+        <div class="social-header">
+            <div>
+                <h4>Irish Left Archive</h4>
+                <a href="https://posts.leftarchive.ie/">@ila@leftarchive.ie</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>Follow us on the <a href="#" class="tooltip-def" data-toggle="tooltip" data-placement="bottom" title="The Fediverse includes Mastodon, Pixelfed, Peertube and many other compatible platforms">Fediverse</a> for updates.</p>
+            <a href="https://posts.leftarchive.ie/remote_follow" class="btn btn-primary" title="Follow us from any federated account like Mastodon, Pixelfed or Peertube"><span class="fas fa-user-plus"></span> Follow <span class="fas fa-arrow-right"></span></a>
+        </div>
+    </div>
 </xsl:template>
 
 

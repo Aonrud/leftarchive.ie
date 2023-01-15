@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/layout-search.xsl"/>
+<xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/page-article-sidecolumn.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
@@ -44,7 +45,8 @@
 <xsl:apply-templates select="comments" />
 </div>
 <aside class="col-md-3 col-sm-3">
-<xsl:call-template name="sidecolumn-article" />
+	<xsl:call-template name="sidecolumn-article" />
+	<xsl:call-template name="sidecolumn-fediverse" />
 </aside>
 </div>
 </article>
