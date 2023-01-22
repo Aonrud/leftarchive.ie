@@ -9,7 +9,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "grunt": "^1.2.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-jshint": "^3.2.0",
     "grunt-contrib-less": "^3.0.0",
@@ -18,19 +18,19 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
-    "@panzoom/panzoom": "^4.3.1",
+    "@panzoom/panzoom": "^4.5.1",
     "bootstrap": "^3.4.1",
     "bootstrap-slider": "^10.6.2",
-    "datatables.net": "^1.10.22",
-    "datatables.net-bs": "^1.10.21",
+    "datatables.net": "^1.13.1",
+    "datatables.net-bs": "^1.13.1",
     "easy-autocomplete": "^1.3.5",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-terser": "^2.0.0",
-    "ila-ui-elements": "Aonrud/ila-ui-elements#semver:0.5.1",
+    "ila-ui-elements": "github:Aonrud/ila-ui-elements#semver:0.5.2",
     "js-cookie": "^3.0.1",
     "list.js": "^2.3.1",
-    "mediaelement": "^4.2.16",
-    "timeline": "Aonrud/ila-timeline#semver:1.1.2",
-    "tippy.js": "^6.3.1"
+    "mediaelement": "^4.2.17",
+    "timeline": "github:Aonrud/ila-timeline#semver:1.1.2",
+    "tippy.js": "^6.3.7"
   }
 }
