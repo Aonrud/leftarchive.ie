@@ -18,6 +18,7 @@
 	#	Shows related organisations, internationals or publications, depending on relevant page
 	# sidecolumn-comments
 	# sidecolumn-clr
+	# sidecolumn-fediverse
 -->
 
 <!--# Named template with default order of all blocks.
@@ -93,10 +94,10 @@
 <xsl:template name="sidecolumn-fediverse">
     <div class="card">
         <div class="social-header">
-            <div>
-                <h4>Irish Left Archive</h4>
-                <a href="https://posts.leftarchive.ie/">@ila@leftarchive.ie</a>
-            </div>
+            <a href="https://posts.leftarchive.ie/">
+                <h3>Irish Left Archive</h3>
+                <p>@ila@leftarchive.ie</p>
+            </a>
         </div>
         <div class="card-body">
             <p>Follow us on the <a href="#" class="tooltip-def" data-toggle="tooltip" data-placement="bottom" title="The Fediverse includes Mastodon, Pixelfed, Peertube and many other compatible platforms">Fediverse</a> for updates.</p>

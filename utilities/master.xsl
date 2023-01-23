@@ -35,7 +35,7 @@
 				<link rel="alternate" type="application/rss+xml" title="Irish Left Archive Comments Feed" href="/rss/comments/" />
 			</xsl:if>
 			
-			<link href="{$workspace}/assets/css/leftarchive.css?v=20230115" rel="stylesheet" type="text/css" />    
+			<link href="{$workspace}/assets/css/leftarchive.css?v=20230123" rel="stylesheet" type="text/css" />    
 			<link rel="search" type="application/opensearchdescription+xml" href="{/data/params/workspace}/assets/opensearch.xml" title="Irish Left Archive Search" />
 			
 			<!--All those bloody icons-->
