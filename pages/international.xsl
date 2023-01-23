@@ -221,7 +221,15 @@
 	
 	<xsl:if test="entry[organisation/item/place/item != 'Ireland']">
 		<tr>
-			<th scope="row"><span class="fas fa-users fa-fw"></span> Other Affiliates:<a href="#" class="tooltip-icon" data-toggle="tooltip" title="Only affiliates with existing entries in the archive are listed here"><sup>&#xf128;</sup></a></th>
+			<th scope="row">
+				<span class="fas fa-users fa-fw"></span> Other Affiliates:
+					<a href="#" class="tooltip-icon" data-toggle="tooltip" title="Only affiliates with existing entries in the archive are listed here">
+					<sup>
+						<span class="sr-only">Info</span>
+						<i class="fa-solid fa-fw fa-info"></i>
+					</sup>
+				</a>
+			</th>
 			<td>
 			<xsl:apply-templates select="entry[organisation/item/place/item != 'Ireland']">
 				<xsl:sort select="year-in" />
