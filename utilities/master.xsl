@@ -35,7 +35,7 @@
 				<link rel="alternate" type="application/rss+xml" title="Irish Left Archive Comments Feed" href="/rss/comments/" />
 			</xsl:if>
 			
-			<link href="{$workspace}/assets/css/leftarchive.css?v=20230123" rel="stylesheet" type="text/css" />    
+			<link href="{$workspace}/assets/css/leftarchive.css?v=20230127" rel="stylesheet" type="text/css" />    
 			<link rel="search" type="application/opensearchdescription+xml" href="{/data/params/workspace}/assets/opensearch.xml" title="Irish Left Archive Search" />
 			
 			<!--All those bloody icons-->
@@ -50,7 +50,7 @@
 
 			<xsl:call-template name="head-insert" />
 
-			<script src="{$workspace}/assets/js/leftarchive.min.js?v=20221116"></script>
+			<script src="{$workspace}/assets/js/leftarchive.min.js?v=20230127"></script>
 
 			<xsl:call-template name="metadata-dublincore" />
 			<xsl:call-template name="metadata-site-ldjson" />

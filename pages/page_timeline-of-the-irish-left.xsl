@@ -23,8 +23,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 				<div class="alert-info alert"><p><a href="/information/about-the-timeline/" class="alert-link">About the timeline <span class="fa fa-angle-double-right"></span></a></p>
 				<p><em>Last updated 9th October, 2022</em></p>
 				</div>
-				<button class="btn btn-link collapsed" data-toggle-target="legend" data-toggled-text="Hide Legend "><span class="button-text">Show Legend </span><span class="caret"></span></button>
-				<div id="legend" class="toggle-view">
+				<button class="btn btn-link" data-toggle-target="legend" data-toggle-text="Hide Legend "><span class="toggle-text">Show Legend </span><span class="caret"></span></button>
+				<div id="legend">
 					<ul class="media-list">
 						<li class="media">
 							<img class="pull-right media-object" src="/workspace/assets/images/timeline/legend-dashed.png" alt="Dashed diagram line" />
@@ -344,7 +344,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			_paq.push(['trackEvent', 'Timeline', 'Search', e.detail.name]);
 		});
 		
-		document.querySelectorAll("[data-toggle-target]").forEach( (el) => new Toggler(el, el.dataset.toggledText) );
+		document.querySelectorAll("[data-toggle-target]").forEach( (el) => new ila.Toggler(el) );
 	</script>
 </xsl:template>
 
