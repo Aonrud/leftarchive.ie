@@ -55,7 +55,7 @@
 			<a title="Organisations">
 				<xsl:attribute name="href">
 					<xsl:text>/browse/organisations/</xsl:text>
-					<xsl:if test="/data/params/mode = 'grid'">grid/</xsl:if>
+					<xsl:if test="/data/params/mode = 'list'">list/</xsl:if>
 				</xsl:attribute>
 				<span class="fas fa-users fa-fw"> </span><span class="hidden-xs"> Organisations</span>
 			</a>
@@ -65,7 +65,7 @@
 			<a title="International Organisations">
 				<xsl:attribute name="href">
 					<xsl:text>/browse/international-organisations/</xsl:text>
-					<xsl:if test="/data/params/mode = 'grid'">grid/</xsl:if>
+					<xsl:if test="/data/params/mode = 'list'">list/</xsl:if>
 				</xsl:attribute>
 				<span class="fas fa-globe-europe fa-fw"> </span><span class="hidden-xs"> International</span>
 			</a>
@@ -75,7 +75,7 @@
 			<a title="Publications">
 				<xsl:attribute name="href">
 					<xsl:text>/browse/publications/</xsl:text>
-					<xsl:if test="/data/params/mode = 'grid'">grid/</xsl:if>
+					<xsl:if test="/data/params/mode = 'list'">list/</xsl:if>
 				</xsl:attribute>
 				<span class="fas fa-newspaper fa-fw"></span><span class="hidden-xs"> Publications</span>
 			</a>
@@ -85,7 +85,10 @@
 			<a title="People">
 				<xsl:attribute name="href">
 					<xsl:text>/browse/people/</xsl:text>
-					<xsl:if test="/data/params/mode = 'grid'">grid/</xsl:if>
+					<!--
+						Default to list for people index due to loading speed issue on grid.
+						Don't check for the parameter here - direct to the default regardless.
+					-->
 				</xsl:attribute>
 				<span class="fas fa-user fa-fw"></span><span class="hidden-xs"> People</span>
 			</a>
@@ -103,10 +106,13 @@
 		</xsl:choose>
     </xsl:variable>
     
-    <!--Check which layout mode we are in. Ignore grid mode unless the section accepts it-->
+    <!--
+		Check which layout mode we are in.
+		Default to grid where possible, excluding 'people'.
+    -->
     <xsl:variable name="index-mode">
 		<xsl:choose>
-			<xsl:when test="/data/params/mode = 'grid' and $grid-allowed = 'Yes'">grid</xsl:when>
+			<xsl:when test="$grid-allowed = 'Yes' and (/data/params/mode = 'grid' or (/data/params/mode = '' and /data/params/type != 'people'))">grid</xsl:when>
 			<xsl:otherwise>list</xsl:otherwise>
 		</xsl:choose>
     </xsl:variable>
@@ -125,14 +131,14 @@
 					</label>
 				</xsl:if>
 				<div class="btn-group" role="group" aria-label="Page layout">
-					<a title="Show entries as a list" href="/browse/{/data/params/type}/">
+					<a title="Show entries as a list" href="/browse/{/data/params/type}/list/">
 						<xsl:attribute name="class">
 							<xsl:text>btn btn-default</xsl:text>
 							<xsl:if test="$index-mode = 'list'"> active</xsl:if>
 						</xsl:attribute>
 						<span class="fas fa-list"></span>
 					</a>
-					<a title="Show entries as a grid" href="/browse/{/data/params/type}/grid/">
+					<a title="Show entries as a grid" href="/browse/{/data/params/type}/">
 						<xsl:attribute name="class">
 							<xsl:text>btn btn-default</xsl:text>
 							<xsl:if test="$index-mode = 'grid'"> active</xsl:if>
@@ -201,13 +207,13 @@
 	<!--Mode attribute can't be dynamically calculated, therefore we explicitly check the value in a <choose>.
 		(It stills saves repeating the choose on each call above to have this template)-->
 	<xsl:choose>
-		<xsl:when test="$mode = 'grid'">
-			<xsl:apply-templates select="." mode="grid" />
-		</xsl:when>
-		<xsl:otherwise>
+		<xsl:when test="$mode = 'list'">
 			<xsl:apply-templates select="." mode="index">
 				<xsl:with-param name="key" select="$index-key" />
-			</xsl:apply-templates>	
+			</xsl:apply-templates>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:apply-templates select="." mode="grid" />
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
