@@ -22,10 +22,7 @@
 			<xsl:call-template name="viewport" />
 			<link rel="canonical">
 				<xsl:attribute name="href">
-					<xsl:choose>
-						<xsl:when test="/data/params/page-types/item = 'index'"><xsl:value-of select="/data/params/root" />/</xsl:when>
-						<xsl:otherwise><xsl:value-of select="/data/params/current-url" />/</xsl:otherwise>
-					</xsl:choose>
+					<xsl:call-template name="canonical-url" />
 				</xsl:attribute>
 			</link>
 			
@@ -103,6 +100,13 @@
 
 <xsl:template name="page-title">
 	<xsl:value-of select="/data/params/website-name" />
+</xsl:template>
+
+<xsl:template name="canonical-url">
+	<xsl:choose>
+		<xsl:when test="/data/params/page-types/item = 'index'"><xsl:value-of select="/data/params/root" />/</xsl:when>
+		<xsl:otherwise><xsl:value-of select="/data/params/current-url" />/</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <!--The named templates need to exist, so are defined here with no content and can be over-written as needed on individual pages

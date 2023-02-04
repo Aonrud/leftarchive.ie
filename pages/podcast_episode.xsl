@@ -74,6 +74,10 @@
 	<xsl:text> — Irish Left Archive Podcast</xsl:text>
 </xsl:template>
 
+<xsl:template name="canonical-url">
+	<xsl:value-of select="/data/podcast-rss-feed/rss/channel/item[itunes:episode = /data/params/no]/link" />
+</xsl:template>
+
 <xsl:template name="breadcrumb-contents">
 	<xsl:call-template name="breadcrumb-list-item">
 		<xsl:with-param name="name" select="'Podcast'" />
