@@ -55,35 +55,11 @@ module.exports = function(grunt) {
 						dest: 'assets/js/jquery.min.js'
 					},
 					{
-						nonull: true,
-						src: 'node_modules/mediaelement/build/mediaelement-and-player.min.js',
-						dest: 'assets/js/mediaelement-and-player.min.js'
-					},
-					{
-						nonull: true,
-						src: 'node_modules/mediaelement/build/mediaelementplayer.min.css',
-						dest: 'assets/css/mediaelementplayer.min.css'
-					},
-					{
 						expand: true,
 						nonull: true,
 						flatten: true,
 						src: 'node_modules//@fortawesome/fontawesome-free/webfonts/*',
 						dest: 'assets/fonts/fa/'
-					},
-					{
-						expand: true,
-						nonull: true,
-						flatten: true,
-						src: 'node_modules/mediaelement/build/*.swf',
-						dest: 'assets/plugins/'
-					},
-					{
-						expand: true,
-						nonull: true,
-						flatten: true,
-						src: 'node_modules/mediaelement/build/mejs-controls*',
-						dest: 'assets/images/'
 					}
 				],
 			}
@@ -110,9 +86,6 @@ module.exports = function(grunt) {
 					'assets/js/cookies.min.js': [
 						'node_modules/js-cookie/dist/js.cookie.js',
 						'assets/js/src/ila.cookie.js'
-					],
-					'assets/js/podcast.min.js': [
-						'assets/js/src/ila.podcast.js'
 					],
 					'assets/js/accounts.min.js': [
 						'assets/js/src/ila.accounts.js'
