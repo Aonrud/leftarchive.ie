@@ -288,16 +288,4 @@ Usage:
 	</li>
 </xsl:template>
 
-
-<!--Inline podcast episode-->
-<xsl:template match="p[starts-with(text(), '!podcast')]" mode="html" priority="1">
-	<xsl:variable name="id">
-		<xsl:value-of select="substring-after(text(), '!podcast ')" />
-	</xsl:variable>
-	
-	<xsl:apply-templates select="/data/podcast-inline/entry[@id = $id]">
-		<xsl:with-param name="class" select="'document-preview'" />
-	</xsl:apply-templates>
-</xsl:template>
-
 </xsl:stylesheet>

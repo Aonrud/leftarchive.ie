@@ -26,7 +26,6 @@
 <xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/section-external-listings.xsl"/>
 <xsl:import href="../utilities/section-imagery.xsl"/>
-<xsl:import href="../utilities/section-podcast.xsl"/>
 <xsl:import href="../utilities/section-publications.xsl"/>
 
 <!--General utilities-->
@@ -181,7 +180,6 @@
 				
 				<xsl:apply-templates select="/data/publications-list-all[entry/hidden = 'Yes']" />
 
-				<xsl:apply-templates select="/data/podcast-related[entry]" />
 				<xsl:apply-templates select="/data/articles-intro[entry]" />			
 				<xsl:apply-templates select="/data/external-listings[entry]" />
 				<xsl:apply-templates select="/data/comments" />

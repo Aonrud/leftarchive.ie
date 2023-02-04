@@ -59,13 +59,14 @@
 <div class="col-sm-4">
 
 	<h4><span class="fas fa-microphone-alt"></span> Podcast</h4>
-	<p><a href="/podcast/"><img src="/image/1/200/200/assets/images/ila-podcast.jpg" class="img-responsive" alt="Irish Left Archive Podcast" /></a></p>
+	<p><a href="https://podcast.leftarchive.ie/"><img src="/image/1/200/200/assets/images/ila-podcast.jpg" class="img-responsive" alt="Irish Left Archive Podcast" /></a></p>
 
 	<h4><span class="fas fa-bookmark fa-fw"></span> Follow the Archive</h4>
 	<ul class="footer-icons list-unstyled">
 		<li><a href="/rss/" title="New Additions RSS feed" class="rss"><span class="fas fa-rss fa-fw"></span></a></li>
 		<li><a href="{$ila-activitypub-url}" rel="me" title="Irish Left Archive on the Fediverse" class="ila"><span class="fas fa-share-nodes fa-fw"></span></a></li>
 		<li><a href="{$ila-git-url}" rel="me" title="Irish Left Archive Git Repositories" class="github"><span class="fab fa-github fa-fw"></span></a></li>
+		<li><a href="https://podcast.leftarchive.ie/" rel="me" title="Irish Left Archive Podcast" class="ila"><span class="fas fa-microphone fa-fw"></span></a></li>
 	</ul>	
 
 </div><!--end col-->

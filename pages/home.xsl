@@ -79,7 +79,7 @@
     
     <div class="row">
         <div class="col-sm-4">
-            <xsl:apply-templates select="podcast-list" mode="aside">
+            <xsl:apply-templates select="/data/podcast-rss-feed/rss/channel" mode="aside">
                 <xsl:with-param name="max-episodes" select="'3'" />
                 <xsl:with-param name="footer" select="'No'" />
             </xsl:apply-templates>

@@ -61,12 +61,10 @@
 						<ul class="list-unstyled">
 							<li><strong>Collections: </strong><xsl:value-of select="@collections" /></li>
 							<li><strong>Articles: </strong><xsl:value-of select="@extended-articles" /></li>
-							<li><strong>Podcast notes: </strong><xsl:value-of select="@podcast" /></li>
 						</ul>
 						<ul>
 							<xsl:apply-templates select="/data/collections-list/entry[inline-images/item/@id = current()/@id]" />
 							<xsl:apply-templates select="/data/articles-intro/entry[inline-images/item/@id = current()/@id]" />
-							<xsl:apply-templates select="/data/podcast-list/entry[inline/item/@id = current()/@id]" />
 						</ul>
 					</td>
 				</tr>
@@ -108,12 +106,6 @@
 			</xsl:attribute>
 			<xsl:value-of select="name" />
 		</a>
-	</li>
-</xsl:template>
-
-<xsl:template match="podcast-list/entry">
-	<li>
-		<a href="/podcast/{url}/"><xsl:value-of select="episode" />: <xsl:value-of select="name" /></a>
 	</li>
 </xsl:template>
 

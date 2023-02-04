@@ -15,7 +15,6 @@
 <xsl:import href="../utilities/section.xsl"/>
 <xsl:import href="../utilities/entry-minor.xsl"/>
 <xsl:import href="../utilities/section-collections.xsl"/>
-<xsl:import href="../utilities/section-podcast.xsl"/>
 <xsl:import href="../utilities/meta-redirect.xsl"/>
 
 <xsl:output method="html" omit-xml-declaration="yes" indent="no" />
@@ -159,9 +158,6 @@
 				</xsl:if>
 
 				<xsl:apply-templates select="/data/personal-archive-list[entry]" />
-				
-				<xsl:apply-templates select="/data/podcast-related[entry]" />
-
 				<xsl:apply-templates select="/data/articles-intro[entry]" />
 
 				<!--Related material - subject-->

@@ -67,9 +67,6 @@
 			<xsl:when test="item/item/@section-handle = 'pages' or item/item/@section-handle = 'custom-pages'">
 				<xsl:value-of select="item/item/@handle" />
 			</xsl:when>
-			<xsl:when test="item/item/@section-handle = 'podcast'">
-				<xsl:value-of select="/data/podcast-featured/entry[@id = current()/item/item/@id]/url" />
-			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="item/item/@id" />
 			</xsl:otherwise>

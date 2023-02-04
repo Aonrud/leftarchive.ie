@@ -243,21 +243,6 @@
 	<xsl:apply-templates select="summary/*[1]" mode="html" />
 </xsl:template>
 
-<!--Podcast-->
-<xsl:template match="entry[../section/@handle = 'podcast']" mode="search-listing-meta">
-	<li>
-		<xsl:call-template name="format-date">
-			<xsl:with-param name="date" select="date/@iso"/><xsl:with-param name="format" select="'D M Y'"/>
-		</xsl:call-template>
-	</li>
-	<li>Episode <xsl:value-of select="episode" /></li>
-	<li>Irish Left Archive Podcast</li>
-</xsl:template>
-
-<xsl:template match="entry[../section/@handle = 'podcast']" mode="search-listing-body">
-	<p><xsl:value-of select="description" /></p>
-</xsl:template>
-
 <!--Demonstrations-->
 <xsl:template match="entry[../section/@handle = 'demonstrations']" mode="search-listing-meta">
 	<li>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"
+	exclude-result-prefixes="atom itunes podcast">
+	
+<xsl:import href="section-podcast-icons.xsl"/>
 
 <xsl:variable name="podcast-image">/assets/images/ila-podcast.jpg</xsl:variable>
 <xsl:variable name="podcast-image-absolute"><xsl:value-of select="/data/params/root" />/image/0<xsl:value-of select="$podcast-image" /></xsl:variable>
@@ -9,84 +15,13 @@
 	Exploring Left politics in Ireland past and present
 </xsl:variable>
 
-<xsl:template name="podcast-description-html">
-	<p>
-	A podcast looking at Left politics in Ireland from the Irish Left Archive.
-	</p><p>
-	We talk to activists, writers, historians, politicians and others involved in Left organisations and movements about their experiences of participating in Left parties and campaigns; Left publications and political documents they've been involved in; and the history and development of progressive politics in Ireland. We also look at the role of the Irish Left Archive and similar informal projects.
-	</p><p>
-	The podcast is hosted by Ciarán Swan and Aonghus Storey.
-	</p>
-</xsl:template>
-
-<xsl:template name="podcast-description">
-	A podcast looking at Left politics in Ireland from the Irish Left Archive.
-	
-	We talk to activists, writers, historians, politicians and others involved in Left organisations and movements about their experiences of participating in Left parties and campaigns; Left publications and political documents they've been involved in; and the history and development of progressive politics in Ireland. We also look at the role of the Irish Left Archive and similar informal projects.
-	
-	The podcast is hosted by Ciarán Swan and Aonghus Storey.
-</xsl:template>
-
 <xsl:template name="podcast-disclaimer">
 	The Irish Left Archive Podcast aims to hear from a broad range of voices on the Left. We are not affiliated with any particular political organisation, and the views, information, or opinions expressed by guests are solely their own and do not necessarily represent those of the Irish Left Archive or those associated with it.
 </xsl:template>
 
-<!--Used for very short footer description in RSS feed episode notes-->
-<xsl:template name="podcast-description-short">
-	The Irish Left Archive Podcast looks at Left politics in Ireland, talking to activists, writers, historians, politicians and others involved in Left organisations and movements about their experiences of participating in Left parties and campaigns. The podcast is hosted by Ciarán Swan and Aonghus Storey.
-</xsl:template>
-
-<xsl:template match="entry" mode="podcast-image-url">
-	<xsl:choose>
-		<xsl:when test="image"><xsl:value-of select="image/@path" />/<xsl:value-of select="image/filename" /></xsl:when>
-		<xsl:otherwise><xsl:value-of select="$podcast-image" /></xsl:otherwise>
-	</xsl:choose>
-</xsl:template>
-
-<!--Related podcast episode(s)-->
-<xsl:template match="podcast-related">
-	<h2>Podcast Episode<xsl:if test="count(entry) > 1">s</xsl:if></h2>
-	<ul class="media-list">
-		<xsl:apply-templates select="entry" />
-	</ul>
-</xsl:template>
-
-<!--List version, for podcast page (and dynamic page for insertion)-->
-<xsl:template match="podcast-related/entry|podcast-list/entry">
-	<li class="media" typeof="schema:PodcastEpisode" resource="/podcast/{url}/#episode">
-		<span property="schema:isPartOf" content="#podcast" />
-		<div class="media-left">
-			<a href="/podcast/{url}/">
-				<img alt="Episode {episode}: {name}" class="bordered">
-					<xsl:attribute name="src">/image/1/150/0<xsl:apply-templates select="." mode="podcast-image-url" /></xsl:attribute>
-				</img>
-			</a>
-		</div>
-		<div class="media-body">
-			<span class="hidden"><xsl:value-of select="name(..)" /></span>
-			<xsl:choose>
-				<xsl:when test="name(..) = 'podcast-related'">
-					<h3 class="media-heading" property="schema:name"><a href="/podcast/{url}/"><xsl:value-of select="episode" />: <xsl:value-of select="name" /></a></h3>
-				</xsl:when>
-				<xsl:otherwise>
-					<h2 class="media-heading" property="schema:name"><a href="/podcast/{url}/"><xsl:value-of select="episode" />: <xsl:value-of select="name" /></a></h2>
-				</xsl:otherwise>
-			</xsl:choose>
-			
-			<xsl:apply-templates select="." mode="meta" />
-			
-			<span property="schema:episodeNumber" content="{episode}" />
-			<p property="schema:description">
-				<xsl:value-of select="description" />
-			</p>
-			<a href="/podcast/{url}/" class="btn btn-success">Listen or download <span class="fas fa-arrow-right"></span></a>
-		</div>
-	</li>
-</xsl:template>
-
-<xsl:template match="podcast-list" mode="aside">
-    
-    <xsl:param name="max-episodes" select="'5'" />
+<xsl:template match="rss/channel" mode="aside">
+	<xsl:param name="current" />
+	<xsl:param name="max-episodes" select="'3'" />
     <xsl:param name="listen-button" select="'Yes'" />
     <xsl:param name="footer" select="'Yes'" />
     
@@ -104,7 +39,9 @@
 		</div>
 		
 		<div class="list-group">
-			<xsl:apply-templates select="entry[position() &lt;= $max-episodes]" mode="aside" />
+			<xsl:apply-templates select="item[position() &lt;= $max-episodes]" mode="aside">
+				<xsl:with-param name="current" select="$current" />
+			</xsl:apply-templates>
 		</div>
 		
 		<xsl:if test="$footer = 'Yes'">
@@ -115,65 +52,72 @@
 	</div>
 </xsl:template>
 
-<xsl:template match="podcast-list/entry" mode="aside">
-	<a class="list-group-item" href="/podcast/{url}/">
-		<xsl:if test="name = /data/podcast-single/entry/name">
+<xsl:template match="rss/channel/item" mode="aside">
+	<xsl:param name="current" />
+	<a class="list-group-item" href="/podcast/episode/{itunes:episode}/">
+		<xsl:if test="$current = itunes:episode">
 			<xsl:attribute name="class">list-group-item list-group-item-info</xsl:attribute>
 		</xsl:if>
-		<p class="text-muted"><span class="fas fa-fw fa-play"></span>&#160;Episode <xsl:value-of select="episode" /></p>
-		<h5><xsl:value-of select="name" /></h5>
+		<p class="text-muted"><span class="fas fa-fw fa-play"></span>&#160;Episode <xsl:value-of select="itunes:episode" /></p>
+		<h5><xsl:value-of select="title" /></h5>
 		<div class="text-muted text-right small">
 			<span class="fas fa-calendar"></span>&#160;
-			<xsl:call-template name="format-date">
-				<xsl:with-param name="date" select="date/@iso"/><xsl:with-param name="format" select="'D M Y'"/>
-			</xsl:call-template>
+			<xsl:value-of select="substring(pubDate, 1, string-length(substring-before(pubDate, ':')) - 3)" />
 		</div>
 	</a>
 </xsl:template>
 
-<!--Re-usable metadata header inline list-->
-<xsl:template match="entry[../section/@handle = 'podcast']" mode="meta">
+<xsl:template match="rss/channel" mode="icons">
+	<xsl:param name="colour" select="'#333'" />
+	<ul class="list-inline">
+		<li>
+			<a href="{atom:link[@rel='self']/@href}" title="Podcast RSS feed" class="alert-link" property="schema:webFeed">
+				<xsl:call-template name="icon-rss">
+					<xsl:with-param name="colour" select="$colour" />
+				</xsl:call-template>
+			</a>
+		</li>
+		<xsl:apply-templates select="podcast:id">
+			<xsl:with-param name="colour" select="$colour" />
+		</xsl:apply-templates>
+	</ul>
+</xsl:template>
+
+<!--Link to podcast platform with icon from section-podcast-icons.xsl-->
+<xsl:template match="podcast:id">
+	<xsl:param name="colour" select="'#333'" />
+	<li>
+		<a href="{@url}" class="alert-link">
+			<xsl:attribute name="title">
+				<xsl:text>Listen on </xsl:text>
+				<xsl:call-template name="initial">
+					<xsl:with-param name="string" select="@platform" />
+				</xsl:call-template>
+			</xsl:attribute>
+			<xsl:apply-templates select="@platform">
+				<xsl:with-param name="colour" select="$colour" />
+			</xsl:apply-templates>
+		</a>
+	</li>
+</xsl:template>
+
+<xsl:template match="channel/item" mode="meta">
 	<ul class="list-inline text-muted">
-		<li property="schema:datePublished" content="{date/@iso}">
+		<li property="schema:datePublished" content="{pubDate}">
 			<span class="fas fa-calendar"></span>&#160;
-			<xsl:call-template name="format-date">
-				<xsl:with-param name="date" select="date/@iso"/><xsl:with-param name="format" select="'D M Y'"/>
-			</xsl:call-template>
+			<xsl:value-of select="substring(pubDate, 1, string-length(substring-before(pubDate, ':')) - 3)" />
 		</li>
 		<li property="schema:duration">
 			<xsl:attribute name="content">
-				<xsl:apply-templates select="duration" mode="iso8601" />
+				<xsl:apply-templates select="itunes:duration" mode="iso8601" />
 			</xsl:attribute>
-			<span class="fas fa-hourglass-start"></span>&#160;
-			<xsl:apply-templates select="duration" />
+			<span class="fas fa-hourglass-start"></span>&#160;<xsl:apply-templates select="itunes:duration" />
 		</li>
 	</ul>
 </xsl:template>
 
-<xsl:template match="/data/podcast-inline/entry">
-	<figure class="inline-entry">
-		<a class="thumbnail" title="Listen to episode {episode} of the Irish Left Archive podcast">
-			<xsl:attribute name="href">
-				<xsl:if test="/data/params/page-types/item = 'XML'"><xsl:value-of select="/data/params/root" /></xsl:if>
-				<xsl:apply-templates select="." mode="entry-url" />
-			</xsl:attribute>
-			<img alt="{name}">
-				<xsl:attribute name="src">
-					<xsl:if test="/data/params/page-types/item = 'XML'"><xsl:value-of select="/data/params/root" /></xsl:if>
-					<xsl:text>/image/1/400/0/</xsl:text>
-					<xsl:value-of select="image/@path" />/<xsl:value-of select="image/filename" />
-				</xsl:attribute>
-			</img>
-			<figcaption class="caption">
-				<h4><xsl:value-of select="name" /></h4>
-				<p class="text-muted"><span class="fas fa-fw fa-play"></span>&#160;Episode <xsl:value-of select="episode" /></p>
-			</figcaption>
-		</a>
-	</figure>
-</xsl:template>
-
 <!--Note - rounds to nearest minute and outputs in format e.g. "1 hr 12 mins" -->
-<xsl:template match="duration">
+<xsl:template match="itunes:duration">
 	<xsl:variable name="hours"><xsl:value-of select="floor(number(.) div 3600)" /></xsl:variable>
 	<xsl:variable name="mins"><xsl:value-of select="round(number(.) div 60) - ($hours * 60)" /></xsl:variable>
 	
@@ -181,7 +125,7 @@
 	<xsl:value-of select="format-number($mins,'00')" /> min<xsl:if test="$mins &gt; 1">s</xsl:if>
 </xsl:template>
 
-<xsl:template match="duration" mode="iso8601">
+<xsl:template match="itunes:duration" mode="iso8601">
 	<xsl:variable name="hours"><xsl:value-of select="floor(number(.) div 3600)" /></xsl:variable>
 	<xsl:variable name="mins"><xsl:value-of select="floor(number(.) div 60) - ($hours * 60)" /></xsl:variable>
 	<xsl:variable name="secs"><xsl:value-of select="number(.) mod 60" /></xsl:variable>

@@ -75,7 +75,6 @@
 			<xsl:apply-templates select="/data/subjects-included[entry]" />
             <xsl:apply-templates select="/data/documents-list[entry]" />
             <xsl:apply-templates select="/data/demonstrations-list[entry]" />
-            <xsl:apply-templates select="/data/podcast-related[entry]" />
             <xsl:apply-templates select="links" />
         </div>
         <aside class="col-sm-4">           

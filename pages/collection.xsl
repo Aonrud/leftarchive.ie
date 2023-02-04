@@ -110,9 +110,6 @@
 			<xsl:apply-templates select="current()[item/@section-handle='subjects']" mode="related-section">
 				<xsl:with-param name="section" select="'subjects'" />
 			</xsl:apply-templates>
-			<xsl:apply-templates select="current()[item/@section-handle='podcast']" mode="related-section">
-				<xsl:with-param name="section" select="'podcast'" />
-			</xsl:apply-templates>
 		</div>
 	</section>
 </xsl:template>

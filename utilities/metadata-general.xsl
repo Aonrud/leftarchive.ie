@@ -3,7 +3,6 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 <xsl:import href="general-strings.xsl"/>
-<xsl:import href="section-podcast.xsl"/>
 
 <!--Over-ride this template at page level to set the metadata image-->
 <xsl:template name="metadata-image">

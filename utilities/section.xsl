@@ -110,7 +110,6 @@
             <xsl:when test="$section-id = '17' or $section = 'collections'"></xsl:when>
             <xsl:when test="$section-id = '15' or $section = 'extended-articles'"></xsl:when>
             <xsl:when test="$section-id = '31' or $section = 'subjects'"></xsl:when>
-            <xsl:when test="$section-id = '41' or $section = 'podcast'"></xsl:when>
         </xsl:choose>
     </xsl:variable>
     

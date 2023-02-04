@@ -375,17 +375,6 @@
 	<xsl:text>/information/</xsl:text><xsl:value-of select="@handle" /><xsl:text>/</xsl:text>
 </xsl:template>
 
-
-<!--Podcast URLs are different - this requires a DS to provide the URL reflection field-->
-<xsl:template match="entry[../section/@handle = 'podcast']|item[@section-handle = 'podcast']" mode="entry-url">
-	<xsl:param name="absolute" select="'No'" />
-	
-	<xsl:if test="$absolute = 'Yes'"><xsl:value-of select="/data/params/root" /></xsl:if>
-	<xsl:text>/podcast/</xsl:text>
-	<xsl:value-of select="/data/podcast-url/entry[@id = current()/@id]/url" />
-	<xsl:text>/</xsl:text>
-</xsl:template>
-
 <xsl:template match="entry|item" mode="entry-url">
 	<xsl:param name="absolute" select="'No'" />
 
@@ -454,7 +443,7 @@
 <!--# Named: get-url
 	# Return a URL based on provided ID and section.
 	#
-	# !Works for ID-based URLs only - exludes 'podcast', 'pages' and 'custom-pages' sections.
+	# !Works for ID-based URLs only - excludes 'pages' and 'custom-pages' sections.
 -->
 <xsl:template name="get-url">
     <xsl:param name="id" />

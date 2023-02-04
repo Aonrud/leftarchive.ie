@@ -8,7 +8,7 @@
 
 <xsl:import href="general-datetime.xsl"/>
 
-<xsl:template match="comments|comments-podcast">
+<xsl:template match="comments">
 
 <xsl:variable name="include-clr">
 <xsl:choose>
@@ -104,7 +104,7 @@
 </ul>
 </xsl:template>
 
-<xsl:template match="comments/parent/entry|comments-podcast/parent/entry">
+<xsl:template match="comments/parent/entry">
 <li class="media comment">
     <div class="media-body">
 						<img class="media-object pull-right" src="//www.gravatar.com/avatar/{email/@hash}?s=64&amp;d=mm" alt="{name}" />
@@ -230,9 +230,6 @@
 		</xsl:if>
 		<xsl:if test="$current-page-id = 41">
 			<input name="fields[associated-page]" type="hidden" value="{/data/international-single/entry/@id}" />
-		</xsl:if>
-		<xsl:if test="$current-page-id = 52">
-			<input name="fields[associated-page]" type="hidden" value="{/data/podcast-single/entry/@id}" />
 		</xsl:if>
 		<xsl:if test="$current-page-id = 70">
 			<input name="fields[associated-page]" type="hidden" value="{/data/demonstration-single/entry/@id}" />

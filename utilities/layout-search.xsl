@@ -41,9 +41,6 @@
                                 <input type="checkbox" name="sections[]" id="peopleCheck" value="people"><xsl:choose><xsl:when test="/data/search/sections and not(/data/search/sections/section[@id = '19'])"></xsl:when><xsl:otherwise><xsl:attribute name="checked">checked</xsl:attribute></xsl:otherwise></xsl:choose></input> <xsl:call-template name="section-icon"><xsl:with-param name="section-id" select="'19'" /></xsl:call-template>People
                             </label>
                             <label>
-                                <input type="checkbox" name="sections[]" id="podCheck" value="podcast"><xsl:choose><xsl:when test="/data/search/sections and not(/data/search/sections/section[@id = '41'])"></xsl:when><xsl:otherwise><xsl:attribute name="checked">checked</xsl:attribute></xsl:otherwise></xsl:choose></input> <xsl:call-template name="section-icon"><xsl:with-param name="section-id" select="'41'" /></xsl:call-template>Podcast
-                            </label>
-                            <label>
                                 <input type="checkbox" name="sections[]" id="pubCheck" value="publications"><xsl:choose><xsl:when test="/data/search/sections and not(/data/search/sections/section[@id = '5'])"></xsl:when><xsl:otherwise><xsl:attribute name="checked">checked</xsl:attribute></xsl:otherwise></xsl:choose></input> <xsl:call-template name="section-icon"><xsl:with-param name="section-id" select="'5'" /></xsl:call-template>Publications
                             </label>
                             <label>

@@ -15,7 +15,6 @@
 <xsl:import href="../utilities/section.xsl"/>
 <xsl:import href="../utilities/entry-minor.xsl"/>
 <xsl:import href="../utilities/section-collections.xsl"/>
-<xsl:import href="../utilities/section-podcast.xsl"/>
 <xsl:import href="../utilities/section-publications.xsl"/>
 <xsl:import href="../utilities/meta-redirect.xsl"/>
 <xsl:import href="../utilities/entry-wikipedia.xsl"/>
@@ -261,7 +260,6 @@
 					</xsl:choose>
 				</section>
 				
-				<xsl:apply-templates select="/data/podcast-related[entry]" />
 				<xsl:apply-templates select="/data/articles-intro[entry]" />
 				<xsl:apply-templates select="/data/people-list-publication-contributors[entry]" />
 				<xsl:apply-templates select="/data/external-listings[entry]" />

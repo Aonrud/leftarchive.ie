@@ -49,8 +49,7 @@
 <!--# Podcast
 -->
 <xsl:template name="sidecolumn-podcast">
-    <xsl:apply-templates select="/data/podcast-list" mode="aside">
-        <xsl:with-param name="max-episodes" select="'3'" />
+    <xsl:apply-templates select="/data/podcast-rss-feed/rss/channel" mode="aside">
         <xsl:with-param name="footer" select="'No'" />
     </xsl:apply-templates>
 </xsl:template>
