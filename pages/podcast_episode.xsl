@@ -78,6 +78,20 @@
 	<xsl:value-of select="/data/podcast-rss-feed/rss/channel/item[itunes:episode = /data/params/no]/link" />
 </xsl:template>
 
+<xsl:template name="metadata-general">
+	<!--TODO: Need to create a HTML output source of the escaped description in order to apply templates to the result-->
+	<xsl:variable name="description">Episode <xsl:value-of select="/data/params/no" /> of the Irish Left Archive Podcast.</xsl:variable>
+	
+	<meta name="description" content="{$description}" />
+    <meta property="og:title" content="#{/data/params/no}: {/data/podcast-rss-feed/rss/channel/item[itunes:episode = /data/params/no]/title}" />
+    <meta property="og:url" content="{/data/podcast-rss-feed/rss/channel/item[itunes:episode = /data/params/no]/link}" />
+    <meta property="og:description" content="{$description}" />	
+</xsl:template>
+
+<xsl:template name="metadata-image">
+	<meta property="og:image" content="{/data/podcast-rss-feed/rss/channel/item[itunes:episode = /data/params/no]/itunes:image/@href}" />
+</xsl:template>
+
 <xsl:template name="breadcrumb-contents">
 	<xsl:call-template name="breadcrumb-list-item">
 		<xsl:with-param name="name" select="'Podcast'" />

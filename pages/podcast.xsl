@@ -167,6 +167,20 @@
 	<xsl:if test="$valid = 'Yes' and /data/params/series != ''">: Series <xsl:value-of select="$current-series" /></xsl:if>
 </xsl:template>
 
+<xsl:template name="metadata-general">
+	<!--TODO: Need to create a HTML output source of the escaped description in order to apply templates to the result-->
+	<xsl:variable name="description"><xsl:value-of select="/data/podcast-rss-feed/rss/channel/description" /></xsl:variable>
+	
+	<meta name="description" content="{$description}" />
+    <meta property="og:title" content="Irish Left Archive Podcast" />
+    <meta property="og:url" content="{/data/podcast-rss-feed/rss/channel/link}" />
+    <meta property="og:description" content="{$description}" />	
+</xsl:template>
+
+<xsl:template name="metadata-image">
+	<meta property="og:image" content="{/data/podcast-rss-feed/rss/channel/image/url}" />
+</xsl:template>
+
 <xsl:template name="breadcrumb-contents">
 	<xsl:call-template name="breadcrumb-list-item">
 		<xsl:with-param name="name" select="'Podcast'" />
