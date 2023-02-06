@@ -11,7 +11,8 @@
 
 <!--Fallback for unmatched platform-->
 <xsl:template match="podcast:id/@platform">
-	<span class="fas fa-headphones"></span>
+	<xsl:param name="colour" select="'#000'" />
+	<span class="fas fa-headphones" style="color: {$colour}"></span>
 </xsl:template>
     
 <xsl:template match="podcast:id/@platform[. = 'antennapod']">
