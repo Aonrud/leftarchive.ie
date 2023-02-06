@@ -8,7 +8,7 @@ class datasourcepodcast_rss_feed extends RemoteDatasource {
     public $dsParamURL = 'https://podcast.leftarchive.ie/@ILAPodcast/feed.xml';
     public $dsParamFORMAT = 'xml';
     public $dsParamXPATH = '/';
-    public $dsParamCACHE = 10080;
+    public $dsParamCACHE = 1440;
     public $dsParamTIMEOUT = 10;
 
     public $dsParamNAMESPACES = array(
@@ -33,7 +33,7 @@ class datasourcepodcast_rss_feed extends RemoteDatasource {
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-01-31T12:03:58+00:00'
+            'release-date' => '2023-02-06T13:00:28+00:00'
         );
     }
 
