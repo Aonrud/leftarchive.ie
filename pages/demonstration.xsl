@@ -103,13 +103,7 @@
 		<div class="snapshots snapshots-grid">
 			<xsl:apply-templates select="documents/item" mode="card" />
 		</div>
-		<xsl:if test="subjects/item or related/item">
-			<footer class="row">
-				<h3 class="col-xs-12">More Information</h3>
-				<xsl:apply-templates select="subjects" />
-				<xsl:apply-templates select="related" />
-			</footer>
-		</xsl:if>
+		<xsl:apply-templates select="related[item]" />
 	</article>
 </xsl:template>
 
@@ -158,34 +152,13 @@
 	</div>
 </xsl:template>
 
-<xsl:template match="entry/subjects">
-	<div class="col-sm-6">
-		<h4>Subjects</h4>
+<xsl:template match="entry/related[item]">
+	<footer>
+		<h4>More Information</h4>
 		<ul class="list-unstyled">
 			<xsl:apply-templates select="item" />
 		</ul>
-	</div>
-</xsl:template>
-
-<xsl:template match="subjects/item">
-	<xsl:variable name="icon">
-		<xsl:call-template name="subjects-group-icon">
-			<xsl:with-param name="group" select="group/item" />
-		</xsl:call-template>
-	</xsl:variable>
-	<li>
-		<span class="fas fa-{$icon}"></span>&#160;
-		<xsl:apply-templates select="." mode="entry-link" />
-	</li>
-</xsl:template>
-
-<xsl:template match="entry/related">
-	<div class="col-sm-6">
-		<h4>Related Entries</h4>
-		<ul class="list-unstyled">
-			<xsl:apply-templates select="item" />
-		</ul>
-	</div>
+	</footer>
 </xsl:template>
 
 <xsl:template match="related/item">

@@ -15,7 +15,7 @@ class datasourcedemonstrations_list extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '449' => '{$ds-subject-single.system-id},{$ds-subjects-included.system-id}',
+        '450' => '{$ds-subject-single.system-id},{$ds-subjects-included.system-id}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -48,11 +48,11 @@ class datasourcedemonstrations_list extends SectionDatasource
         return array(
             'name' => 'Demonstrations - List',
             'author' => array(
-                'name' => 'Aonrud',
+                'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2022-11-17T12:37:51+00:00'
+            'release-date' => '2023-02-08T11:12:20+00:00'
         );
     }
 
