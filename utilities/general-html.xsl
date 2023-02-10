@@ -33,7 +33,8 @@ Usage:
 <xsl:template match="a" priority="1" mode="html">
     <xsl:variable name="external">
         <xsl:choose>
-            <xsl:when test="contains(@href,'//') and not(contains(@href, 'leftarchive.ie'))">Yes</xsl:when>
+			<!--Don't add icon and rel to links with explicitly set 'no-ext' class-->
+            <xsl:when test="not(contains(@class, 'no-ext')) and contains(@href,'//') and not(contains(@href, 'leftarchive.ie'))">Yes</xsl:when>
             <xsl:otherwise>No</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
