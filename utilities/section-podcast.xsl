@@ -77,7 +77,7 @@
 				</xsl:call-template>
 			</a>
 		</li>
-		<xsl:apply-templates select="podcast:id">
+		<xsl:apply-templates select="podcast:id[@platform = 'antennapod' or @platform = 'apple' or @platform = 'fyyd' or @platform = 'pocketcasts' or @platform = 'podcastindex' or @platform = 'spotify']">
 			<xsl:with-param name="colour" select="$colour" />
 		</xsl:apply-templates>
 	</ul>
