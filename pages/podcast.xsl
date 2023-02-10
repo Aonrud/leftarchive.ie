@@ -34,6 +34,11 @@
 	</xsl:choose>
 </xsl:variable>
 
+<xsl:variable name="full-title">
+	<xsl:text>Irish Left Archive Podcast</xsl:text>
+	<xsl:if test="$valid = 'Yes' and /data/params/series != ''">: Series <xsl:value-of select="$current-series" /></xsl:if>
+</xsl:variable>
+
 <!--Main template to select view mode-->
 <xsl:template match="/data">
 	<xsl:choose>
@@ -163,8 +168,7 @@
 
 <xsl:template name="page-title">
 	<xsl:if test="$valid != 'Yes'">Error — </xsl:if>
-	<xsl:text>Irish Left Archive Podcast</xsl:text>
-	<xsl:if test="$valid = 'Yes' and /data/params/series != ''">: Series <xsl:value-of select="$current-series" /></xsl:if>
+	<xsl:value-of select="$full-title" />
 </xsl:template>
 
 <xsl:template name="metadata-general">
@@ -172,7 +176,7 @@
 	<xsl:variable name="description"><xsl:value-of select="/data/podcast-rss-feed/rss/channel/description" /></xsl:variable>
 	
 	<meta name="description" content="{$description}" />
-    <meta property="og:title" content="Irish Left Archive Podcast" />
+    <meta property="og:title" content="{$full-title}" />
     <meta property="og:url" content="{/data/podcast-rss-feed/rss/channel/link}" />
     <meta property="og:description" content="{$description}" />	
 </xsl:template>
