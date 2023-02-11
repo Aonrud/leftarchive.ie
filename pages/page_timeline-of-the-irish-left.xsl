@@ -21,7 +21,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 				<h3>Timeline of the Irish Left</h3>
 				<p>This diagram shows the historical development of left political groups and parties since the beginning of the 20th Century in Ireland.</p>
 				<div class="alert-info alert"><p><a href="/information/about-the-timeline/" class="alert-link">About the timeline <span class="fa fa-angle-double-right"></span></a></p>
-				<p><em>Last updated 9th October, 2022</em></p>
+				<p><em>Last updated 11th February, 2023</em></p>
 				</div>
 				<button class="btn btn-link" data-toggle-target="legend" data-toggle-text="Hide Legend "><span class="toggle-text">Show Legend </span><span class="caret"></span></button>
 				<div id="legend">
@@ -59,19 +59,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="WSPL" data-start="1930" data-end="1945" data-end-estimate="true" data-row="1">Women's Social and Progressive League</div>
 			<div id="BAG" data-ila-id="4848" data-start="1968" data-become="BLG" data-row="1">Belfast Anarchist Group</div>
 			<div id="BLG" data-ila-id="4848" data-start="1973" data-end="1974" data-row="1">Belfast Libertarian Group</div>
-			<div id="BAC" data-ila-id="175" data-start="1978" data-end="1990" data-row="1" data-end-estimate="true">Belfast Anarchist Collective</div>
+			<div id="AWA" data-ila-id="32" data-start="1979" data-links="BAC DAG" data-end="1982" data-row="1">Anarchist Workers' Alliance</div>
+			<div id="CAWG" data-ila-id="6301" data-start="1984" data-merge="WSM" data-end="1984">Cork Anarchist Workers Group</div>
 			<div id="AFA" data-ila-id="35" data-start="1991" data-row="1" data-links="RA">Anti-Fascist Action (Ireland)</div>
-
-			<div id="AWA" data-ila-id="32" data-start="1979" data-links="BAC DAG" data-end="1982" data-row="2">Anarchist Workers' Alliance</div>
+			<div id="DAG" data-ila-id="1410" data-start="1978" data-end="1979" data-row="2">Dublin Anarchist Group</div>
+			<div id="ABC" data-ila-id="1411" data-start="1980" data-end="1981" data-row="2">Anarchist Bookshop Collective</div>
+			<div id="DAC" data-ila-id="1412" data-start="1982" data-row="2" data-end="1985" data-end-estimate="true">Dublin Anarchist Collective</div>
 			<div id="RA" data-ila-id="1438" data-start="1990" data-end="1997" data-row="2">Red Action</div>
 			<div id="WCA" data-ila-id="1439" data-start="2001" data-end="2005" data-end-estimate="true" data-row="2" data-links="RA">Working Class Action</div>
 			<div id="IMTI" data-ila-id="1871" data-start="2009" data-row="2">International Marxist Tendency in Ireland</div>
 
 
 			<div id="FSR" data-start="1930" data-end="1931" data-row="3">Friends of Soviet Russia</div>
-			<div id="DAG" data-ila-id="1410" data-start="1978" data-end="1979" data-row="3">Dublin Anarchist Group</div>
-			<div id="ABC" data-ila-id="1411" data-start="1980" data-end="1981" data-row="3">Anarchist Bookshop Collective</div>
-			<div id="DAC" data-ila-id="1412" data-start="1982" data-row="3" data-end="1985" data-end-estimate="true">Dublin Anarchist Collective</div>
+			<div id="BAC" data-ila-id="175" data-start="1978" data-end="1990" data-row="3" data-end-estimate="true">Belfast Anarchist Collective</div>
 			<div id="AFI" data-ila-id="1484" data-start="1995" data-row="3" data-merge="SolFed" data-end="2003">Anarchist Federation in Ireland</div>
 			<div id="RAG" data-ila-id="1477" data-start="2005" data-row="3" data-end="2014" data-end-estimate="true">Revolutionary Anarcha-Feminist Group (RAG)</div>
 
