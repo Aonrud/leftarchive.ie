@@ -1,8 +1,8 @@
 <?php
 
-class datasourcearticles_intro extends SectionDatasource
+class datasourcearticles_intro_subject extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'articles-intro';
+    public $dsParamROOTELEMENT = 'articles-intro-subject';
     public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'yes';
     public $dsParamLIMIT = '20';
@@ -10,12 +10,12 @@ class datasourcearticles_intro extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'name';
+    public $dsParamSORT = 'added';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '107' => '{$id},{$ds-organisation-single.system-id},{$ds-article-single.associated}',
+        '407' => '{$ds-subject-single.system-id},{$ds-subjects-included.system-id}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -30,19 +30,19 @@ class datasourcearticles_intro extends SectionDatasource
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-organisation-single.system-id', '$ds-article-single.associated');
+        $this->_dependencies = array('$ds-subject-single.system-id', '$ds-subjects-included.system-id');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Articles - Intro',
+            'name' => 'Articles - Intro - Subject',
             'author' => array(
                 'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-02-12T16:11:33+00:00'
+            'release-date' => '2023-02-12T16:15:20+00:00'
         );
     }
 

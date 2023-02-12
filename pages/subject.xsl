@@ -6,6 +6,7 @@
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/section-articles.xsl"/>
 <xsl:import href="../utilities/section-collections.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/general-strings.xsl"/>
@@ -75,6 +76,7 @@
 			<xsl:apply-templates select="/data/subjects-included[entry]" />
             <xsl:apply-templates select="/data/documents-list[entry]" />
             <xsl:apply-templates select="/data/demonstrations-list[entry]" />
+            <xsl:apply-templates select="/data/articles-intro-subject[entry]" />
             <xsl:apply-templates select="links" />
         </div>
         <aside class="col-sm-4">           

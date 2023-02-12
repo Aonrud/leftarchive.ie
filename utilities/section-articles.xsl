@@ -5,13 +5,13 @@
 <xsl:output method="html" omit-xml-declaration="yes" indent="no" />
 
 <!--Intro section-->
-<xsl:template match="articles-intro">
+<xsl:template match="articles-intro|articles-intro-subject">
 	<h2>Articles</h2>
 	<xsl:apply-templates select="entry" />
 </xsl:template>
 
 <!--Standard intro entry -->
-<xsl:template match="articles-intro/entry">
+<xsl:template match="articles-intro/entry|articles-intro-subject/entry">
 	<article>
 		<h3><a href="/article/{@id}/"><xsl:value-of select="name" /></a></h3>
 		<xsl:if test="from/item"><p class="text-muted"> From <xsl:value-of select="from/item" /></p></xsl:if>
