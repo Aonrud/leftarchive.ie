@@ -21,7 +21,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 				<h3>Timeline of the Irish Left</h3>
 				<p>This diagram shows the historical development of left political groups and parties since the beginning of the 20th Century in Ireland.</p>
 				<div class="alert-info alert"><p><a href="/information/about-the-timeline/" class="alert-link">About the timeline <span class="fa fa-angle-double-right"></span></a></p>
-				<p><em>Last updated 11th February, 2023</em></p>
+				<p><em>Last updated 19th February, 2023</em></p>
 				</div>
 				<button class="btn btn-link" data-toggle-target="legend" data-toggle-text="Hide Legend "><span class="toggle-text">Show Legend </span><span class="caret"></span></button>
 				<div id="legend">
@@ -74,6 +74,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="BAC" data-ila-id="175" data-start="1978" data-end="1990" data-row="3" data-end-estimate="true">Belfast Anarchist Collective</div>
 			<div id="AFI" data-ila-id="1484" data-start="1995" data-row="3" data-merge="SolFed" data-end="2003">Anarchist Federation in Ireland</div>
 			<div id="RAG" data-ila-id="1477" data-start="2005" data-row="3" data-end="2014" data-end-estimate="true">Revolutionary Anarcha-Feminist Group (RAG)</div>
+			<div id="IAN2022" data-ila-id="6310" data-start="2022" data-row="3">Irish Anarchist Network</div>
 
 			<div id="SWG" data-ila-id="1446" data-start="1975" data-row="4" data-become="BWC">Socialist Women's Group</div>
 			<div id="BWC" data-ila-id="628" data-start="1977" data-row="4" data-end="1980">Belfast Women's Collective</div>
