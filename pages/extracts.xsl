@@ -61,10 +61,12 @@
 						<ul class="list-unstyled">
 							<li><strong>Collections: </strong><xsl:value-of select="@collections" /></li>
 							<li><strong>Articles: </strong><xsl:value-of select="@extended-articles" /></li>
+							<li><strong>Calendar Events: </strong><xsl:value-of select="@calendar-events" /></li>
 						</ul>
 						<ul>
 							<xsl:apply-templates select="/data/collections-list/entry[inline-images/item/@id = current()/@id]" />
 							<xsl:apply-templates select="/data/articles-intro/entry[inline-images/item/@id = current()/@id]" />
+							<xsl:apply-templates select="/data/calendar-events-list/entry[inline/item/@id = current()/@id]" />
 						</ul>
 					</td>
 				</tr>
@@ -95,14 +97,11 @@
 	</a>
 </xsl:template>
 
-<xsl:template match="collections-list/entry|articles-intro/entry">
+<xsl:template match="collections-list/entry|articles-intro/entry|calendar-events-list/entry">
 	<li>
 		<a>
 			<xsl:attribute name="href">
-				<xsl:call-template name="get-url">
-					<xsl:with-param name="id" select="@id" />
-					<xsl:with-param name="section-id" select="../section/@id" />
-				</xsl:call-template>
+				<xsl:apply-templates select="." mode="entry-url" />
 			</xsl:attribute>
 			<xsl:value-of select="name" />
 		</a>

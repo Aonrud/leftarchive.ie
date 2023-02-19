@@ -360,7 +360,7 @@
 <!--# Mode: entry-url
 	# Ouputs the URL for the matched entry
 	#
-	# !Really just duplicates get-url... but makes it easier to get the URL without passing the params every time.
+	# !Really just duplicates get-url for most cases, but makes it easier to get the URL without passing the params every time.
 -->
 
 <!--# Special cases, where entry URL isn't ID-based.
@@ -375,6 +375,23 @@
 	<xsl:text>/information/</xsl:text><xsl:value-of select="@handle" /><xsl:text>/</xsl:text>
 </xsl:template>
 
+<!--# Calendar events link to the 'On This Day'.
+	# NOTE: The event date must be available to determine the URL.
+-->
+<xsl:template match="entry[../section/@handle = 'calendar-events']|item[@section-handle = 'calendar-events']" mode="entry-url">
+	<xsl:param name="absolute" select="'No'" />
+	<xsl:if test="$absolute = 'Yes'"><xsl:value-of select="/data/params/root" /></xsl:if>
+	<xsl:text>/on-this-day/</xsl:text>
+	<xsl:call-template name="format-date">
+		<xsl:with-param name="date" select="date/@iso" />
+		<xsl:with-param name="format" select="'n/d/'" />
+	</xsl:call-template>
+	<xsl:text>#event-</xsl:text>
+	<xsl:value-of select="@id" />
+</xsl:template>
+
+
+<!--General version for `/section-slug/id/` URLs-->
 <xsl:template match="entry|item" mode="entry-url">
 	<xsl:param name="absolute" select="'No'" />
 
