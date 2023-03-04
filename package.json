@@ -27,6 +27,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-terser": "^2.0.0",
     "ila-ui-elements": "github:Aonrud/ila-ui-elements#semver:0.8.2",
+    "jquery": "^3.6.3",
     "js-cookie": "^3.0.1",
     "list.js": "^2.3.1",
     "timeline": "github:Aonrud/ila-timeline#semver:1.1.2",
