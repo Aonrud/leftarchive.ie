@@ -111,7 +111,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 		View Document: <xsl:value-of select="/data/document-single/entry/name" /><xsl:if test="/data/document-single/entry/organisation/item"> - <xsl:for-each select="/data/document-single/entry/organisation/item"><xsl:choose><xsl:when test="position() = 1"></xsl:when><xsl:when test="position() = last()"> and </xsl:when><xsl:otherwise>, </xsl:otherwise></xsl:choose><xsl:value-of select="name" /></xsl:for-each></xsl:if>
 		</xsl:attribute>
 	</meta>
-	<meta property="og:url" content="{$root}/document/view/{/data/document-single/entry/@id}/" />
+	<meta property="og:url">
+		<xsl:attribute name="content">
+			<xsl:value-of select="/data/params/root" />
+			<xsl:text>/document/view/</xsl:text>
+			<xsl:value-of select="/data/document-single/entry/@id" />
+			<xsl:text>/</xsl:text>
+			<xsl:if test="/data/params/current-query-string != ''">?<xsl:value-of select="/data/params/current-query-string" /></xsl:if>
+		</xsl:attribute>
+	</meta>
 	<meta property="og:description" content="{$description}" />
 </xsl:template>
 

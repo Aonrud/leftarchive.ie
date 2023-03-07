@@ -293,8 +293,21 @@ Search <xsl:if test="/data/params/url-keywords">Results For <xsl:value-of select
 	
 	<meta name="description" content="{$description}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Search the Irish Left Archive" />
-	<meta property="og:url" content="{/data/params/root}/search/" />
+	<meta property="og:title" content="">
+		<xsl:attribute name="content">
+			<xsl:choose>
+				<xsl:when test="/data/params/url-keywords">Search results for "<xsl:value-of select="/data/params/url-keywords" />" in the Irish Left Archive</xsl:when>
+				<xsl:otherwise>Search the Irish Left Archive</xsl:otherwise>
+			</xsl:choose>
+		</xsl:attribute>
+	</meta>
+	<meta property="og:url">
+		<xsl:attribute name="content">
+			<xsl:value-of select="/data/params/root" />
+			<xsl:text>/search/</xsl:text>
+			<xsl:if test="/data/params/current-query-string != ''">?<xsl:value-of select="/data/params/current-query-string" /></xsl:if>
+		</xsl:attribute>
+	</meta>
 	<meta property="og:description" content="{$description}" />
 </xsl:template>
 
