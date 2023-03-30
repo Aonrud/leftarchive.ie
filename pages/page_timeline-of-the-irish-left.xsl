@@ -253,7 +253,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 
 			<div id="ATL" data-start="1929" data-end="1929" data-row="33">Anti-Tribute League</div>
 			<div id="IWFC" data-start="1930" data-end="1932" data-row="33" data-links="ATL">Irish Working Farmers' Congress</div>
-			<div id="RLP" data-ila-id="1418" data-start="1963" data-row="33" data-end="1973">Republican Labour Party (RLP)</div>
 			<div id="SAN" data-ila-id="256" data-start="1979"  data-end="1982" data-row="33" data-links="LSO BICO SPI">Socialists Against Nationalism</div>
 			<div id="DSP" data-ila-id="194" data-start="1982" data-row="33" data-merge="LP" data-end="1990" data-links="BICO">Democratic Socialist Party (DSP)</div>
 			<div id="NA" data-ila-id="193" data-start="1992" data-row="33" data-split="WP" data-become="DL" data-colour="red">New Agenda</div>
@@ -265,9 +264,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SRC" data-ila-id="252" data-start="1986" data-row="34" data-end="1992" data-links="IRSP">Socialist Republican Collective (SRC)</div>
 			<div id="Saoradh" data-ila-id="2249" data-start="2016" data-row="34">Saoradh</div>
 
-			<div id="NPF" data-ila-id="1449" data-start="1964" data-become="NP" data-row="35" data-links="RLP">National Political Front</div>
-			<div id="NP" data-ila-id="1449" data-start="1965" data-become="NDP" data-row="35">National Party</div>
-			<div id="NDP" data-ila-id="1449" data-start="1965" data-end="1970" data-row="35">National Democratic Party</div>
 			<div id="IRSP" data-ila-id="212" data-start="1974" data-row="35" data-split="OSF" data-colour="#8AA3FF">Irish Republican Socialist Party (IRSP)</div>
 
 			<div id="CrleNaP" data-start="1929" data-end="1930" data-row="36">Comhairle na Poblachta</div>
@@ -288,14 +284,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="PSF" data-ila-id="244" data-start="1969" data-row="39" data-colour="#080">Sinn Féin (Provisional)</div>
 
 			<div id="SE" data-ila-id="1436" data-start="1967" data-row="40" data-split="SF" data-end="1973">Saor Éire</div>
+			<div id="RS" data-ila-id="240" data-start="1975" data-row="40" data-end="1985">Revolutionary Struggle</div>
 			<div id="Aontu" data-start="2019" data-row="40" data-split="PSF">Aontú</div>
 
 			<div id="RTC" data-ila-id="241" data-start="1976" data-row="41" data-end="1982" data-links="RS">Ripening of Time Collective</div>
 			<div id="RNU" data-ila-id="3195" data-start="2007" data-row="41" data-split="PSF">Republican Network for Unity</div>
-
+			
+			<div id="RLP" data-ila-id="1418" data-start="1963" data-row="42" data-end="1973">Republican Labour Party (RLP)</div>
 			<div id="CSM32" data-ila-id="1465" data-start="1997" data-split="PSF" data-row="42">32 County Sovereignty Movement</div>
 
-			<div id="RS" data-ila-id="240" data-start="1975" data-row="43" data-end="1985">Revolutionary Struggle</div>
+			<div id="NPF" data-ila-id="1449" data-start="1964" data-become="NP" data-row="43" data-links="RLP">National Political Front</div>
+			<div id="NP" data-ila-id="1449" data-start="1965" data-become="NDP" data-row="43">National Party</div>
+			<div id="NDP" data-ila-id="1449" data-start="1965" data-end="1970" data-row="43">National Democratic Party</div>
 			<div id="RSF" data-ila-id="1437" data-start="1986" data-row="43" data-split="PSF">Republican Sinn Féin</div>
 
 			<div id="SDLP" data-ila-id="243" data-start="1970" data-row="44" data-colour="#006E51" data-links="NDP">Social Democratic &amp; Labour Party (SDLP)</div>
