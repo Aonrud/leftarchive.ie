@@ -21,7 +21,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 				<h3>Timeline of the Irish Left</h3>
 				<p>This diagram shows the historical development of left political groups and parties since the beginning of the 20th Century in Ireland.</p>
 				<div class="alert-info alert"><p><a href="/information/about-the-timeline/" class="alert-link">About the timeline <span class="fa fa-angle-double-right"></span></a></p>
-				<p><em>Last updated 25th February, 2023</em></p>
+				<p><em>Last updated 5th April, 2023</em></p>
 				</div>
 				<button class="btn btn-link" data-toggle-target="legend" data-toggle-text="Hide Legend "><span class="toggle-text">Show Legend </span><span class="caret"></span></button>
 				<div id="legend">
@@ -210,104 +210,106 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="GPNI" data-start="1985" data-row="25" data-merge="GP" data-end="2006" data-colour="#00755B">Green Party in Northern Ireland</div>
 			<div id="FN" data-ila-id="1430" data-start="2010" data-row="25" data-split="GP" data-colour="#4b7a00">Fís Nua</div>
 
-			<div id="RWP" data-ila-id="5943" data-start="1930" data-end="1930" data-row="26" data-become="RWG">Revolutionary Workers' Party</div>
-			<div id="RWG" data-ila-id="2147" data-start="1930" data-row="26" data-become="CPI1">Revolutionary Workers' Groups</div>
-			<div id="CPI1" data-ila-id="186" data-start="1933" data-row="26" data-end="1941">Communist Party of Ireland</div>
-			<div id="IWL" data-ila-id="1195" data-start="1948" data-row="26" data-become="IWP" data-links="CPI1">Irish Workers' League</div>
-			<div id="IWP" data-ila-id="1195" data-start="1962" data-row="26" data-become="CPI2">Irish Workers' Party</div>
-			<div id="CPI2" data-ila-id="186" data-start="1970" data-row="26">Communist Party of Ireland (CPI)</div>
-
-			<div id="CYM1" data-ila-id="189" data-start="1963" data-end="1991" data-links="IWP" data-row="27">Connolly Youth Movement</div>
-			<div id="CYM2" data-ila-id="189" data-start="2002" data-links="CPI2 CYM1" data-row="27">Connolly Youth Movement</div>
+			<div id="ICP" data-ila-id="6387" data-start="2022" data-row="26" data-split="CPI2">Irish Communist Party</div>
 			
-			<div id="WPI" data-ila-id="5898" data-start="1926" data-row="28" data-end="1927">Workers' Party of Ireland</div>
-			<div id="IWG1" data-ila-id="1364" data-start="1966" data-end="1968" data-row="28">Irish Workers' Group</div>
-			<div id="CCO" data-ila-id="190" data-start="1971" data-row="28" data-split="ICO" data-become="CWC">Cork Communist Organisation</div>
-			<div id="CWC" data-ila-id="191" data-start="1972" data-row="28" data-end="1989" data-end-estimate="true">Cork Workers' Club</div>
-			<div id="PC" data-start="1994" data-row="28" data-end="1995" data-links="DL GPNI">Peace Coalition</div>
-			<div id="SD2015" data-ila-id="1737" data-start="2015" data-row="28" data-colour="#752f8b">Social Democrats</div>
+			<div id="RWP" data-ila-id="5943" data-start="1930" data-end="1930" data-row="27" data-become="RWG">Revolutionary Workers' Party</div>
+			<div id="RWG" data-ila-id="2147" data-start="1930" data-row="27" data-become="CPI1">Revolutionary Workers' Groups</div>
+			<div id="CPI1" data-ila-id="186" data-start="1933" data-row="27" data-end="1941">Communist Party of Ireland</div>
+			<div id="IWL" data-ila-id="1195" data-start="1948" data-row="27" data-become="IWP" data-links="CPI1">Irish Workers' League</div>
+			<div id="IWP" data-ila-id="1195" data-start="1962" data-row="27" data-become="CPI2">Irish Workers' Party</div>
+			<div id="CPI2" data-ila-id="186" data-start="1970" data-row="27">Communist Party of Ireland (CPI)</div>
 
-			<div id="IWU" data-ila-id="1433" data-start="1960" data-row="29" data-become="ICG">Irish Workers' Union</div>
-			<div id="ICG" data-ila-id="1433" data-start="1964" data-row="29" data-fork="IWG1 ICO">Irish Communist Group</div>
-			<div id="LA" data-ila-id="1448" data-start="1975" data-row="29" data-end="1976" data-links="OSF LCLL CPI2" data-colour="#caa">Left Alliance</div>
-			<div id="CLR" data-ila-id="1435" data-start="1978" data-row="29" data-end="1993" data-links="BICO">Campaign for Labour Representation</div>
-			<div id="IFEM" data-ila-id="2269" data-start="2014" data-row="29" data-become="I4C">Independents for Equality Movement</div>
-			<div id="I4C" data-ila-id="2269" data-start="2015" data-row="29">Independents 4 Change</div>
+			<div id="CYM1" data-ila-id="189" data-start="1963" data-end="1991" data-links="IWP" data-row="28">Connolly Youth Movement</div>
+			<div id="CYM2" data-ila-id="189" data-start="2002" data-links="CPI2 CYM1" data-row="28">Connolly Youth Movement</div>
+			
+			<div id="WPI" data-ila-id="5898" data-start="1926" data-row="29" data-end="1927">Workers' Party of Ireland</div>
+			<div id="IWG1" data-ila-id="1364" data-start="1966" data-end="1968" data-row="29">Irish Workers' Group</div>
+			<div id="CCO" data-ila-id="190" data-start="1971" data-row="29" data-split="ICO" data-become="CWC">Cork Communist Organisation</div>
+			<div id="CWC" data-ila-id="191" data-start="1972" data-row="29" data-end="1989" data-end-estimate="true">Cork Workers' Club</div>
+			<div id="PC" data-start="1994" data-row="29" data-end="1995" data-links="DL GPNI">Peace Coalition</div>
+			<div id="SD2015" data-ila-id="1737" data-start="2015" data-row="29" data-colour="#752f8b">Social Democrats</div>
 
-			<div id="ICO" data-ila-id="209" data-start="1965" data-row="30" data-become="BICO">Irish Communist Organisation (ICO)</div>
-			<div id="BICO" data-ila-id="44" data-start="1971" data-row="30" data-end="1998" data-end-estimate="true">British &amp; Irish Communist Organisation (BICO)</div>
-			<div id="OnePercentNetwork" data-ila-id="5788" data-start="2010" data-end="2011" data-end-estimate="true" data-row="30" data-links="ISN WSM EIR" data-colour="#c8211d">The 1% Network</div>
-			<div id="RTOC" data-ila-id="3505" data-start="2020" data-row="30" data-colour="#ea3f3c">Right To Change</div>
+			<div id="IWU" data-ila-id="1433" data-start="1960" data-row="30" data-become="ICG">Irish Workers' Union</div>
+			<div id="ICG" data-ila-id="1433" data-start="1964" data-row="30" data-fork="IWG1 ICO">Irish Communist Group</div>
+			<div id="LA" data-ila-id="1448" data-start="1975" data-row="30" data-end="1976" data-links="OSF LCLL CPI2" data-colour="#caa">Left Alliance</div>
+			<div id="CLR" data-ila-id="1435" data-start="1978" data-row="30" data-end="1993" data-links="BICO">Campaign for Labour Representation</div>
+			<div id="IFEM" data-ila-id="2269" data-start="2014" data-row="30" data-become="I4C">Independents for Equality Movement</div>
+			<div id="I4C" data-ila-id="2269" data-start="2015" data-row="30">Independents 4 Change</div>
+
+			<div id="ICO" data-ila-id="209" data-start="1965" data-row="31" data-become="BICO">Irish Communist Organisation (ICO)</div>
+			<div id="BICO" data-ila-id="44" data-start="1971" data-row="31" data-end="1998" data-end-estimate="true">British &amp; Irish Communist Organisation (BICO)</div>
+			<div id="OnePercentNetwork" data-ila-id="5788" data-start="2010" data-end="2011" data-end-estimate="true" data-row="31" data-links="ISN WSM EIR" data-colour="#c8211d">The 1% Network</div>
+			<div id="RTOC" data-ila-id="3505" data-start="2020" data-row="31" data-colour="#ea3f3c">Right To Change</div>
 
 			
-			<div id="SE31" data-ila-id="5944" data-start="1931" data-row="31" data-end="1932" data-links="RWG IWFC">Saor Éire (1931)</div>
-			<div id="RC" data-ila-id="4090" data-start="1934" data-row="31" data-end="1936">Republican Congress</div>
-			<div id="COBI" data-ila-id="182" data-start="1974" data-row="31" data-split="BICO" data-become="CF">Communist Organisation in the British Isles (COBI)</div>
-			<div id="CF" data-ila-id="182" data-start="1977" data-row="31" data-end="1980" data-end-estimate="true">Communist Formation</div>
-			<div id="AHS" data-ila-id="38" data-start="1987" data-row="31" data-links="BICO">Aubane Historical Society</div>
+			<div id="SE31" data-ila-id="5944" data-start="1931" data-row="32" data-end="1932" data-links="RWG IWFC">Saor Éire (1931)</div>
+			<div id="RC" data-ila-id="4090" data-start="1934" data-row="32" data-end="1936">Republican Congress</div>
+			<div id="COBI" data-ila-id="182" data-start="1974" data-row="32" data-split="BICO" data-become="CF">Communist Organisation in the British Isles (COBI)</div>
+			<div id="CF" data-ila-id="182" data-start="1977" data-row="32" data-end="1980" data-end-estimate="true">Communist Formation</div>
+			<div id="AHS" data-ila-id="38" data-start="1987" data-row="32" data-links="BICO">Aubane Historical Society</div>
 
-			<div id="IRF" data-ila-id="214" data-start="1965" data-row="32" data-become="SECork">Irish Revolutionary Forces (IRF)</div>
-			<div id="SECork" data-ila-id="242" data-start="1968" data-row="32" data-merge="ICO" data-end="1971">Saor Éire (Cork)</div>
-			<div id="LSO" data-ila-id="1416" data-start="1972" data-row="32" data-merge="DSP" data-end="1982">Limerick Socialist Organisation</div>
-			<div id="PANA" data-ila-id="1552" data-start="1996" data-row="32">Peace and Neutrality Alliance (PANA)</div>
+			<div id="IRF" data-ila-id="214" data-start="1965" data-row="33" data-become="SECork">Irish Revolutionary Forces (IRF)</div>
+			<div id="SECork" data-ila-id="242" data-start="1968" data-row="33" data-merge="ICO" data-end="1971">Saor Éire (Cork)</div>
+			<div id="LSO" data-ila-id="1416" data-start="1972" data-row="33" data-merge="DSP" data-end="1982">Limerick Socialist Organisation</div>
+			<div id="PANA" data-ila-id="1552" data-start="1996" data-row="33">Peace and Neutrality Alliance (PANA)</div>
 
-			<div id="ATL" data-start="1929" data-end="1929" data-row="33">Anti-Tribute League</div>
-			<div id="IWFC" data-start="1930" data-end="1932" data-row="33" data-links="ATL">Irish Working Farmers' Congress</div>
-			<div id="SAN" data-ila-id="256" data-start="1979"  data-end="1982" data-row="33" data-links="LSO BICO SPI">Socialists Against Nationalism</div>
-			<div id="DSP" data-ila-id="194" data-start="1982" data-row="33" data-merge="LP" data-end="1990" data-links="BICO">Democratic Socialist Party (DSP)</div>
-			<div id="NA" data-ila-id="193" data-start="1992" data-row="33" data-split="WP" data-become="DL" data-colour="red">New Agenda</div>
-			<div id="DL" data-ila-id="193" data-start="1992" data-row="33" data-merge="LP" data-end="1999" data-colour="red">Democratic Left</div>
-			<div id="ISN" data-ila-id="215" data-start="2001" data-end="2017" data-end-estimate="true" data-row="33" data-links="WP ORM">Irish Socialist Network (ISN)</div>
-			<div id="LD" data-ila-id="3310" data-start="2018" data-row="33" data-colour="#ed1a11">Lasair Dhearg</div>
+			<div id="ATL" data-start="1929" data-end="1929" data-row="34">Anti-Tribute League</div>
+			<div id="IWFC" data-start="1930" data-end="1932" data-row="34" data-links="ATL">Irish Working Farmers' Congress</div>
+			<div id="SAN" data-ila-id="256" data-start="1979"  data-end="1982" data-row="34" data-links="LSO BICO SPI">Socialists Against Nationalism</div>
+			<div id="DSP" data-ila-id="194" data-start="1982" data-row="34" data-merge="LP" data-end="1990" data-links="BICO">Democratic Socialist Party (DSP)</div>
+			<div id="NA" data-ila-id="193" data-start="1992" data-row="34" data-split="WP" data-become="DL" data-colour="red">New Agenda</div>
+			<div id="DL" data-ila-id="193" data-start="1992" data-row="34" data-merge="LP" data-end="1999" data-colour="red">Democratic Left</div>
+			<div id="ISN" data-ila-id="215" data-start="2001" data-end="2017" data-end-estimate="true" data-row="34" data-links="WP ORM">Irish Socialist Network (ISN)</div>
+			<div id="LD" data-ila-id="3310" data-start="2018" data-row="34" data-colour="#ed1a11">Lasair Dhearg</div>
 
-			<div id="SPI" data-ila-id="251" data-start="1971" data-row="34" data-split="OSF" data-merge="DSP" data-end="1982">Socialist Party of Ireland (SPI)</div>
-			<div id="SRC" data-ila-id="252" data-start="1986" data-row="34" data-end="1992" data-links="IRSP">Socialist Republican Collective (SRC)</div>
-			<div id="Saoradh" data-ila-id="2249" data-start="2016" data-row="34">Saoradh</div>
+			<div id="SPI" data-ila-id="251" data-start="1971" data-row="35" data-split="OSF" data-merge="DSP" data-end="1982">Socialist Party of Ireland (SPI)</div>
+			<div id="SRC" data-ila-id="252" data-start="1986" data-row="35" data-end="1992" data-links="IRSP">Socialist Republican Collective (SRC)</div>
+			<div id="Saoradh" data-ila-id="2249" data-start="2016" data-row="35">Saoradh</div>
 
-			<div id="IRSP" data-ila-id="212" data-start="1974" data-row="35" data-split="OSF" data-colour="#8AA3FF">Irish Republican Socialist Party (IRSP)</div>
+			<div id="IRSP" data-ila-id="212" data-start="1974" data-row="36" data-split="OSF" data-colour="#8AA3FF">Irish Republican Socialist Party (IRSP)</div>
 
-			<div id="CrleNaP" data-start="1929" data-end="1930" data-row="36">Comhairle na Poblachta</div>
-			<div id="ICSP" data-ila-id="205" data-start="1976" data-row="36" data-split="IRSP" data-become="ISP">Irish Committee for a Socialist Programme</div>
-			<div id="ISP" data-ila-id="205" data-start="1977" data-end="1978" data-row="36">Independent Socialist Party (ISP)</div>
-			<div id="WPP" data-ila-id="1420" data-start="1985" data-row="36" data-split="WP" data-merge="WP" data-end="1987">Waterford People's Party</div>
-			<div id="ORM" data-ila-id="230" data-start="1998" data-row="36" data-split="WP">Official Republican Movement (ORM)</div>
+			<div id="CrleNaP" data-start="1929" data-end="1930" data-row="37">Comhairle na Poblachta</div>
+			<div id="ICSP" data-ila-id="205" data-start="1976" data-row="37" data-split="IRSP" data-become="ISP">Irish Committee for a Socialist Programme</div>
+			<div id="ISP" data-ila-id="205" data-start="1977" data-end="1978" data-row="37">Independent Socialist Party (ISP)</div>
+			<div id="WPP" data-ila-id="1420" data-start="1985" data-row="37" data-split="WP" data-merge="WP" data-end="1987">Waterford People's Party</div>
+			<div id="ORM" data-ila-id="230" data-start="1998" data-row="37" data-split="WP">Official Republican Movement (ORM)</div>
 
-			<div id="OSF" data-ila-id="231" data-start="1969" data-row="37" data-become="SFWP" data-colour="red">Sinn Féin (Official)</div>
-			<div id="SFWP" data-ila-id="267" data-start="1977" data-row="37" data-become="WP" data-colour="red">Sinn Féin The Workers' Party</div>
-			<div id="WP" data-ila-id="267" data-start="1982" data-row="37" data-colour="red">The Workers' Party</div>
+			<div id="OSF" data-ila-id="231" data-start="1969" data-row="38" data-become="SFWP" data-colour="red">Sinn Féin (Official)</div>
+			<div id="SFWP" data-ila-id="267" data-start="1977" data-row="38" data-become="WP" data-colour="red">Sinn Féin The Workers' Party</div>
+			<div id="WP" data-ila-id="267" data-start="1982" data-row="38" data-colour="red">The Workers' Party</div>
 
-			<div id="SF" data-ila-id="245" data-start="1905" data-fork="OSF PSF" data-row="38" data-colour="#040">Sinn Féin (Pre 1970)</div>
-			<div id="NE" data-ila-id="1419" data-start="1973" data-row="38" data-end="1975" data-split="OSF">New Earth</div>
-			<div id="LCR" data-ila-id="223" data-start="1986" data-row="38" data-end="1991" data-split="PSF">League of Communist Republicans (LCR)</div>
-			<div id="EIR" data-ila-id="635" data-start="2006" data-row="38" data-split="PSF" data-colour="#0faf4d">Éirígí</div>
+			<div id="SF" data-ila-id="245" data-start="1905" data-fork="OSF PSF" data-row="39" data-colour="#040">Sinn Féin (Pre 1970)</div>
+			<div id="NE" data-ila-id="1419" data-start="1973" data-row="39" data-end="1975" data-split="OSF">New Earth</div>
+			<div id="LCR" data-ila-id="223" data-start="1986" data-row="39" data-end="1991" data-split="PSF">League of Communist Republicans (LCR)</div>
+			<div id="EIR" data-ila-id="635" data-start="2006" data-row="39" data-split="PSF" data-colour="#0faf4d">Éirígí</div>
 
-			<div id="PSF" data-ila-id="244" data-start="1969" data-row="39" data-colour="#080">Sinn Féin (Provisional)</div>
+			<div id="PSF" data-ila-id="244" data-start="1969" data-row="40" data-colour="#080">Sinn Féin (Provisional)</div>
 
-			<div id="SE" data-ila-id="1436" data-start="1967" data-row="40" data-split="SF" data-end="1973">Saor Éire</div>
-			<div id="RS" data-ila-id="240" data-start="1975" data-row="40" data-end="1985">Revolutionary Struggle</div>
-			<div id="Aontu" data-start="2019" data-row="40" data-split="PSF">Aontú</div>
+			<div id="SE" data-ila-id="1436" data-start="1967" data-row="41" data-split="SF" data-end="1973">Saor Éire</div>
+			<div id="RS" data-ila-id="240" data-start="1975" data-row="41" data-end="1985">Revolutionary Struggle</div>
+			<div id="Aontu" data-start="2019" data-row="41" data-split="PSF">Aontú</div>
 
-			<div id="RTC" data-ila-id="241" data-start="1976" data-row="41" data-end="1982" data-links="RS">Ripening of Time Collective</div>
-			<div id="RNU" data-ila-id="3195" data-start="2007" data-row="41" data-split="PSF">Republican Network for Unity</div>
+			<div id="RTC" data-ila-id="241" data-start="1976" data-row="42" data-end="1982" data-links="RS">Ripening of Time Collective</div>
+			<div id="RNU" data-ila-id="3195" data-start="2007" data-row="42" data-split="PSF">Republican Network for Unity</div>
 			
-			<div id="RLP" data-ila-id="1418" data-start="1963" data-row="42" data-end="1973">Republican Labour Party (RLP)</div>
-			<div id="CSM32" data-ila-id="1465" data-start="1997" data-split="PSF" data-row="42">32 County Sovereignty Movement</div>
+			<div id="RLP" data-ila-id="1418" data-start="1963" data-row="43" data-end="1973">Republican Labour Party (RLP)</div>
+			<div id="CSM32" data-ila-id="1465" data-start="1997" data-split="PSF" data-row="43">32 County Sovereignty Movement</div>
 
-			<div id="NPF" data-ila-id="1449" data-start="1964" data-become="NP" data-row="43" data-links="RLP">National Political Front</div>
-			<div id="NP" data-ila-id="1449" data-start="1965" data-become="NDP" data-row="43">National Party</div>
-			<div id="NDP" data-ila-id="1449" data-start="1965" data-end="1970" data-row="43">National Democratic Party</div>
-			<div id="RSF" data-ila-id="1437" data-start="1986" data-row="43" data-split="PSF">Republican Sinn Féin</div>
+			<div id="NPF" data-ila-id="1449" data-start="1964" data-become="NP" data-row="44" data-links="RLP">National Political Front</div>
+			<div id="NP" data-ila-id="1449" data-start="1965" data-become="NDP" data-row="44">National Party</div>
+			<div id="NDP" data-ila-id="1449" data-start="1965" data-end="1970" data-row="44">National Democratic Party</div>
+			<div id="RSF" data-ila-id="1437" data-start="1986" data-row="44" data-split="PSF">Republican Sinn Féin</div>
 
-			<div id="SDLP" data-ila-id="243" data-start="1970" data-row="44" data-colour="#006E51" data-links="NDP">Social Democratic &amp; Labour Party (SDLP)</div>
+			<div id="SDLP" data-ila-id="243" data-start="1970" data-row="45" data-colour="#006E51" data-links="NDP">Social Democratic &amp; Labour Party (SDLP)</div>
 
-			<div id="WTS" data-ila-id="199" data-start="1964" data-row="45" data-links="SF">Wolfe Tone Society</div>
+			<div id="WTS" data-ila-id="199" data-start="1964" data-row="46" data-links="SF">Wolfe Tone Society</div>
 
-			<div id="Int" data-ila-id="67" data-start="1965" data-row="46" data-become="ICM-ML">The Internationalists</div>
-			<div id="ICM-ML" data-ila-id="67" data-start="1969" data-row="46" data-become="CPI-ML">Irish Communist Movement (Marxist-Leninist)</div>
-			<div id="CPI-ML" data-ila-id="67" data-start="1972" data-row="46" data-end="2003">Communist Party of Ireland (Marxist-Leninist) (CPI-ML)</div>
-			<div id="AIAI" data-ila-id="3777" data-start="2017" data-row="46" data-colour="#1c882c">Anti-Imperialist Action Ireland</div>
+			<div id="Int" data-ila-id="67" data-start="1965" data-row="47" data-become="ICM-ML">The Internationalists</div>
+			<div id="ICM-ML" data-ila-id="67" data-start="1969" data-row="47" data-become="CPI-ML">Irish Communist Movement (Marxist-Leninist)</div>
+			<div id="CPI-ML" data-ila-id="67" data-start="1972" data-row="47" data-end="2003">Communist Party of Ireland (Marxist-Leninist) (CPI-ML)</div>
+			<div id="AIAI" data-ila-id="3777" data-start="2017" data-row="47" data-colour="#1c882c">Anti-Imperialist Action Ireland</div>
 
-			<div id="PUP" data-ila-id="233" data-start="1979" data-row="47" data-colour="#022a68">Progressive Unionist Party</div>
+			<div id="PUP" data-ila-id="233" data-start="1979" data-row="48" data-colour="#022a68">Progressive Unionist Party</div>
 		</div><!--diagram-->
 			
 		<div class="controls">
