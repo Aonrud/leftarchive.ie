@@ -1,6 +1,6 @@
 *~
 .directory
 .env
-manifest/
+manifest/config.php
 node_modules/
 install/
