@@ -1,0 +1,99 @@
+[submodule "site/workspace"]
+	path = site/workspace
+	url = git@github.com:Aonrud/ila-workspace.git
+[submodule "site/extensions/akismet"]
+	path = site/extensions/akismet
+	url = https://github.com/symphonists/akismet.git
+[submodule "site/extensions/association_field"]
+	path = site/extensions/association_field
+	url = https://github.com/symphonists/association_field.git
+[submodule "site/extensions/association_output"]
+	path = site/extensions/association_output
+	url = https://github.com/mazedigital/association_output.git
+[submodule "site/extensions/association_ui_editor"]
+	path = site/extensions/association_ui_editor
+	url = https://github.com/mazedigital/association_ui_editor.git
+[submodule "site/extensions/association_ui_selector"]
+	path = site/extensions/association_ui_selector
+	url = https://github.com/mazedigital/association_ui_selector.git
+[submodule "site/extensions/cacheabledatasource"]
+	path = site/extensions/cacheabledatasource
+	url = https://github.com/symphonists/cacheabledatasource.git
+[submodule "site/extensions/cachelite"]
+	path = site/extensions/cachelite
+	url = https://github.com/symphonists/cachelite.git
+[submodule "site/extensions/cache_management"]
+	path = site/extensions/cache_management
+	url = https://github.com/DeuxHuitHuit/cache_management.git
+[submodule "site/extensions/debugdevkit"]
+	path = site/extensions/debugdevkit
+	url = https://github.com/symphonycms/debugdevkit.git
+[submodule "site/extensions/editor_for_symphony"]
+	path = site/extensions/editor_for_symphony
+	url = https://github.com/symphonists/editor_for_symphony.git
+[submodule "site/extensions/email_template_manager"]
+	path = site/extensions/email_template_manager
+	url = https://github.com/michael-e/email_template_manager.git
+[submodule "site/extensions/entity_diagram"]
+	path = site/extensions/entity_diagram
+	url = https://github.com/symphonists/entity_diagram.git
+[submodule "site/extensions/field_metakeys"]
+	path = site/extensions/field_metakeys
+	url = https://github.com/brendo/field_metakeys.git
+[submodule "site/extensions/iframe_panel"]
+	path = site/extensions/iframe_panel
+	url = https://github.com/Aonrud/iframe_panel.git
+[submodule "site/extensions/importcsv"]
+	path = site/extensions/importcsv
+	url = https://github.com/symphonists/importcsv.git
+[submodule "site/extensions/jit_image_manipulation"]
+	path = site/extensions/jit_image_manipulation
+	url = https://github.com/symphonycms/jit_image_manipulation.git
+[submodule "site/extensions/link_preview"]
+	path = site/extensions/link_preview
+	url = https://github.com/DeuxHuitHuit/link_preview.git
+[submodule "site/extensions/maintenance_mode"]
+	path = site/extensions/maintenance_mode
+	url = https://github.com/symphonycms/maintenance_mode.git
+[submodule "site/extensions/markdown"]
+	path = site/extensions/markdown
+	url = https://github.com/symphonycms/markdown.git
+[submodule "site/extensions/multiuploadfield"]
+	path = site/extensions/multiuploadfield
+	url = https://github.com/symphonists/multiuploadfield.git
+[submodule "site/extensions/numberfield"]
+	path = site/extensions/numberfield
+	url = https://github.com/symphonycms/numberfield.git
+[submodule "site/extensions/order_entries"]
+	path = site/extensions/order_entries
+	url = https://github.com/symphonists/order_entries.git
+[submodule "site/extensions/output_field"]
+	path = site/extensions/output_field
+	url = https://github.com/symphonists/output_field.git
+[submodule "site/extensions/parenthesistabs"]
+	path = site/extensions/parenthesistabs
+	url = https://github.com/symphonists/parenthesistabs.git
+[submodule "site/extensions/profiledevkit"]
+	path = site/extensions/profiledevkit
+	url = https://github.com/symphonycms/profiledevkit.git
+[submodule "site/extensions/reflectionfield"]
+	path = site/extensions/reflectionfield
+	url = https://github.com/symphonists/reflectionfield.git
+[submodule "site/extensions/remote_datasource"]
+	path = site/extensions/remote_datasource
+	url = https://github.com/symphonycms/remote_datasource.git
+[submodule "site/extensions/search_index"]
+	path = site/extensions/search_index
+	url = https://github.com/symphonists/search_index.git
+[submodule "site/extensions/selectbox_link_field"]
+	path = site/extensions/selectbox_link_field
+	url = https://github.com/symphonycms/selectbox_link_field.git
+[submodule "site/extensions/tracker"]
+	path = site/extensions/tracker
+	url = https://github.com/symphonists/tracker.git
+[submodule "site/extensions/uniondatasource"]
+	path = site/extensions/uniondatasource
+	url = https://github.com/brendo/uniondatasource.git
+[submodule "site/extensions/xssfilter"]
+	path = site/extensions/xssfilter
+	url = https://github.com/symphonycms/xssfilter.git
