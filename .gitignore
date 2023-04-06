@@ -1,6 +1,6 @@
 *~
 .directory
-.htaccess
+.env
 manifest/
 node_modules/
 install/
