@@ -1,0 +1,6 @@
+*~
+.directory
+.htaccess
+manifest/
+node_modules/
+install/
