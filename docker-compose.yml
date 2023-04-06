@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  site:
+    image: leftarchive.ie:latest 
+    container_name: "leftarchive.ie"
+    restart: unless-stopped
+    volumes:
+      - ./workspace:/var/www/html/workspace
+    ports:
+      - "8081:80"
+  db:
+    image: mariadb:10.5
+    container_name: "leftarchive-db"
+    networks:
+      - leftarchive-db
+    volumes:
+      - leftarchive-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    restart: unless-stopped
+volumes:
+  leftarchive-db:
+networks:
+  leftarchive-db:

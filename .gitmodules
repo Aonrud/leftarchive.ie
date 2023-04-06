@@ -1,5 +1,5 @@
-[submodule "site/workspace"]
-	path = site/workspace
+[submodule "workspace"]
+	path = workspace
 	url = git@github.com:Aonrud/ila-workspace.git
 [submodule "site/extensions/akismet"]
 	path = site/extensions/akismet

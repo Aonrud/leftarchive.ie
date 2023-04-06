@@ -1,6 +1,7 @@
 *~
 .directory
 .env
+config.php
 manifest/config.php
 node_modules/
 install/
