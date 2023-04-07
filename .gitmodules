@@ -49,6 +49,7 @@
 [submodule "site/extensions/jit_image_manipulation"]
 	path = site/extensions/jit_image_manipulation
 	url = https://github.com/symphonycms/jit_image_manipulation.git
+	branch = 1.x
 [submodule "site/extensions/link_preview"]
 	path = site/extensions/link_preview
 	url = https://github.com/Aonrud/link_preview.git
