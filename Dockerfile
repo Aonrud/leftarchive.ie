@@ -19,7 +19,7 @@ RUN docker-php-ext-install \
     zip \
     gd
 
-RUN a2enmod rewrite
+RUN a2enmod rewrite headers
 
 COPY site /var/www/html
 

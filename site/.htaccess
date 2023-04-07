@@ -3,6 +3,11 @@ RewriteRule ^podcast/feed/$ https://podcast.leftarchive.ie/@ILAPodcast/feed.xml 
 RewriteRule ^podcast/([0-9]+).*$ /podcast/episode/$1/ [L,R=301]
 
 
+### Allow CORS
+<IfModule mod_headers.c>
+	Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
 ### Redirect non-www URLs to www
 RewriteCond %{HTTP_HOST} ^leftarchive.ie [NC]
 RewriteRule (.*) https://www.leftarchive.ie/$1 [L,R=301]
