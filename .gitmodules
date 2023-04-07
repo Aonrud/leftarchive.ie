@@ -93,7 +93,10 @@
 	url = https://github.com/symphonists/tracker.git
 [submodule "site/extensions/uniondatasource"]
 	path = site/extensions/uniondatasource
-	url = https://github.com/brendo/uniondatasource.git
+	url = https://github.com/Aonrud/uniondatasource.git
 [submodule "site/extensions/xssfilter"]
 	path = site/extensions/xssfilter
 	url = https://github.com/symphonycms/xssfilter.git
+[submodule "site/extensions/dashboard"]
+	path = site/extensions/dashboard
+	url = https://github.com/symphonists/dashboard.git
