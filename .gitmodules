@@ -12,7 +12,7 @@
 	url = https://github.com/mazedigital/association_output.git
 [submodule "site/extensions/association_ui_editor"]
 	path = site/extensions/association_ui_editor
-	url = https://github.com/mazedigital/association_ui_editor.git
+	url = https://github.com/Aonrud/association_ui_editor.git
 [submodule "site/extensions/association_ui_selector"]
 	path = site/extensions/association_ui_selector
 	url = https://github.com/mazedigital/association_ui_selector.git
