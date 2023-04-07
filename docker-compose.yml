@@ -5,6 +5,8 @@ services:
     image: leftarchive.ie:latest 
     container_name: "leftarchive.ie"
     restart: unless-stopped
+    networks:
+      - leftarchive-db
     volumes:
       - ./workspace:/var/www/html/workspace
     ports:
