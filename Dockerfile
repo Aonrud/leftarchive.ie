@@ -19,14 +19,17 @@ RUN docker-php-ext-install \
     zip \
     gd
 
-RUN a2enmod rewrite headers
+#Setup apache modules
+RUN a2enmod rewrite headers remoteip
+COPY remoteip.conf /etc/apache2/conf-available/remoteip.conf
+RUN a2enconf remoteip
 
+#Copy in the website and set permissions
 COPY site /var/www/html
+RUN chown -R www-data:www-data /var/www/html/manifest
+COPY config.php /var/www/html/manifest/config.php
 
+#Set up shared group with host
 RUN groupadd www-pub
 RUN groupmod -g 1002 www-pub
 RUN usermod -a -G www-pub www-data
-
-RUN chown -R www-data:www-data /var/www/html/manifest
-
-COPY config.php /var/www/html/manifest/config.php
