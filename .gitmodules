@@ -85,7 +85,7 @@
 	url = https://github.com/symphonycms/remote_datasource.git
 [submodule "site/extensions/search_index"]
 	path = site/extensions/search_index
-	url = https://github.com/symphonists/search_index.git
+	url = git@github.com:Aonrud/search_index.git
 [submodule "site/extensions/selectbox_link_field"]
 	path = site/extensions/selectbox_link_field
 	url = https://github.com/symphonycms/selectbox_link_field.git
