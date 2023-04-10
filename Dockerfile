@@ -1,5 +1,7 @@
 FROM php:7.4-apache
 
+ARG upload=128M
+
 RUN apt-get update \
     && apt-get install -y \
         git \
@@ -19,6 +21,8 @@ RUN docker-php-ext-install \
     zip \
     gd
 
+RUN echo "upload_max_filesize = $upload\npost_max_size = $upload" > /usr/local/etc/php/conf.d/uploads.ini
+    
 #Setup apache modules
 RUN a2enmod rewrite headers remoteip
 COPY remoteip.conf /etc/apache2/conf-available/remoteip.conf
