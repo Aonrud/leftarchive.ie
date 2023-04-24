@@ -12,7 +12,7 @@ services:
     ports:
       - "8081:80"
   db:
-    image: mariadb:10.5
+    image: mariadb:10.11
     container_name: "leftarchive-db"
     networks:
       - leftarchive-db
