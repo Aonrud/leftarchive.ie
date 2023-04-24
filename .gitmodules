@@ -16,12 +16,6 @@
 [submodule "site/extensions/association_ui_selector"]
 	path = site/extensions/association_ui_selector
 	url = https://github.com/mazedigital/association_ui_selector.git
-[submodule "site/extensions/cacheabledatasource"]
-	path = site/extensions/cacheabledatasource
-	url = https://github.com/symphonists/cacheabledatasource.git
-[submodule "site/extensions/cachelite"]
-	path = site/extensions/cachelite
-	url = https://github.com/symphonists/cachelite.git
 [submodule "site/extensions/cache_management"]
 	path = site/extensions/cache_management
 	url = https://github.com/DeuxHuitHuit/cache_management.git
