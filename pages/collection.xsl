@@ -148,10 +148,10 @@ Could use an indexing method with key (as per browse page) here instead?
 <xsl:template name="metadata-image">
 	<xsl:choose>
 		<xsl:when test="/data/collection-single/entry/image">
-			<xsl:apply-templates select="/data/collection-single/entry/image" mode="metadata-image-ratio" />
+			<xsl:apply-templates select="/data/collection-single/entry/image" mode="metadata-image-scale" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:apply-templates select="/data/documents-list/entry/cover-image" mode="metadata-image-ratio" />
+			<xsl:apply-templates select="/data/documents-list/entry/cover-image" mode="metadata-image-scale" />
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
