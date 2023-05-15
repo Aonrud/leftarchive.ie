@@ -4,7 +4,6 @@
 
 <xsl:import href="../utilities/layout-search.xsl"/>
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
-<xsl:import href="../utilities/layout-share.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
@@ -75,10 +74,6 @@
 						
 						<tr><th scope="row"><span class="fas fa-comment fa-fw"></span> Discuss:</th><td><a href="#comments">Comments on <xsl:value-of select="name" /></a></td></tr>
 					</table>
-					<xsl:call-template name="share-links">
-						<xsl:with-param name="title"><xsl:value-of select="name" /> in the Irish Left Archive</xsl:with-param>
-						<xsl:with-param name="alignment">right</xsl:with-param>
-					</xsl:call-template>
 
 				</div><!--col-->
 

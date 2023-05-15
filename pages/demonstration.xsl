@@ -4,7 +4,6 @@
 
 <xsl:import href="../utilities/layout-search.xsl"/>
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
-<xsl:import href="../utilities/layout-share.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/section-demonstrations.xsl"/>
@@ -89,11 +88,6 @@
 					</li>
 				</ul>
 				<footer>
-					<xsl:call-template name="share-links">
-						<xsl:with-param name="title"><xsl:value-of select="$formatted-date" />: <xsl:value-of select="/data/demonstration-single/entry/name" /> — Snapshots of Political Action</xsl:with-param>
-						<xsl:with-param name="alignment">right</xsl:with-param>
-						<xsl:with-param name="hashtag" select="'#SnapshotsOfPoliticalAction'" />
-					</xsl:call-template>
 					<p><i>Snapshots of Political Action, from <a href="#">Irish Election Literature <span class="fas fa-external-link-alt"></span></a> and the <b>Irish Left Archive</b>.</i></p>
 				</footer>
 			</div>

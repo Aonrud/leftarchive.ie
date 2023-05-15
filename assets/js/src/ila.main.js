@@ -125,26 +125,7 @@ $(document).ready(function(){
   
   //Trigger tooltips
   $('a[data-toggle="tooltip"]').tooltip().click(function() { return false; });
-  
-  //Index - exclude no-materials entries
-//   $("#no-materials-exclude").click( function() {
-// 	$(".no-materials").closest("li").toggle();
-// 	$(this).toggleClass("exclude");
-// 	if ($(this).hasClass("exclude")) {
-// 			$(this).text("Show entries with no current archive materials");
-// 		} else {
-// 			$(this).text("Hide entries with no current archive materials");
-// 		}
-// 	return false;
-//   });
-  
-  /* Register share clicks */
-  $("ul.share a").click( function() {
-		var item = $(this).data("item"),
-		medium = $(this).data("medium");
-		_paq.push(['trackEvent', 'Social Share', medium+' Click', item]);
-  });
-  
+
   //Enable the overlay
   if (document.body.classList.contains("t-image-overlay")) {
 	  const iv = new ila.ImageViewer({

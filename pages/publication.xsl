@@ -4,7 +4,6 @@
 
 <xsl:import href="../utilities/layout-search.xsl"/>
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
-<xsl:import href="../utilities/layout-share.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
@@ -137,10 +136,6 @@
 							<td><a href="#comments" property="schema:discussionUrl">Comments on this publication</a></td>
 						</tr>
 					</table>
-					<xsl:call-template name="share-links">
-						<xsl:with-param name="title"><xsl:value-of select="name" /> in the Irish Left Archive</xsl:with-param>
-						<xsl:with-param name="alignment">right</xsl:with-param>
-					</xsl:call-template>
 				</div><!--col-->
 			</div><!--row-->
 		</div><!--page-fields-->

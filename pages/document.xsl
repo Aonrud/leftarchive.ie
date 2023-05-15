@@ -9,7 +9,6 @@
 <xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/meta-notices.xsl"/>
 <xsl:import href="../utilities/metadata-coins.xsl"/>
-<xsl:import href="../utilities/layout-share.xsl"/>
 <xsl:import href="../utilities/general-ordinals.xsl"/>
 <xsl:import href="../utilities/section-subjects.xsl"/>
 <xsl:import href="../utilities/section-demonstrations.xsl"/>
@@ -105,11 +104,6 @@
 		</table>
 
 		<xsl:call-template name="metadata-coins" />
-
-		<xsl:call-template name="share-links">
-			<xsl:with-param name="title"><xsl:value-of select="document-single/entry/name" /><xsl:if test="document-single/entry/subtitle">: <xsl:value-of select="document-single/entry/subtitle" /></xsl:if></xsl:with-param>
-			<xsl:with-param name="alignment">right</xsl:with-param>
-		</xsl:call-template>
 		
 		<p>
             <em><strong>Please note:</strong>&#160;

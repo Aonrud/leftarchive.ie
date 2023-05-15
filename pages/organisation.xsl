@@ -11,7 +11,6 @@
 <!--Main page templates-->
 <xsl:import href="../utilities/layout-search.xsl"/>
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
-<xsl:import href="../utilities/layout-share.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
 
 <!--Entry part temlates-->
@@ -116,10 +115,6 @@
 							<td><a href="#comments">Comments on this organisation</a></td>
 						</tr>
 					</table>
-					<xsl:call-template name="share-links">
-						<xsl:with-param name="title"><xsl:value-of select="name" /> in the Irish Left Archive</xsl:with-param>
-						<xsl:with-param name="alignment">right</xsl:with-param>
-					</xsl:call-template>
 				</div>
 			</div><!--row-->
 		</div><!--Page fields-->
