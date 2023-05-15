@@ -171,6 +171,19 @@
 	<xsl:value-of select="$full-title" />
 </xsl:template>
 
+
+<xsl:template name="canonical-url">
+	<xsl:choose>
+		<xsl:when test="/data/params/series != ''">
+			<xsl:text>https://podcast.leftarchive.ie/@ILAPodcast/episodes?season=</xsl:text>
+			<xsl:value-of select="substring-after(/data/params/series, 'series-')" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="/data/params/current-url" />/
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:template>
+
 <xsl:template name="metadata-general">
 	<!--TODO: Need to create a HTML output source of the escaped description in order to apply templates to the result-->
 	<xsl:variable name="description"><xsl:value-of select="/data/podcast-rss-feed/rss/channel/description" /></xsl:variable>
