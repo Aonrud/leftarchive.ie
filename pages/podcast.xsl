@@ -179,7 +179,8 @@
 			<xsl:value-of select="substring-after(/data/params/series, 'series-')" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="/data/params/current-url" />/
+			<xsl:value-of select="/data/params/current-url" />
+			<xsl:text>/</xsl:text>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
