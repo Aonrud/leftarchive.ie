@@ -109,10 +109,46 @@
 <xsl:template name="force-number">
     <xsl:param name="string" />
     <xsl:param name="default" select="'0'" />
-
+    
     <xsl:choose>
         <xsl:when test="number($string) = $string"><xsl:value-of select="$string" /></xsl:when>
         <xsl:otherwise><xsl:value-of select="$default" /></xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+
+
+<!-- Makes a sentence-formatted list from a space-separated list of words.
+     Adds commas between each, and 'and' before the final one.
+     TODO: This is crude – it doesn't handle multiple consecutive spaces or trailing spaces.
+-->
+<xsl:template name="make-list">
+    <xsl:param name="string" />
+    <xsl:param name="delimiter" select="' '" />
+    
+    <xsl:variable name="separator">
+        <xsl:choose>
+            <!--Ignore leading space-->
+            <xsl:when test="string-length(substring-before($string, $delimiter)) = 0"></xsl:when>
+            <xsl:when test="contains(substring-after($string, $delimiter), $delimiter)">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text> and </xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    
+    <xsl:choose>
+        <xsl:when test="contains($string, $delimiter)">
+            <xsl:value-of select="substring-before($string, $delimiter)" />
+            <xsl:value-of select="$separator" />
+            <xsl:call-template name="make-list">
+                <xsl:with-param name="string" select="substring-after($string, $delimiter)" />
+            </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="$string" />
+        </xsl:otherwise>
     </xsl:choose>
 </xsl:template>
 

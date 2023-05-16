@@ -4,6 +4,7 @@
 
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/general-datetime.xsl"/>
+<xsl:import href="../utilities/general-strings.xsl"/>
 <xsl:import href="../utilities/section.xsl"/>
 
 <xsl:output method="html" omit-xml-declaration="yes" indent="no" />
@@ -12,30 +13,30 @@
 	<header class="page-header">
 		<h1>Calendar of Events <small>Showing events, documents, demonstrations and subjects from each day of the year</small></h1>
 	</header>
-	<ul class="list-inline">
+	<ul class="list-inline text-muted">
 		<li>
 			<xsl:call-template name="section-icon">
 				<xsl:with-param name="section" select="'calendar-events'" />
 			</xsl:call-template>
-			<xsl:text> = Historical Events</xsl:text>
+			<xsl:text>Historical Events</xsl:text>
 		</li>
 		<li>
 			<xsl:call-template name="section-icon">
 				<xsl:with-param name="section" select="'documents'" />
 			</xsl:call-template>
-			<xsl:text> = Documents Published</xsl:text>
+			<xsl:text>Documents Published</xsl:text>
 		</li>
 		<li>
 			<xsl:call-template name="section-icon">
 				<xsl:with-param name="section" select="'demonstrations'" />
 			</xsl:call-template>
-			<xsl:text> = Demonstrations</xsl:text>
+			<xsl:text>Demonstrations</xsl:text>
 		</li>
 		<li>
 			<xsl:call-template name="section-icon">
 				<xsl:with-param name="section" select="'subjects'" />
 			</xsl:call-template>
-			<xsl:text> = Subject Headings</xsl:text>
+			<xsl:text>Subject Headings</xsl:text>
 		</li>
 	</ul>
 	<div class="calendar">
@@ -93,12 +94,12 @@
 		<xsl:value-of select="count(/data/calendar-events-list/entry[contains(date, $date-match)])" />
 	</xsl:variable>
 	
-	<xsl:variable name="docs-count">
-		<xsl:value-of select="count(/data/documents-fixed-date/entry[month = $month and day = $current])" />
-	</xsl:variable>
-		
 	<xsl:variable name="demonstrations-count">
 		<xsl:value-of select="count(/data/demonstrations-list/entry[contains(date, $date-match)])" />
+	</xsl:variable>
+	
+	<xsl:variable name="documents-count">
+		<xsl:value-of select="count(/data/documents-fixed-date/entry[month = $month and day = $current])" />
 	</xsl:variable>
 	
 	<xsl:variable name="subjects-count">
@@ -106,9 +107,30 @@
 	</xsl:variable>
 	
 	<li>
-		<a href="/on-this-day/{format-number($month, '00')}/{format-number($current, '00')}/" data-events="{$events-count}" data-documents="{$docs-count}" data-demonstrations="{$demonstrations-count}" data-subjects="{$subjects-count}" data-total="{$events-count + $docs-count + $demonstrations-count + $subjects-count}">
-			<xsl:attribute name="data-date"><xsl:value-of select="format-number($month, '00')" />/<xsl:value-of select="format-number($current, '00')" /></xsl:attribute>
-			<xsl:value-of select="format-number($current, '00')" />
+		<a href="/on-this-day/{format-number($month, '00')}/{format-number($current, '00')}/" data-events="{$events-count}" data-demonstrations="{$demonstrations-count}" data-documents="{$documents-count}" data-subjects="{$subjects-count}" data-total="{$events-count + $documents-count + $demonstrations-count + $subjects-count}">
+			<xsl:attribute name="data-date">
+				<xsl:value-of select="format-number($month, '00')" />/<xsl:value-of select="format-number($current, '00')" />
+			</xsl:attribute>
+			<xsl:if test="$events-count + $documents-count + $demonstrations-count + $subjects-count != 0">
+				<xsl:attribute name="title">
+					<xsl:text> View </xsl:text>
+					<xsl:call-template name="make-list">
+						<xsl:with-param name="string">
+							<xsl:if test="$events-count != 0"> events</xsl:if>
+							<xsl:if test="$demonstrations-count != 0"> demonstrations</xsl:if>
+							<xsl:if test="$documents-count != 0"> documents</xsl:if>
+							<xsl:if test="$subjects-count != 0"> subjects</xsl:if>
+						</xsl:with-param>
+					</xsl:call-template>
+					<xsl:text> from </xsl:text>
+					<xsl:call-template name="format-date">
+						<xsl:with-param name="date">1900-<xsl:value-of select="format-number($month, '00')" />-<xsl:value-of select="format-number($current, '00')" /></xsl:with-param>
+						<xsl:with-param name="format" select="'D M'" />
+					</xsl:call-template>
+				</xsl:attribute>
+			</xsl:if>
+			
+			<div><xsl:value-of select="format-number($current, '00')" /></div>
 			
 			<ul class="indicators">
 				<li class="events">
@@ -116,14 +138,14 @@
 						<xsl:with-param name="section" select="'calendar-events'" />
 					</xsl:call-template>
 				</li>
-				<li class="documents">
-					<xsl:call-template name="section-icon">
-						<xsl:with-param name="section" select="'documents'" />
-					</xsl:call-template>
-				</li>
 				<li class="demonstrations">
 					<xsl:call-template name="section-icon">
 						<xsl:with-param name="section" select="'demonstrations'" />
+					</xsl:call-template>
+				</li>
+				<li class="documents">
+					<xsl:call-template name="section-icon">
+						<xsl:with-param name="section" select="'documents'" />
 					</xsl:call-template>
 				</li>
 				<li class="subjects">
