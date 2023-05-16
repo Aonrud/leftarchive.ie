@@ -49,6 +49,7 @@
         <li><a href="/browse/people/" title="Browse people">People</a></li>
         <li><a href="/browse/subjects/" title="Browse subject headings">Subjects</a></li>
         <li><a href="/on-this-day/" title="Events from this date in history">On This Day</a></li>
+        <li><a href="/on-this-day/calendar/" title="Calendar of historical events and documents">Calendar</a></li>
 	</ul>
 	
 	<h4><span class="fas fa-code-branch fa-fw"></span> Timeline</h4>
