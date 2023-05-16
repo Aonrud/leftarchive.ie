@@ -53,21 +53,22 @@
 		<xsl:value-of select="count(/data/calendar-events-list/entry[contains(date, $match)])" />
 	</xsl:variable>
 	
-	<section class="month">
-		<header>
-			<h3>
+	<details class="month">
+		<summary>
+			<p>
 				<xsl:call-template name="format-month">
 					<xsl:with-param name="month" select="format-number($current, '00')" />
 					<xsl:with-param name="format" select="'M'" />
 				</xsl:call-template>
-			</h3>
-		</header>
+			</p>
+			<span class="summary-btn" aria-hidden="true"></span>
+		</summary>
 		<ul class="days">
 			<xsl:call-template name="days">
 				<xsl:with-param name="month" select="$current" />
 			</xsl:call-template>
 		</ul>
-	</section>
+	</details>
 	
 	<xsl:if test="$current &lt; $months">
 		<xsl:call-template name="calendar">
