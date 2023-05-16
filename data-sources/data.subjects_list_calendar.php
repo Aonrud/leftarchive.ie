@@ -1,8 +1,8 @@
 <?php
 
-class datasourcecalendar_events_list extends SectionDatasource
+class datasourcesubjects_list_calendar extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'calendar-events-list';
+    public $dsParamROOTELEMENT = 'subjects-list-calendar';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,46 +10,42 @@ class datasourcecalendar_events_list extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'linked'
-    );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '396' => '{$ds-extracts-list.system-id}',
-        '397' => 'Published',
+        'system:id' => 'not:{$ds-calendar-events-list.linked}',
+        '310' => 'sql: NULL',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name',
-        'date',
-        'inline'
+        'date'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-extracts-list.system-id');
+        $this->_dependencies = array('$ds-calendar-events-list.linked');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Calendar Events - List',
+            'name' => 'Subjects - List - Calendar',
             'author' => array(
                 'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-05-16T11:03:51+00:00'
+            'release-date' => '2023-05-16T11:08:16+00:00'
         );
     }
 
     public function getSource()
     {
-        return '44';
+        return '31';
     }
 
     public function allowEditorToParse()

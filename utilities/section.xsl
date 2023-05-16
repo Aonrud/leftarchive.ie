@@ -83,6 +83,7 @@
             <xsl:when test="$section-id = '41' or $section = 'podcast'">fa-microphone-alt</xsl:when>
             <xsl:when test="$section-id = '46' or $section = 'demonstrations'">fa-bullhorn</xsl:when>
             <xsl:when test="$section-id = '47' or $section = 'places'">fa-map</xsl:when>
+            <xsl:when test="$section-id = '44' or $section = 'calendar-events'">fa-calendar</xsl:when>
         </xsl:choose>
     </xsl:variable>
     

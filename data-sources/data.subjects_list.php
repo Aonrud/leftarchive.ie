@@ -37,11 +37,11 @@ class datasourcesubjects_list extends SectionDatasource
         return array(
             'name' => 'Subjects - List',
             'author' => array(
-                'name' => 'Aonrud',
-                'website' => 'https://www.clririshleftarchive.org',
+                'name' => 'Aon Rud',
+                'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
-            'version' => 'Symphony 2.7.3',
-            'release-date' => '2018-05-06T12:05:24+00:00'
+            'version' => 'Symphony 2.7.10',
+            'release-date' => '2023-05-16T11:02:55+00:00'
         );
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-class datasourcecalendar_events_list extends SectionDatasource
+class datasourcedocuments_fixed_date extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'calendar-events-list';
+    public $dsParamROOTELEMENT = 'documents-fixed-date';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,46 +10,43 @@ class datasourcecalendar_events_list extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'linked'
-    );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '396' => '{$ds-extracts-list.system-id}',
-        '397' => 'Published',
+        '225' => 'greater than 0',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name',
-        'date',
-        'inline'
+        'year',
+        'month',
+        'day'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-extracts-list.system-id');
+        $this->_dependencies = array();
     }
 
     public function about()
     {
         return array(
-            'name' => 'Calendar Events - List',
+            'name' => 'Documents - Fixed Date',
             'author' => array(
                 'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-05-16T11:03:51+00:00'
+            'release-date' => '2023-05-16T09:11:34+00:00'
         );
     }
 
     public function getSource()
     {
-        return '44';
+        return '6';
     }
 
     public function allowEditorToParse()

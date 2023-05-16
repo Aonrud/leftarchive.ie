@@ -52,7 +52,7 @@ class datasourcedemonstrations_list extends SectionDatasource
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-02-08T11:12:20+00:00'
+            'release-date' => '2023-05-16T10:40:39+00:00'
         );
     }
 
