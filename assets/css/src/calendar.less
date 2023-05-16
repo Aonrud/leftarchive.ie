@@ -120,7 +120,7 @@ ul.days {
 		&:not([data-documents="0"]) li.documents,
 		&:not([data-demonstrations="0"]) li.demonstrations,
 		&:not([data-subjects="0"]) li.subjects {
-			color: @main;
+			color: lighten(@grey-base, 75%);
 		}
 	}
 }
@@ -130,8 +130,7 @@ ul.indicators {
 	width: 100%;
 	padding: 0;
 	font-size: 0.7142857em;
-	color: lighten(@grey-base, 75%);
-	opacity: 0.75;
+	color: @mainSoft;
 	display: flex;
 	li {
 		flex: 0 0 25%;
