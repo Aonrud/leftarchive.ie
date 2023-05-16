@@ -15,7 +15,6 @@ class datasourcesubjects_list_calendar extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        'system:id' => 'not:{$ds-calendar-events-list.linked}',
         '310' => 'sql: NULL',
     );
 
@@ -27,7 +26,7 @@ class datasourcesubjects_list_calendar extends SectionDatasource
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-calendar-events-list.linked');
+        $this->_dependencies = array();
     }
 
     public function about()
@@ -39,7 +38,7 @@ class datasourcesubjects_list_calendar extends SectionDatasource
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-05-16T11:08:16+00:00'
+            'release-date' => '2023-05-16T17:41:04+00:00'
         );
     }
 
