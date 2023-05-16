@@ -33,9 +33,6 @@ class datasourcesubject_single extends SectionDatasource
         'include-in',
         'linked',
         'date',
-        'year',
-        'month',
-        'day',
         'links'
     );
 
@@ -50,11 +47,11 @@ class datasourcesubject_single extends SectionDatasource
         return array(
             'name' => 'Subject - Single',
             'author' => array(
-                'name' => 'Aonrud',
+                'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-09-09T10:02:38+00:00'
+            'release-date' => '2023-05-16T12:07:56+00:00'
         );
     }
 

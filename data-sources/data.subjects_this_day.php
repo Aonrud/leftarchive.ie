@@ -15,10 +15,8 @@ class datasourcesubjects_this_day extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        'system:id' => 'not:{$ds-calendar-events-this-day.linked}',
+        '283' => 'regexp: -{$this-month}-{$this-day}|-{$month}-{$day}',
         '310' => 'sql: NULL',
-        '316' => '{$month:$this-month}',
-        '317' => '{$day:$this-day}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -33,7 +31,7 @@ class datasourcesubjects_this_day extends SectionDatasource
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-calendar-events-this-day.linked');
+        $this->_dependencies = array();
     }
 
     public function about()
@@ -41,11 +39,11 @@ class datasourcesubjects_this_day extends SectionDatasource
         return array(
             'name' => 'Subjects - This Day',
             'author' => array(
-                'name' => 'Aonrud',
+                'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2022-06-08T13:44:03+00:00'
+            'release-date' => '2023-05-16T12:06:38+00:00'
         );
     }
 
