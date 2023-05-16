@@ -229,7 +229,10 @@
 	</xsl:variable>
 	<dt>
 		<span class="fas fa-{$icon}"></span>&#160;
-		<xsl:value-of select="year" />
+		<xsl:call-template name="format-date">
+			<xsl:with-param name="date" select="date" />
+			<xsl:with-param name="format" select="'Y'" />
+		</xsl:call-template>
 	</dt>
 	<dd><a href="/subject/{@id}/"><xsl:value-of select="name" /></a></dd>
 </xsl:template>

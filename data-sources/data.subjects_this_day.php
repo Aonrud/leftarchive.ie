@@ -10,22 +10,20 @@ class datasourcesubjects_this_day extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'year';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '283' => 'regexp: -{$this-month}-{$this-day}|-{$month}-{$day}',
         '310' => 'sql: NULL',
+        '283' => 'regexp: -{$this-month}-{$this-day}|-{$month}-{$day}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name',
         'group',
         'summary: formatted',
-        'year',
-        'month',
-        'day'
+        'date'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -43,7 +41,7 @@ class datasourcesubjects_this_day extends SectionDatasource
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-05-16T12:06:38+00:00'
+            'release-date' => '2023-05-16T14:06:23+00:00'
         );
     }
 
