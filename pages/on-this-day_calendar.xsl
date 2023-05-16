@@ -22,15 +22,15 @@
 		</li>
 		<li>
 			<xsl:call-template name="section-icon">
-				<xsl:with-param name="section" select="'documents'" />
-			</xsl:call-template>
-			<xsl:text>Documents Published</xsl:text>
-		</li>
-		<li>
-			<xsl:call-template name="section-icon">
 				<xsl:with-param name="section" select="'demonstrations'" />
 			</xsl:call-template>
 			<xsl:text>Demonstrations</xsl:text>
+		</li>
+		<li>
+			<xsl:call-template name="section-icon">
+				<xsl:with-param name="section" select="'documents'" />
+			</xsl:call-template>
+			<xsl:text>Documents Published</xsl:text>
 		</li>
 		<li>
 			<xsl:call-template name="section-icon">
