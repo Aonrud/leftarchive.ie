@@ -144,7 +144,7 @@
 </xsl:template>
 
 <xsl:template name="page-title">
-	Calendar of Events
+	Calendar of Events — Irish Left Archive
 </xsl:template>
 
 <xsl:template name="metadata-general">
