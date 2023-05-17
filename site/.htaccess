@@ -2,6 +2,7 @@
 RewriteRule ^podcast/feed/$ https://podcast.leftarchive.ie/@ILAPodcast/feed.xml [L,R=301]
 RewriteRule ^podcast/([0-9]+).*$ /podcast/episode/$1/ [L,R=301]
 
+RewriteRule ^on-this-day/(.*)$ /calendar/on-this-day/$1 [L,R=301]
 
 ### Allow CORS
 <IfModule mod_headers.c>
