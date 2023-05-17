@@ -108,7 +108,7 @@
 	</xsl:variable>
 	
 	<li>
-		<a href="/on-this-day/{format-number($month, '00')}/{format-number($current, '00')}/" data-events="{$events-count}" data-demonstrations="{$demonstrations-count}" data-documents="{$documents-count}" data-subjects="{$subjects-count}" data-total="{$events-count + $documents-count + $demonstrations-count + $subjects-count}">
+		<a href="/calendar/on-this-day/{format-number($month, '00')}/{format-number($current, '00')}/" data-events="{$events-count}" data-demonstrations="{$demonstrations-count}" data-documents="{$documents-count}" data-subjects="{$subjects-count}" data-total="{$events-count + $documents-count + $demonstrations-count + $subjects-count}">
 			<xsl:attribute name="data-date">
 				<xsl:value-of select="format-number($month, '00')" />/<xsl:value-of select="format-number($current, '00')" />
 			</xsl:attribute>
@@ -182,19 +182,10 @@
 <xsl:template name="breadcrumb-contents">
 	<xsl:call-template name="breadcrumb-list-item">
 		<xsl:with-param name="name">
-			<xsl:text>On This Day</xsl:text>
-		</xsl:with-param>
-		<xsl:with-param name="link">/on-this-day/</xsl:with-param>
-		<xsl:with-param name="position" select="'2'" />
-		<xsl:with-param name="active" select="'No'" />
-	</xsl:call-template>
-	
-	<xsl:call-template name="breadcrumb-list-item">
-		<xsl:with-param name="name">
 			<xsl:text>Calendar</xsl:text>
 		</xsl:with-param>
-		<xsl:with-param name="link">/on-this-day/calendar/</xsl:with-param>
-		<xsl:with-param name="position" select="'3'" />
+		<xsl:with-param name="link">/calendar/</xsl:with-param>
+		<xsl:with-param name="position" select="'2'" />
 		<xsl:with-param name="active" select="'Yes'" />
 	</xsl:call-template>
 </xsl:template>

@@ -56,7 +56,7 @@
 	<meta name="validity" value="{$date-valid}" />
 	<xsl:if test="$date-valid = 'No'">
 		<xsl:call-template name="redirect">
-			<xsl:with-param name="url" select="'/on-this-day/'" />
+			<xsl:with-param name="url" select="'/calendar/on-this-day/'" />
 		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
@@ -284,7 +284,7 @@
 	</xsl:variable>
 	<div class="text-center">
 		<div class="btn-group" role="group">
-			<a href="/on-this-day/{$prev}" class="btn btn-default">
+			<a href="/calendar/on-this-day/{$prev}" class="btn btn-default">
 				<span class="fas fa-arrow-left"></span>&#160;
 				<xsl:call-template name="format-date">
 					<xsl:with-param name="date"><xsl:value-of select="/data/params/this-year" />-<xsl:value-of select="$prev" /></xsl:with-param>
@@ -294,7 +294,7 @@
 			<span class="btn btn-default disabled">
 				<xsl:value-of select="$display-date" />
 			</span>
-			<a href="/on-this-day/{$next}" class="btn btn-default">
+			<a href="/calendar/on-this-day/{$next}" class="btn btn-default">
 				<xsl:call-template name="format-date">
 					<xsl:with-param name="date"><xsl:value-of select="/data/params/this-year" />-<xsl:value-of select="$next" /></xsl:with-param>
 					<xsl:with-param name="format" select="'D M'" />
@@ -320,12 +320,19 @@
 
 <xsl:template name="breadcrumb-contents">
 	<xsl:call-template name="breadcrumb-list-item">
+		<xsl:with-param name="name" select="'Calendar'" />
+		<xsl:with-param name="link">/calendar/</xsl:with-param>
+		<xsl:with-param name="position" select="'2'" />
+		<xsl:with-param name="active" select="'No'" />
+	</xsl:call-template>
+	
+	<xsl:call-template name="breadcrumb-list-item">
 		<xsl:with-param name="name">
 			<xsl:text>On This Day</xsl:text>
 			<xsl:if test="$date != concat(/data/params/this-month, '-', /data/params/this-day)">: <xsl:value-of select="$display-date" /></xsl:if>
 		</xsl:with-param>
-		<xsl:with-param name="link">/on-this-day/</xsl:with-param>
-		<xsl:with-param name="position" select="'2'" />
+		<xsl:with-param name="link">/calendar/on-this-day/</xsl:with-param>
+		<xsl:with-param name="position" select="'3'" />
 		<xsl:with-param name="active" select="'Yes'" />
 	</xsl:call-template>
 </xsl:template>

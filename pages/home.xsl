@@ -190,12 +190,12 @@
                 <ul>
                     <xsl:if test="/data/documents-this-day/entry">
                         <li>
-                            <xsl:call-template name="section-icon"><xsl:with-param name="section" select="'documents'" /></xsl:call-template><a href="/on-this-day/#documents">Documents published on <xsl:value-of select="$display-date" /></a>
+                            <xsl:call-template name="section-icon"><xsl:with-param name="section" select="'documents'" /></xsl:call-template><a href="/calendar/on-this-day/#documents">Documents published on <xsl:value-of select="$display-date" /></a>
                         </li>
                     </xsl:if>
                     <xsl:if test="/data/subjects-this-day/entry">
                     <li>
-                        <xsl:call-template name="section-icon"><xsl:with-param name="section" select="'Subjects'" /></xsl:call-template><a href="/on-this-day/#subjects">Subject headings from <xsl:value-of select="$display-date" /></a>
+                        <xsl:call-template name="section-icon"><xsl:with-param name="section" select="'Subjects'" /></xsl:call-template><a href="/calendar/on-this-day/#subjects">Subject headings from <xsl:value-of select="$display-date" /></a>
                     </li>
                     </xsl:if>
                 </ul>
@@ -207,7 +207,7 @@
 
 <xsl:template match="calendar-events-this-day/entry|demonstrations-this-day/entry">
     <div class="otd-entry">
-        <a href="/on-this-day/#event-{@id}">
+        <a href="/calendar/on-this-day/#event-{@id}">
             <div class="label label-primary">
                 <xsl:call-template name="format-date">
                     <xsl:with-param name="date" select="date" />

@@ -381,7 +381,7 @@
 <xsl:template match="entry[../section/@handle = 'calendar-events']|item[@section-handle = 'calendar-events']" mode="entry-url">
 	<xsl:param name="absolute" select="'No'" />
 	<xsl:if test="$absolute = 'Yes'"><xsl:value-of select="/data/params/root" /></xsl:if>
-	<xsl:text>/on-this-day/</xsl:text>
+	<xsl:text>/calendar/on-this-day/</xsl:text>
 	<xsl:call-template name="format-date">
 		<xsl:with-param name="date" select="date/@iso" />
 		<xsl:with-param name="format" select="'n/d/'" />

@@ -91,12 +91,12 @@
 								<a href="/articles/">Articles</a>
 							</li>
 							<li>
-								<xsl:if test="/data/params/current-page-id = 66"><xsl:attribute name="class">active</xsl:attribute></xsl:if>
-								<a href="/on-this-day/">On This Day</a>
+								<xsl:if test="/data/params/current-page-id = 73"><xsl:attribute name="class">active</xsl:attribute></xsl:if>
+								<a href="/calendar/">Calendar</a>
 							</li>
 							<li>
-								<xsl:if test="/data/params/current-page-id = 73"><xsl:attribute name="class">active</xsl:attribute></xsl:if>
-								<a href="/on-this-day/calendar/">Calendar</a>
+								<xsl:if test="/data/params/current-page-id = 66"><xsl:attribute name="class">active</xsl:attribute></xsl:if>
+								<a href="/calendar/on-this-day/">On This Day</a>
 							</li>
 							<li>
 								<xsl:if test="/data/params/current-page-id = 55"><xsl:attribute name="class">active</xsl:attribute></xsl:if>
