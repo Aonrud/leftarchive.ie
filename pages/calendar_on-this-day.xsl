@@ -84,6 +84,8 @@
 		</h1>
 	</div>
 	
+	<p class="text-right"><a href="/calendar" class="btn btn-success"><i class="fas fa-calendar-alt"></i> Full Calendar</a></p>
+	
 	<xsl:choose>
 		<xsl:when test="$date-valid = 'No'">
 			<div class="alert alert-danger"><span class="fas fa-exclamation"></span> Invalid date in URL. Returning to main page.</div>
