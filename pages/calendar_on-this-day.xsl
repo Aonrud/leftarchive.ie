@@ -74,7 +74,7 @@
 
 <xsl:template match="/data">
 	<xsl:variable name="total">
-		<xsl:value-of select="count(calendar-events-this-day/entry[contains(date, $date)]|demonstrations-this-day/entry[contains(date, $date)]|subjects-this-day[entry]|documents-this-day[entry])" />
+		<xsl:value-of select="count(calendar-events-this-day/entry[contains(date, $date)]|demonstrations-this-day/entry[contains(date, $date)]|subjects-this-day/entry[contains(date, $date)]|documents-this-day[entry])" />
 	</xsl:variable>
 
 	<div class="page-header">
@@ -99,14 +99,14 @@
 							<xsl:apply-templates select="calendar-events-this-day/entry[contains(date, $date)]" mode="event-list" />
 							<xsl:apply-templates select="demonstrations-this-day/entry[contains(date, $date)]" mode="event-list" />
 							<xsl:apply-templates select="documents-this-day[entry]" mode="event-list" />
-							<xsl:apply-templates select="subjects-this-day[entry]" mode="event-list" />
+							<xsl:apply-templates select="subjects-this-day[contains(entry/date, $date)]" mode="event-list" />
 						</ul>
 					</xsl:if>
 					
 					<xsl:apply-templates select="calendar-events-this-day/entry[contains(date, $date)]" mode="event-article" />
 					<xsl:apply-templates select="demonstrations-this-day/entry[contains(date, $date)]" mode="event-article" />
 					<xsl:apply-templates select="documents-this-day[entry]" />
-					<xsl:apply-templates select="subjects-this-day[entry]" />
+					<xsl:apply-templates select="subjects-this-day[contains(entry/date, $date)]" />
 					
 					<xsl:call-template name="date-next-prev" />
 				</div>
@@ -215,7 +215,7 @@
 		</header>
 		<section>
 			<dl>
-				<xsl:apply-templates select="entry" />
+				<xsl:apply-templates select="entry[contains(date, $date)]" />
 			</dl>
 		</section>
 	</article>
