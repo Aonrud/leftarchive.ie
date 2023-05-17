@@ -4,6 +4,8 @@
 	align-content: start;
 	position: relative;
 	min-height: 41em;
+	overflow: hidden;
+	
 	details {
 		width: 25%;
 		padding: 0.5em;
@@ -11,17 +13,21 @@
 			display: none;
 		}
 		summary {
-			display: flex;
-			align-items: center;
+			padding-top: 2em;
 			font-size: 1.2em;
 			font-weight: 700;
 			cursor: pointer;
-			height: 10em;
+			height: 8em;
 			text-align: center;
 			color: @grey-light;
 			border: 1px solid #ccc;
 			border-radius: 3px;
-			transition: all 0.1s ease-in;
+			//Encodes 'assets/images/calendar-bg.svg'
+			background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSLzIwMDEvUkVDLVNWRy0yMDAxMDkwNC9EVEQvc3ZnMTAuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTkwIDE5MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CjxnIGlkPSJsYXllcjAiPgogIDxsaW5lIHgxPSI1IiB4Mj0iMTg1IiB5MT0iNjUiIHkyPSI2NSIgc3Ryb2tlPSIjZWVlIiBzdHJva2Utd2lkdGg9IjEiIC8+CiAgPGxpbmUgeDE9IjUiIHgyPSIxODUiIHkxPSIxMjUiIHkyPSIxMjUiIHN0cm9rZT0iI2VlZSIgc3Ryb2tlLXdpZHRoPSIxIiAvPiAgCiAgPGxpbmUgeDE9IjY1IiB4Mj0iNjUiIHkxPSI1IiB5Mj0iMTg1IiBzdHJva2U9IiNlZWUiIHN0cm9rZS13aWR0aD0iMSIgLz4KICA8bGluZSB4MT0iMTI1IiB4Mj0iMTI1IiB5MT0iNSIgeTI9IjE4NSIgc3Ryb2tlPSIjZWVlIiBzdHJva2Utd2lkdGg9IjEiIC8+CjwvZz4KPC9zdmc+Cg==");
+			background-size: 80% 80%;
+			background-repeat: no-repeat;
+			background-position: center;
+			
 			p {
 				flex: 1;
 				margin: 0;
@@ -39,13 +45,18 @@
 		top: 0;
 		bottom: 0;
 		background: #fff;
-		transition: all 0.2s ease-in;
+		animation: 0.2s 1 reveal;
 		summary {
+			display: flex;
+			align-items: center;
 			height: 3em;
 			margin: 0;
+			padding-top: 0;
 			text-align: left;
 			color: #333;
 			border: none;
+			background-image: none;
+			
 			&:hover, &:focus {
 				background: none;
 			}
@@ -64,9 +75,6 @@
 	.calendar {
 		details {
 			width: 16.6%;
-		}
-		details[open] {
-			flex-direction: row;
 		}
 	}
 }
@@ -144,5 +152,14 @@ ul.indicators {
 	}
 	ul.indicators  {
 		font-size: 0.833em;
+	}
+}
+
+@keyframes reveal {
+	from {
+		top: -20em;
+	}
+	to {
+		top: 0;
 	}
 }
