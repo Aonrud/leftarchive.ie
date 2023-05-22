@@ -63,11 +63,11 @@
 			</p>
 			<span class="summary-btn" aria-hidden="true"></span>
 		</summary>
-		<ul class="days">
+		<ol class="days">
 			<xsl:call-template name="days">
 				<xsl:with-param name="month" select="$current" />
 			</xsl:call-template>
-		</ul>
+		</ol>
 	</details>
 	
 	<xsl:if test="$current &lt; $months">
