@@ -9,6 +9,7 @@
 <xsl:import href="../utilities/section-articles.xsl"/>
 <xsl:import href="../utilities/section-collections.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
+<xsl:import href="../utilities/section-external-listings.xsl"/>
 <xsl:import href="../utilities/general-strings.xsl"/>
 <xsl:import href="../utilities/entry-identifiers.xsl"/>
 <xsl:import href="../utilities/entry-wikipedia.xsl"/>
@@ -77,6 +78,7 @@
             <xsl:apply-templates select="/data/documents-list[entry]" />
             <xsl:apply-templates select="/data/demonstrations-list[entry]" />
             <xsl:apply-templates select="/data/articles-intro-subject[entry]" />
+            <xsl:apply-templates select="/data/external-listings[entry]" />
             <xsl:apply-templates select="links" />
         </div>
         <aside class="col-sm-4">           
@@ -265,7 +267,7 @@
 </xsl:template>
 
 <xsl:template match="subject-single/entry/links">
-    <h2>Further information / External links</h2>
+    <h2>Further Links</h2>
     <table class="identifiers">
         <xsl:apply-templates select="key" />
     </table>

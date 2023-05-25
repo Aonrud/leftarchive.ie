@@ -6,6 +6,7 @@
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
+<xsl:import href="../utilities/section-external-listings.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
 
 <xsl:output method="html" omit-xml-declaration="yes" indent="no" />
@@ -33,6 +34,9 @@
 				<ul class="list-unstyled year-list">
 				<xsl:apply-templates select="collection-single/entry/documents/item" />
 				</ul>
+				</section>
+				<section>
+					<xsl:apply-templates select="/data/external-listings[entry]" />
 				</section>
 				<xsl:apply-templates select="comments" />
 			</div>

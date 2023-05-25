@@ -10,9 +10,9 @@
 		</dl>
 	</section>
 </xsl:template>
-	
+
 <xsl:template match="external-listings/entry">
-    <dt><a href="{url}" title="{org-pub/item} at {resource/item}" class="external-link"><xsl:value-of select="name" /><span class="fas fa-external-link-alt"></span></a></dt>
+    <dt><a href="{url}" title="{linked/item} at {resource/item}" class="external-link"><xsl:value-of select="name" /><span class="fas fa-external-link-alt"></span></a></dt>
     <dd>
     <p class="text-muted"><xsl:value-of select="resource/item"/></p>
     <xsl:copy-of select="description/*" />

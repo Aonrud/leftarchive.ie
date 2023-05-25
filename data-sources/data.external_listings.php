@@ -15,12 +15,12 @@ class datasourceexternal_listings extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '209' => '{$id},{$ds-organisation-single.system-id},{$ds-organisations-minor.system-id},{$ds-publications-minor.system-id},{$ds-people-minor.system-id},{$ds-internationals-minor.system-id}',
+        '209' => '{$id},{$ds-organisation-single.system-id},{$ds-organisations-minor.system-id},{$ds-publications-minor.system-id},{$ds-people-minor.system-id},{$ds-internationals-minor.system-id},{$ds-subject-single.system-id}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name',
-        'org-pub',
+        'linked',
         'resource',
         'url',
         'description: formatted'
@@ -29,7 +29,7 @@ class datasourceexternal_listings extends SectionDatasource
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-organisation-single.system-id', '$ds-organisations-minor.system-id', '$ds-publications-minor.system-id', '$ds-people-minor.system-id', '$ds-internationals-minor.system-id');
+        $this->_dependencies = array('$ds-organisation-single.system-id', '$ds-organisations-minor.system-id', '$ds-publications-minor.system-id', '$ds-people-minor.system-id', '$ds-internationals-minor.system-id', '$ds-subject-single.system-id');
     }
 
     public function about()
@@ -37,11 +37,11 @@ class datasourceexternal_listings extends SectionDatasource
         return array(
             'name' => 'External Listings',
             'author' => array(
-                'name' => 'Aonrud',
+                'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
-            'version' => 'Symphony 2.7.3',
-            'release-date' => '2019-12-08T16:45:11+00:00'
+            'version' => 'Symphony 2.7.10',
+            'release-date' => '2023-05-25T13:30:55+00:00'
         );
     }
 
