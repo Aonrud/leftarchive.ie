@@ -16,12 +16,22 @@ RUN apt-get update \
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
 RUN docker-php-ext-install \
+    opcache \
+    pdo_mysql \
     mysqli \
     xsl \
     zip \
     gd
 
-RUN echo "upload_max_filesize = $upload\npost_max_size = $upload" > /usr/local/etc/php/conf.d/uploads.ini
+RUN { \
+    echo "opcache.memory_consumption=128"; \
+    echo "opcache.interned_strings_buffer=8"; \
+    echo "opcache.max_accelerated_files=4000"; \
+    echo "opcache.revalidate_freq=60"; \
+    echo "opcache.enable_cli=1"; \
+    echo "upload_max_filesize=${upload}"; \
+    echo "post_max_size=${upload}"; \
+    } > /usr/local/etc/php/conf.d/custom.ini
     
 #Setup apache modules
 RUN a2enmod rewrite headers remoteip
