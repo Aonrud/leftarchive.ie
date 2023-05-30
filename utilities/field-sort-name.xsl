@@ -22,6 +22,7 @@
     <xsl:variable name="root">
         <xsl:choose>
             <xsl:when test="starts-with($core, 'The ')"><xsl:value-of select="substring-after($core, 'The ')" /></xsl:when>
+            <xsl:when test="starts-with($core, 'A ')"><xsl:value-of select="substring-after($core, 'A ')" /></xsl:when>
             <xsl:when test="starts-with($core, 'An ')"><xsl:value-of select="substring-after($core, 'An ')" /></xsl:when>
             <xsl:when test="starts-with($core, 'Na ')"><xsl:value-of select="substring-after($core, 'Na ')" /></xsl:when>
             <xsl:otherwise><xsl:value-of select="$core" /></xsl:otherwise>
