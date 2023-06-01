@@ -23,6 +23,7 @@
 			<p class="lead">The table below is a list of Irish left publications—those included in our digital collection and others of which we are aware.</p>
 			<p>Entries highlighted in grey aren't currently listed in the archive. Of those, in some cases issues or even whole archives are available elsewhere online; particularly more recent publications, which are often available in PDF form on publication. Where we can, we will link to those on the relevant organisation's page. In other cases there is limited information available and we'd be glad to hear from anyone with knowledge of them.</p>
 			<p>If you were involved in or have examples of any of the publications that aren't available in our collection or elsewhere, please <a href="/submit/">get in touch with us</a>.</p>
+			<p><i><strong>Acknowledgements:</strong> Thanks to John Goodwillie for pointing us to his article <cite>Lesser Marxist Movements in Ireland: a Bibliography, 1934-1984</cite> (Saothar, 11, 1986. pp.116–123), to Conor McCabe for his work compiling <cite>Irish left/progressive publications 1880 2004</cite>, and to Ciarán Crossey for providing several additions to the bibliography.</i></p>
 			<xsl:apply-templates select="publications-list-all" />
 		</section>
 		<aside class="col-sm-3">
