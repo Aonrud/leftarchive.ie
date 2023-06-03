@@ -1,3 +1,6 @@
+### Redirect webfinger
+RewriteRule ^.well-known/webfinger.*$ https://posts.leftarchive.ie/.well-known/webfinger$1 [L,R=301]
+
 ### Podcast transition
 RewriteRule ^podcast/feed/$ https://podcast.leftarchive.ie/@ILAPodcast/feed.xml [L,R=301]
 RewriteRule ^podcast/([0-9]+).*$ /podcast/episode/$1/ [L,R=301]
