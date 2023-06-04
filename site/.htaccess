@@ -1,6 +1,5 @@
-### Webfinger and nodeinfo
+### Redirect webfinger
 RewriteRule ^.well-known/webfinger.*$ https://posts.leftarchive.ie/.well-known/webfinger$1 [L,R=301]
-RewriteRule ^.well-known/nodeinfo$ https://posts.leftarchive.ie/.well-known/nodeinfo [L,R=301]
 
 ### Podcast transition
 RewriteRule ^podcast/feed/$ https://podcast.leftarchive.ie/@ILAPodcast/feed.xml [L,R=301]
