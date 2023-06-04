@@ -35,7 +35,11 @@ RUN { \
     
 #Setup apache modules
 RUN a2enmod rewrite headers remoteip
-COPY remoteip.conf /etc/apache2/conf-available/remoteip.conf
+RUN { \
+    echo "RemoteIPHeader X-Forwarded-For"; \
+    echo "RemoteIPTrustedProxy 192.168.0.0/24"; \
+    } > /etc/apache2/conf-available/remoteip.conf
+
 RUN a2enconf remoteip
 
 #Copy in the website and set permissions
