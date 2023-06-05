@@ -331,7 +331,7 @@
 	
 <xsl:template match="channel/item">
 	<div class="col-xs-6 col-md-3">
-		<a href="{link}" class="thumbnail">
+		<a href="/podcast/episode/{itunes:episode}/" class="thumbnail">
 			<img class="img-responsive" src="{itunes:image/@href}" />
 			<div class="caption">
 				<h4><xsl:value-of select="itunes:episode" />: <xsl:value-of select="title" /></h4>
