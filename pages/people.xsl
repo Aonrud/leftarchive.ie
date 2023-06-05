@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	exclude-result-prefixes="itunes podcast"
+	>
 
 <xsl:import href="../utilities/layout-search.xsl"/>
 <xsl:import href="../utilities/layout-sidecolumn.xsl"/>
 <xsl:import href="../utilities/section-comments.xsl"/>
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/general-datetime.xsl"/>
 <xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/section-external-listings.xsl"/>
 <xsl:import href="../utilities/section-articles.xsl"/>
@@ -167,7 +172,8 @@
 				</xsl:if>
 				
 				<xsl:apply-templates select="/data/external-listings[entry]" />
-
+				<xsl:apply-templates select='/data/podcast-rss-feed/rss/channel[item/podcast:person/@href = concat(/data/params/current-url, "/")]' />
+				
 				<xsl:apply-templates select="/data/comments" />
 
 			</div>
@@ -311,6 +317,30 @@
 
 <xsl:template match="picture-manual-image-credit/p[1]" mode="html">
 	<p><strong>Picture: </strong> <xsl:apply-templates select="* | @* | text()" mode="html"/></p>
+</xsl:template>
+
+
+<xsl:template match="podcast-rss-feed/rss/channel">
+	<h2>Irish Left Archive Podcast</h2>
+	<div class="row">
+		<xsl:apply-templates select='item[podcast:person/@href = concat(/data/params/current-url, "/")]'>
+			<xsl:sort select="itunes:episode" data-type="number" />
+		</xsl:apply-templates>
+	</div>
+</xsl:template>
+	
+<xsl:template match="channel/item">
+	<div class="col-xs-6 col-md-3">
+		<a href="{link}" class="thumbnail">
+			<img class="img-responsive" src="{itunes:image/@href}" />
+			<div class="caption">
+				<h4><xsl:value-of select="itunes:episode" />: <xsl:value-of select="title" /></h4>
+				<time datetime="{pubDate}">
+					<xsl:value-of select="substring(pubDate, 5, string-length(substring-before(pubDate, ':')) - 7)" />
+				</time>
+			</div>
+		</a>
+	</div>
 </xsl:template>
 
 <xsl:template name="page-title">
