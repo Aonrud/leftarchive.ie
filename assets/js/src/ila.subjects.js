@@ -31,6 +31,7 @@ $(document).ready(function(){
                 
                 if (response.result === 'success') {
                     _paq.push(['trackEvent', 'Subject Suggestion', response.suggestion]);
+                    umami.track('Subject Suggestion', { value: response.suggestion });
                     var message = '<p class="alert alert-success"><span class="fas fa-check"></span> Thanks! Your suggestion has been sent for review.</p>';
                     var form = $('#subject-suggestion').html();
                     

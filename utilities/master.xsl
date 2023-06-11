@@ -7,6 +7,7 @@
 <xsl:import href="metadata-dublincore.xsl"/>
 <xsl:import href="metadata-general.xsl"/>
 <xsl:import href="metadata-matomo.xsl"/>
+<xsl:import href="metadata-umami.xsl"/>
 <xsl:import href="layout-navigation.xsl"/>
 <xsl:import href="entry.xsl" />
 
@@ -31,6 +32,8 @@
 				<link rel="alternate" type="application/rss+xml" title="Irish Left Archive Feed" href="/rss/" />
 				<link rel="alternate" type="application/rss+xml" title="Irish Left Archive Comments Feed" href="/rss/comments/" />
 			</xsl:if>
+			
+			<script async="async" src="https://u.leftarchive.ie/script.js" data-website-id="3248ae1a-86d5-4419-a1bc-104339d7ec3c"></script>
 			
 			<link href="{$workspace}/assets/css/leftarchive.css?v=20230204" rel="stylesheet" type="text/css" />    
 			<link rel="search" type="application/opensearchdescription+xml" href="{/data/params/workspace}/assets/opensearch.xml" title="Irish Left Archive Search" />
@@ -94,6 +97,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			<xsl:call-template name="end-insert" />
+			<xsl:call-template name="umami" />
 		</body>
 	</html>
 </xsl:template>
