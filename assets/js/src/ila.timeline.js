@@ -27,7 +27,9 @@ class PopoverWrapper {
 					console.log(`Error loading info for ${instance.reference.id}: ${e}`);
 				});
 				_paq.push(['trackEvent', 'Timeline', 'Popover', instance.reference.innerText]);
-				umami.track('Timeline Popover', { value: instance.reference.innerText });
+				if (typeof umami !== "undefined") {
+					umami.track('Timeline Popover', { value: instance.reference.innerText });
+				}
 			}
 		});
 	}
