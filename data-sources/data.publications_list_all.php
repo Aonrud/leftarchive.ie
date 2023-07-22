@@ -20,6 +20,8 @@ class datasourcepublications_list_all extends SectionDatasource
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name',
+        'irish',
+        'tagline',
         'organisations',
         'hidden',
         'irregular',
@@ -56,11 +58,11 @@ class datasourcepublications_list_all extends SectionDatasource
         return array(
             'name' => 'Publications - List - All',
             'author' => array(
-                'name' => 'Aonrud',
+                'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2022-10-22T17:18:06+00:00'
+            'release-date' => '2023-07-22T17:16:41+00:00'
         );
     }
 

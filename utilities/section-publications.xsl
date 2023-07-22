@@ -11,7 +11,14 @@
 				<xsl:text>active</xsl:text>
 			</xsl:attribute>
 		</xsl:if>
-		<td property="schema:name"><xsl:apply-templates select="name" mode="publication-table-row" /></td>
+		<td>
+			<span property="schema:name"><xsl:apply-templates select="name" mode="publication-table-row" /></span>
+			<xsl:if test="irish">&#160;(<i property="schema:name" lang="ga"><xsl:value-of select="irish" /></i>)</xsl:if>
+			<xsl:if test="tagline">
+				<xsl:text>: </xsl:text>
+				<xsl:value-of select="tagline" />
+			</xsl:if>
+		</td>
 		<td>
 			<xsl:attribute name="data-sort">
 				<xsl:choose>
