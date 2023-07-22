@@ -125,8 +125,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SA" data-ila-id="246" data-start="2002" data-end="2004" data-split="SWP" data-row="11" data-end-estimate="true">Socialist Alternative</div>
 			<div id="PBP" data-ila-id="1454" data-start="2005" data-row="11" data-links="SWP" data-colour="#d62249">People Before Profit (PBP)</div>
 
-			<div id="INUM" data-start="1926" data-become="IUWM" data-row="12">Irish National Unemployed Movement</div>
-			<div id="IUWM" data-start="1930" data-end="1935" data-row="12">Irish Unemployed Workers' Movement</div>
 			<div id="SRP" data-ila-id="2397" data-start="1944" data-row="12" data-merge="LP" data-end="1949">Socialist Republican Party</div>
 			<div id="IWG2" data-ila-id="219" data-start="1976" data-row="12" data-split="SWM" data-end="2013" data-end-estimate="true">Irish Workers' Group</div>
 			
@@ -179,16 +177,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="LPiNI" data-ila-id="179" data-start="2008" data-row="19" data-colour="#e4003b">Labour Party in Northern Ireland</div>
 
 			<div id="ILP-IRE" data-start="1912" data-end="1914" data-links="ILP SPI09" data-row="20">Independent Labour Party (Ireland)</div>
+			<div id="ICWPA" data-row="20" data-start="1926" data-end="1930" data-end-estimate="true">International Class War Prisoners Aid (ICWPA)</div>
 			<div id="CLP" data-start="1942" data-end="1947" data-split="NILP" data-row="20">Commonwealth Labour Party</div>
 			<div id="NLP" data-ila-id="1417" data-start="1974" data-end="2004" data-split="NILP" data-end-estimate="true" data-row="20">Newtownabbey Labour Party</div>
 			<div id="Coop" data-start="2009" data-links="LPiNI" data-row="20" data-colour="#3f1d70">Co-operative Party in Northern Ireland</div>
 
-			<div id="ICWPA" data-row="21" data-start="1926" data-end="1930" data-end-estimate="true">International Class War Prisoners Aid (ICWPA)</div>
 			<div id="UFL" data-ila-id="5333" data-row="21" data-start="1936" data-end="1936" data-links="NILP SPNI CPI1">United Front Labour</div>
 			<div id="ILG" data-row="21" data-start="1958" data-end="1965" data-end-estimate="true">Independent Labour Group</div>
 			<div id="SLISO" data-ila-id="1429" data-start="1974" data-merge="LP" data-end="1991" data-row="21">Sligo/Leitrim Independent Socialist Organisation</div>
 			<div id="ARG-GL" data-ila-id="4343" data-start="2021" data-split="GP" data-row="21" data-colour="#68b2a0">An Rabharta Glas - Green Left</div>
 
+			<div id="INUM" data-start="1926" data-become="IUWM" data-row="22" data-links="WPI">Irish National Unemployed Movement</div>
+			<div id="IUWM" data-start="1930" data-end="1935" data-row="22">Irish Unemployed Workers' Movement</div>
 			<div id="WUAG" data-ila-id="1414" data-start="1985" data-row="22">Workers' and Unemployed Action Group (WUAG)</div>
 
 			<div id="ISRP" data-ila-id="1613" data-start="1900" data-row="23" data-end="1904">Irish Socialist Republican Party</div>
@@ -197,19 +197,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="LWR" data-ila-id="222" data-start="1968" data-end="1988" data-split="IWG1" data-row="23">League for a Workers' Republic (LWR)</div>
 			<div id="SGI" data-ila-id="257" data-start="1990" data-row="23">Spartacist Group of Ireland</div>
 
+			<div id="JCWC" data-ila-id="6548" data-start="1924" data-row="24" data-become="WPI">James Connolly Workers' Club</div>
+			<div id="WPI" data-ila-id="5898" data-start="1926" data-row="24" data-end="1927">Workers' Party of Ireland</div>
 			<div id="LWV" data-ila-id="264" data-start="1970" data-split="LWR" data-become="WL" data-row="24">League for a Workers' Vanguard</div>
 			<div id="WL" data-ila-id="264" data-start="1972" data-end="1978" data-row="24">Workers' League</div>
 			<div id="EP" data-ila-id="203" data-start="1981" data-row="24" data-become="GA" data-colour="#00755B">Ecology Party</div>
 			<div id="GA" data-ila-id="203" data-start="1983" data-row="24" data-become="GP" data-colour="#00755B">Green Alliance</div>
 			<div id="GP" data-ila-id="203" data-start="1987" data-row="24" data-colour="#00755B">Green Party</div>
 
-			<div id="IWL23" data-ila-id="1614" data-start="1923" data-row="25" data-end="1932" data-end-estimate="true">Irish Worker League</div>
 			<div id="CPNI" data-ila-id="187" data-start="1941" data-row="25" data-split="CPI1" data-merge="CPI2" data-end="1970">Communist Party of Northern Ireland (CPNI)</div>
 			<div id="IMS" data-ila-id="211" data-start="1976" data-end="1978" data-row="25" data-split="CPI2" data-end-estimate="true">Irish Marxist Society</div>
 			<div id="NIEP" data-start="1983" data-row="25" data-become="GPNI" data-colour="#00755B">Northern Ireland Ecology Party</div>
 			<div id="GPNI" data-start="1985" data-row="25" data-merge="GP" data-end="2006" data-colour="#00755B">Green Party in Northern Ireland</div>
 			<div id="FN" data-ila-id="1430" data-start="2010" data-row="25" data-split="GP" data-colour="#4b7a00">Fís Nua</div>
 
+			<div id="IWL23" data-ila-id="1614" data-start="1923" data-row="26" data-end="1932" data-end-estimate="true">Irish Worker League</div>
 			<div id="ICP" data-ila-id="6387" data-start="2022" data-row="26" data-split="CPI2">Irish Communist Party</div>
 			
 			<div id="RWP" data-ila-id="5943" data-start="1930" data-end="1930" data-row="27" data-become="RWG">Revolutionary Workers' Party</div>
@@ -222,7 +224,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="CYM1" data-ila-id="189" data-start="1963" data-end="1991" data-links="IWP" data-row="28">Connolly Youth Movement</div>
 			<div id="CYM2" data-ila-id="189" data-start="2002" data-links="CPI2 CYM1" data-row="28">Connolly Youth Movement</div>
 			
-			<div id="WPI" data-ila-id="5898" data-start="1926" data-row="29" data-end="1927">Workers' Party of Ireland</div>
 			<div id="IWG1" data-ila-id="1364" data-start="1966" data-end="1968" data-row="29">Irish Workers' Group</div>
 			<div id="CCO" data-ila-id="190" data-start="1971" data-row="29" data-split="ICO" data-become="CWC">Cork Communist Organisation</div>
 			<div id="CWC" data-ila-id="191" data-start="1972" data-row="29" data-end="1989" data-end-estimate="true">Cork Workers' Club</div>
