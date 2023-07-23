@@ -31,7 +31,7 @@
     "jquery": "^3.6.3",
     "js-cookie": "^3.0.1",
     "list.js": "^2.3.1",
-    "timeline": "github:Aonrud/ila-timeline#semver:1.2.0",
+    "timeline": "github:Aonrud/ila-timeline#semver:1.3.0",
     "tippy.js": "^6.3.7"
   }
 }

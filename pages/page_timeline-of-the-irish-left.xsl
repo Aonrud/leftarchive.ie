@@ -133,7 +133,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SWP" data-ila-id="254" data-start="1995" data-row="13" data-colour="#990000" data-become="SWN">Socialist Workers' Party (SWP)</div>
 			<div id="SWN" data-ila-id="2531" data-start="2018" data-row="13" data-colour="#990000" data-links="PBP">Socialist Workers' Network (SWN)</div>
 
-			<div id="ILP" data-ila-id="204" data-start="1900" data-end="1932" data-row="14">Independent Labour Party (UK)</div>
+			<div id="ILP" data-ila-id="204" data-start="1893" data-end="1932" data-row="14">Independent Labour Party (UK)</div>
 			<div id="YSA" data-ila-id="1452" data-start="1968" data-row="14" data-end="1969" data-links="PD YS">Young Socialists Alliance</div>
 			<div id="RMG" data-ila-id="239" data-start="1971" data-row="14" data-become="MSR">Revolutionary Marxist Group (RMG)</div>
 			<div id="MSR" data-ila-id="2155" data-start="1976" data-row="14" data-merge="PD" data-end="1978" >Movement for a Socialist Republic</div>
@@ -172,7 +172,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SEA" data-ila-id="1440" data-start="2001" data-end="2008" data-links="SWP NLP" data-row="18">Socialist Environmental Alliance (SEA)</div>
 			<div id="LF" data-ila-id="1421" data-start="2013" data-row="18">Left Forum</div>
 
-			<div id="BLP" data-start="1900" data-merge="NILP" data-end="1924" data-row="19" data-links="ILP">Belfast Labour Party</div>
+			<div id="BLP" data-start="1892" data-merge="NILP" data-end="1924" data-row="19" data-links="ILP">Belfast Labour Party</div>
 			<div id="NILP" data-ila-id="1409" data-start="1924" data-merge="L87" data-end="1987" data-row="19" data-links="ILP">Northern Ireland Labour Party (NILP)</div>
 			<div id="LPiNI" data-ila-id="179" data-start="2008" data-row="19" data-colour="#e4003b">Labour Party in Northern Ireland</div>
 
@@ -191,7 +191,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="IUWM" data-start="1930" data-end="1935" data-row="22">Irish Unemployed Workers' Movement</div>
 			<div id="WUAG" data-ila-id="1414" data-start="1985" data-row="22">Workers' and Unemployed Action Group (WUAG)</div>
 
-			<div id="ISRP" data-ila-id="1613" data-start="1900" data-row="23" data-end="1904">Irish Socialist Republican Party</div>
+			<div id="ISRP" data-ila-id="1613" data-start="1896" data-row="23" data-end="1904">Irish Socialist Republican Party</div>
 			<div id="SPI09" data-ila-id="1612" data-start="1909" data-row="23" data-end="1921" data-become="CPI21" data-links="ISRP">Socialist Party of Ireland (1909)</div>
 			<div id="CPI21" data-ila-id="1612" data-start="1921" data-row="23" data-end="1924">Communist Party of Ireland (1921)</div>
 			<div id="LWR" data-ila-id="222" data-start="1968" data-end="1988" data-split="IWG1" data-row="23">League for a Workers' Republic (LWR)</div>
