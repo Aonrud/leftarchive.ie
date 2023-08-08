@@ -156,7 +156,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SD" data-ila-id="1425" data-start="1996" data-row="16">Socialist Democracy</div>
 
 			<div id="BSS" data-start="1905" data-end="1912" data-row="17">Belfast Socialist Society</div>
-			<div id="CsnaP" data-start="1940" data-end="1943" data-row="17" data-end-estimate="true">Córas na Poblachta</div>
 			<div id="CnaP" data-start="1946" data-end="1965" data-row="17">Clann na Poblachta</div>
 			<div id="LRG" data-ila-id="1426" data-start="1976" data-split="PD" data-row="17" data-become="RRP">Left Revolutionary Group</div>
 			<div id="RRP" data-ila-id="1426" data-start="1976" data-end="1978" data-row="17">Red Republican Party</div>
