@@ -128,7 +128,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SRP" data-ila-id="2397" data-start="1944" data-row="12" data-merge="LP" data-end="1949">Socialist Republican Party</div>
 			<div id="IWG2" data-ila-id="219" data-start="1976" data-row="12" data-split="SWM" data-end="2013" data-end-estimate="true">Irish Workers' Group</div>
 			
-			<div id="YS" data-ila-id="5094" data-start="1967" data-row="13" data-links="LP">Young Socialists</div>
+			<div id="YS" data-ila-id="5094" data-start="1967" data-end="1971" data-row="13" data-links="LP">Young Socialists</div>
 			<div id="SWM" data-ila-id="253" data-start="1971" data-row="13" data-split="YS" data-become="SWP" data-colour="#990000">Socialist Workers' Movement (SWM)</div>
 			<div id="SWP" data-ila-id="254" data-start="1995" data-row="13" data-colour="#990000" data-become="SWN">Socialist Workers' Party (SWP)</div>
 			<div id="SWN" data-ila-id="2531" data-start="2018" data-row="13" data-colour="#990000" data-links="PBP">Socialist Workers' Network (SWN)</div>
@@ -230,7 +230,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SD2015" data-ila-id="1737" data-start="2015" data-row="29" data-colour="#752f8b">Social Democrats</div>
 
 			<div id="IWU" data-ila-id="1433" data-start="1960" data-row="30" data-become="ICG">Irish Workers' Union</div>
-			<div id="ICG" data-ila-id="1433" data-start="1964" data-row="30">Irish Communist Group</div>
+			<div id="ICG" data-ila-id="1433" data-start="1964"  data-end="1965" data-row="30">Irish Communist Group</div>
 			<div id="LA" data-ila-id="1448" data-start="1975" data-row="30" data-end="1976" data-links="OSF LCLL CPI2" data-colour="#caa">Left Alliance</div>
 			<div id="CLR" data-ila-id="1435" data-start="1978" data-row="30" data-end="1993" data-links="BICO">Campaign for Labour Representation</div>
 			<div id="IFEM" data-ila-id="2269" data-start="2014" data-row="30" data-become="I4C">Independents for Equality Movement</div>
@@ -278,7 +278,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SFWP" data-ila-id="267" data-start="1977" data-row="38" data-become="WP" data-colour="red">Sinn Féin The Workers' Party</div>
 			<div id="WP" data-ila-id="267" data-start="1982" data-row="38" data-colour="red">The Workers' Party</div>
 
-			<div id="SF" data-ila-id="245" data-start="1905" data-row="39" data-colour="#040">Sinn Féin (Pre 1970)</div>
+			<div id="SF" data-ila-id="245" data-start="1905" data-end="1969" data-row="39" data-colour="#040">Sinn Féin (Pre 1970)</div>
 			<div id="NE" data-ila-id="1419" data-start="1973" data-row="39" data-end="1975" data-split="OSF">New Earth</div>
 			<div id="LCR" data-ila-id="223" data-start="1986" data-row="39" data-end="1991" data-split="PSF">League of Communist Republicans (LCR)</div>
 			<div id="EIR" data-ila-id="635" data-start="2006" data-row="39" data-split="PSF" data-colour="#0faf4d">Éirígí</div>
