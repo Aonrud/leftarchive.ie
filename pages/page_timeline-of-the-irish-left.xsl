@@ -119,7 +119,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 
 			<div id="CSP" data-ila-id="2419" data-start="1945" data-row="11" data-split="LP" data-end="1947" data-end-estimate="true">Cork Socialist Party</div>
 			<div id="NPD" data-ila-id="1422" data-start="1958" data-row="11" data-merge="LP" data-end="1963" >National Progressive Democrats</div>
-			<div id="LCLL" data-ila-id="1442" data-start="1971" data-row="11" data-links="LP" data-fork="LP SLP" data-end="1977" data-colour="#adf">Liaison Committee of the Labour Left</div>
+			<div id="LCLL" data-ila-id="1442" data-start="1971" data-row="11" data-links="LP" data-end="1977" data-colour="#adf">Liaison Committee of the Labour Left</div>
 			<div id="SLP" data-ila-id="1276" data-start="1977" data-row="11" data-end="1982" data-links="MSR IWG2 SWM LWR" data-colour="#8F432B">Socialist Labour Party (SLP)</div>
 			<div id="CUAG" data-ila-id="1722" data-start="1983" data-end="1984" data-end-estimate="true" data-row="11">Cork Unemployed Action Group</div>
 			<div id="SA" data-ila-id="246" data-start="2002" data-end="2004" data-split="SWP" data-row="11" data-end-estimate="true">Socialist Alternative</div>
@@ -128,14 +128,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SRP" data-ila-id="2397" data-start="1944" data-row="12" data-merge="LP" data-end="1949">Socialist Republican Party</div>
 			<div id="IWG2" data-ila-id="219" data-start="1976" data-row="12" data-split="SWM" data-end="2013" data-end-estimate="true">Irish Workers' Group</div>
 			
-			<div id="YS" data-ila-id="5094" data-start="1967" data-row="13" data-fork="SWM RMG" data-links="LP">Young Socialists</div>
-			<div id="SWM" data-ila-id="253" data-start="1971" data-row="13" data-become="SWP" data-colour="#990000">Socialist Workers' Movement (SWM)</div>
+			<div id="YS" data-ila-id="5094" data-start="1967" data-row="13" data-links="LP">Young Socialists</div>
+			<div id="SWM" data-ila-id="253" data-start="1971" data-row="13" data-split="YS" data-become="SWP" data-colour="#990000">Socialist Workers' Movement (SWM)</div>
 			<div id="SWP" data-ila-id="254" data-start="1995" data-row="13" data-colour="#990000" data-become="SWN">Socialist Workers' Party (SWP)</div>
 			<div id="SWN" data-ila-id="2531" data-start="2018" data-row="13" data-colour="#990000" data-links="PBP">Socialist Workers' Network (SWN)</div>
 
 			<div id="ILP" data-ila-id="204" data-start="1893" data-end="1932" data-row="14">Independent Labour Party (UK)</div>
 			<div id="YSA" data-ila-id="1452" data-start="1968" data-row="14" data-end="1969" data-links="PD YS">Young Socialists Alliance</div>
-			<div id="RMG" data-ila-id="239" data-start="1971" data-row="14" data-become="MSR">Revolutionary Marxist Group (RMG)</div>
+			<div id="RMG" data-ila-id="239" data-start="1971" data-row="14" data-split="YS" data-become="MSR">Revolutionary Marxist Group (RMG)</div>
 			<div id="MSR" data-ila-id="2155" data-start="1976" data-row="14" data-merge="PD" data-end="1978" >Movement for a Socialist Republic</div>
 
 			<div id="CWAG" data-ila-id="1851" data-start="2004" data-row="14" data-merge="PBP" data-end="2007">Community and Workers Action Group</div>
@@ -223,20 +223,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="CYM1" data-ila-id="189" data-start="1963" data-end="1991" data-links="IWP" data-row="28">Connolly Youth Movement</div>
 			<div id="CYM2" data-ila-id="189" data-start="2002" data-links="CPI2 CYM1" data-row="28">Connolly Youth Movement</div>
 			
-			<div id="IWG1" data-ila-id="1364" data-start="1966" data-end="1968" data-row="29">Irish Workers' Group</div>
+			<div id="IWG1" data-ila-id="1364" data-start="1966" data-end="1968" data-split="ICG" data-row="29">Irish Workers' Group</div>
 			<div id="CCO" data-ila-id="190" data-start="1971" data-row="29" data-split="ICO" data-become="CWC">Cork Communist Organisation</div>
 			<div id="CWC" data-ila-id="191" data-start="1972" data-row="29" data-end="1989" data-end-estimate="true">Cork Workers' Club</div>
 			<div id="PC" data-start="1994" data-row="29" data-end="1995" data-links="DL GPNI">Peace Coalition</div>
 			<div id="SD2015" data-ila-id="1737" data-start="2015" data-row="29" data-colour="#752f8b">Social Democrats</div>
 
 			<div id="IWU" data-ila-id="1433" data-start="1960" data-row="30" data-become="ICG">Irish Workers' Union</div>
-			<div id="ICG" data-ila-id="1433" data-start="1964" data-row="30" data-fork="IWG1 ICO">Irish Communist Group</div>
+			<div id="ICG" data-ila-id="1433" data-start="1964" data-row="30">Irish Communist Group</div>
 			<div id="LA" data-ila-id="1448" data-start="1975" data-row="30" data-end="1976" data-links="OSF LCLL CPI2" data-colour="#caa">Left Alliance</div>
 			<div id="CLR" data-ila-id="1435" data-start="1978" data-row="30" data-end="1993" data-links="BICO">Campaign for Labour Representation</div>
 			<div id="IFEM" data-ila-id="2269" data-start="2014" data-row="30" data-become="I4C">Independents for Equality Movement</div>
 			<div id="I4C" data-ila-id="2269" data-start="2015" data-row="30">Independents 4 Change</div>
 
-			<div id="ICO" data-ila-id="209" data-start="1965" data-row="31" data-become="BICO">Irish Communist Organisation (ICO)</div>
+			<div id="ICO" data-ila-id="209" data-start="1965" data-row="31" data-split="ICG" data-become="BICO">Irish Communist Organisation (ICO)</div>
 			<div id="BICO" data-ila-id="44" data-start="1971" data-row="31" data-end="1998" data-end-estimate="true">British &amp; Irish Communist Organisation (BICO)</div>
 			<div id="OnePercentNetwork" data-ila-id="5788" data-start="2010" data-end="2011" data-end-estimate="true" data-row="31" data-links="ISN WSM EIR" data-colour="#c8211d">The 1% Network</div>
 			<div id="RTOC" data-ila-id="3505" data-start="2020" data-row="31" data-colour="#ea3f3c">Right To Change</div>
@@ -274,16 +274,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="WPP" data-ila-id="1420" data-start="1985" data-row="37" data-split="WP" data-merge="WP" data-end="1987">Waterford People's Party</div>
 			<div id="ORM" data-ila-id="230" data-start="1998" data-row="37" data-split="WP">Official Republican Movement (ORM)</div>
 
-			<div id="OSF" data-ila-id="231" data-start="1969" data-row="38" data-become="SFWP" data-colour="red">Sinn Féin (Official)</div>
+			<div id="OSF" data-ila-id="231" data-start="1969" data-row="38" data-split="SF" data-become="SFWP" data-colour="red">Sinn Féin (Official)</div>
 			<div id="SFWP" data-ila-id="267" data-start="1977" data-row="38" data-become="WP" data-colour="red">Sinn Féin The Workers' Party</div>
 			<div id="WP" data-ila-id="267" data-start="1982" data-row="38" data-colour="red">The Workers' Party</div>
 
-			<div id="SF" data-ila-id="245" data-start="1905" data-fork="OSF PSF" data-row="39" data-colour="#040">Sinn Féin (Pre 1970)</div>
+			<div id="SF" data-ila-id="245" data-start="1905" data-row="39" data-colour="#040">Sinn Féin (Pre 1970)</div>
 			<div id="NE" data-ila-id="1419" data-start="1973" data-row="39" data-end="1975" data-split="OSF">New Earth</div>
 			<div id="LCR" data-ila-id="223" data-start="1986" data-row="39" data-end="1991" data-split="PSF">League of Communist Republicans (LCR)</div>
 			<div id="EIR" data-ila-id="635" data-start="2006" data-row="39" data-split="PSF" data-colour="#0faf4d">Éirígí</div>
 
-			<div id="PSF" data-ila-id="244" data-start="1969" data-row="40" data-colour="#080">Sinn Féin (Provisional)</div>
+			<div id="PSF" data-ila-id="244" data-start="1969" data-row="40" data-split="SF" data-colour="#080">Sinn Féin (Provisional)</div>
 
 			<div id="SE" data-ila-id="1436" data-start="1967" data-row="41" data-split="SF" data-end="1973">Saor Éire</div>
 			<div id="RS" data-ila-id="240" data-start="1975" data-row="41" data-end="1985">Revolutionary Struggle</div>
@@ -335,7 +335,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 	<script>
 		const tl = new Timeline("diagram", { 
 			entrySelector: "div",
-			panzoom: true
+			panzoom: Panzoom
 			});
 		tl.create();
 		

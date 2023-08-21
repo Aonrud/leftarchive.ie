@@ -130,7 +130,7 @@ $(document).ready(function(){
   if (document.body.classList.contains("t-image-overlay")) {
 	  const iv = new ila.ImageViewer({
 		  showDownload: true,
-		  panzoom: true,
+		  panzoom: Panzoom,
 		  texts: {
 			  cue: "",
 			  hide: "",
