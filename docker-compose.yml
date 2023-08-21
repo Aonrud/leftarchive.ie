@@ -2,7 +2,7 @@ version: "3"
 
 services:
   site:
-    image: leftarchive.ie:latest 
+    build: .
     container_name: "leftarchive.ie"
     restart: unless-stopped
     networks:
