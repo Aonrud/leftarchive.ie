@@ -52,7 +52,7 @@
         <li><a href="/calendar/on-this-day/" title="Events from this date in history">On This Day</a></li>
 	</ul>
 	
-	<h4><span class="fas fa-code-branch fa-fw"></span> Timeline</h4>
+	<h4><span class="fas fa-diagram-project fa-fw"></span> Timeline</h4>
 	<p><small><a href="/page/timeline-of-the-irish-left/" title="View a timeline of Irish left organisations.">View our timeline of Irish left organisations from 1900 to the present</a>.</small></p>
 
 </div><!--end col-->

@@ -377,7 +377,7 @@
 
 <xsl:template match="timeline" mode="entry-table">
 	<tr>
-		<th scope="row"><span class="fas fa-code-branch fa-fw"></span> Timeline:</th>
+		<th scope="row"><span class="fas fa-diagram-project fa-fw"></span> Timeline:</th>
 		<td><a href="/page/timeline-of-the-irish-left/#find-{.}">View in the timeline of the Irish left</a></td>
 	</tr>
 </xsl:template>
