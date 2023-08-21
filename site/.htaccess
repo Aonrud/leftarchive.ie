@@ -16,56 +16,55 @@ RewriteRule ^on-this-day/(.*)$ /calendar/on-this-day/$1 [L,R=301]
 RewriteCond %{HTTP_HOST} ^leftarchive.ie [NC]
 RewriteRule (.*) https://www.leftarchive.ie/$1 [L,R=301]
 
-### Symphony
-Options +FollowSymlinks -Indexes
+### Symphony 2.7.x ###
+Options +SymLinksIfOwnerMatch -Indexes
+
+<IfModule !mod_rewrite.c>
+    SetEnv HTTP_MOD_REWRITE No
+</IfModule>
 
 <IfModule mod_rewrite.c>
 
-	RewriteEngine on
-	RewriteBase /
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
 
-    ###Extra git and dev file checks -send to 404 instead of forbid
-    ###Placed before general security check to ensure .git is matched here first
-    RewriteRule (^|/)\.git  -       [R=404]
-    RewriteRule (^|/)gruntfile\.js$ - [R=404]
-    RewriteRule (^|/)package.*\.json - [R=404]
+    RewriteEngine on
+    RewriteBase /
 
-	### SECURITY - Protect crucial files
-	RewriteRule ^manifest/(.*)$ - [F]
-	RewriteRule ^workspace/(pages|utilities)/(.*)\.xsl$ - [F]
-	RewriteRule ^(.*)\.sql$ - [F]
-	
-	###Excludes the .well-known directory
-	RewriteCond %{REQUEST_URI} !^/\.well-known
-	RewriteRule (^|/)\. - [F]
+    ### SECURITY - Protect crucial files
+    RewriteRule ^manifest/(.*)$ - [F]
+    RewriteRule ^workspace/(pages|utilities)/(.*)\.xsl$ - [F]
+    RewriteRule ^(.*)\.sql$ - [F]
+    RewriteRule (^|/)\. - [F]
 
-	### DO NOT APPLY RULES WHEN REQUESTING "favicon.ico"
-	RewriteCond %{REQUEST_FILENAME} favicon.ico [NC]
-	RewriteRule .* - [S=14]
+    ### DO NOT APPLY RULES WHEN REQUESTING "favicon.ico"
+    RewriteCond %{REQUEST_FILENAME} favicon.ico [NC]
+    RewriteRule .* - [S=14]
 
-	### IMAGE RULES
-	RewriteRule ^image\/(.+)$ extensions/jit_image_manipulation/lib/image.php?param=$1 [B,L,NC]
-	    
-	### CHECK FOR TRAILING SLASH - Will ignore files
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_URI} !/$
-	RewriteCond %{REQUEST_URI} !(.*)/$
-	RewriteRule ^(.*)$ $1/ [L,R=301]
+    ### IMAGE RULES
+    RewriteRule ^image\/(.+)$ extensions/jit_image_manipulation/lib/image.php?param=$1 [B,L,NC]
 
-	### URL Correction
-	RewriteRule ^(symphony/)?index.php(/.*/?) $1$2 [NC]
+    ### CHECK FOR TRAILING SLASH - Will ignore files
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteCond %{REQUEST_URI} !(.*)/$
+    RewriteRule ^(.*)$ $1/ [L,R=301]
 
-	### ADMIN REWRITE
-	RewriteRule ^symphony\/?$ index.php?mode=administration&%{QUERY_STRING} [NC,L]
+    ### URL Correction
+    RewriteRule ^(symphony/)?index.php(/.*/?) $1$2 [NC]
 
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING}	[NC,L]
+    ### ADMIN REWRITE
+    RewriteRule ^symphony\/?$ index.php?mode=administration&%{QUERY_STRING} [NC,L]
 
-	### FRONTEND REWRITE - Will ignore files and folders
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^(.*\/?)$ index.php?symphony-page=$1&%{QUERY_STRING}	[L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING}   [NC,L]
+
+    ### FRONTEND REWRITE - Will ignore files and folders
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*\/?)$ index.php?symphony-page=$1&%{QUERY_STRING}    [L]
 
 </IfModule>
 ######
