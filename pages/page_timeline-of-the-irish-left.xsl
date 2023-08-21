@@ -230,7 +230,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="SD2015" data-ila-id="1737" data-start="2015" data-row="29" data-colour="#752f8b">Social Democrats</div>
 
 			<div id="IWU" data-ila-id="1433" data-start="1960" data-row="30" data-become="ICG">Irish Workers' Union</div>
-			<div id="ICG" data-ila-id="1433" data-start="1964"  data-end="1965" data-row="30">Irish Communist Group</div>
+			<div id="ICG" data-ila-id="1433" data-start="1964"  data-end="1966" data-row="30">Irish Communist Group</div>
 			<div id="LA" data-ila-id="1448" data-start="1975" data-row="30" data-end="1976" data-links="OSF LCLL CPI2" data-colour="#caa">Left Alliance</div>
 			<div id="CLR" data-ila-id="1435" data-start="1978" data-row="30" data-end="1993" data-links="BICO">Campaign for Labour Representation</div>
 			<div id="IFEM" data-ila-id="2269" data-start="2014" data-row="30" data-become="I4C">Independents for Equality Movement</div>
