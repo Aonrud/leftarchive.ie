@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:podcast="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"
+    xmlns:podcast="https://podcastindex.org/namespace/1.0"
     exclude-result-prefixes="dc podcast">
 
 <!--Match podcast:id declarations in RSS/ATOM feed.

@@ -13,7 +13,7 @@ class datasourcepodcast_rss_feed extends RemoteDatasource {
 
     public $dsParamNAMESPACES = array(
         'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-        'podcast' => 'https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md',
+        'podcast' => 'https://podcastindex.org/namespace/1.0',
         'atom' => 'http://www.w3.org/2005/Atom',
         'content' => 'http://purl.org/rss/1.0/modules/content/',
     );
