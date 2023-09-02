@@ -36,8 +36,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0(grunt@1.6.1)(terser@5.19.2)
   ila-ui-elements:
-    specifier: github:Aonrud/ila-ui-elements#semver:0.9.0
-    version: github.com/Aonrud/ila-ui-elements/3409cd600d42972200d5bc6f5e4bbf970e1ca0d6
+    specifier: git+https://git.aonghus.org/Irish-Left-Archive/ila-ui-elements.git#semver:0.9.0
+    version: git.aonghus.org/Irish-Left-Archive/ila-ui-elements/3409cd600d42972200d5bc6f5e4bbf970e1ca0d6
   jquery:
     specifier: ^3.7.0
     version: 3.7.0
@@ -48,8 +48,8 @@ dependencies:
     specifier: ^2.3.1
     version: 2.3.1
   timeline:
-    specifier: github:Aonrud/ila-timeline#semver:2.1.2
-    version: git@github.com+Aonrud/ila-timeline/365f7afde474869d7e8b25f51766f0cd319a55b7
+    specifier: git+https://git.aonghus.org/aonrud/Timeline.js.git#semver:2.1.2
+    version: git.aonghus.org/aonrud/Timeline.js/365f7afde474869d7e8b25f51766f0cd319a55b7
   tippy.js:
     specifier: ^6.3.7
     version: 6.3.7
@@ -1307,16 +1307,16 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  git@github.com+Aonrud/ila-timeline/365f7afde474869d7e8b25f51766f0cd319a55b7:
-    resolution: {commit: 365f7afde474869d7e8b25f51766f0cd319a55b7, repo: git@github.com:Aonrud/ila-timeline.git, type: git}
+  git.aonghus.org/Irish-Left-Archive/ila-ui-elements/3409cd600d42972200d5bc6f5e4bbf970e1ca0d6:
+    resolution: {commit: 3409cd600d42972200d5bc6f5e4bbf970e1ca0d6, repo: https://git.aonghus.org/Irish-Left-Archive/ila-ui-elements.git, type: git}
+    name: ila_ui_elements
+    version: 0.9.0
+    dev: false
+
+  git.aonghus.org/aonrud/Timeline.js/365f7afde474869d7e8b25f51766f0cd319a55b7:
+    resolution: {commit: 365f7afde474869d7e8b25f51766f0cd319a55b7, repo: https://git.aonghus.org/aonrud/Timeline.js.git, type: git}
     name: Timeline.js
     version: 2.1.2
     optionalDependencies:
       '@panzoom/panzoom': 4.5.1
-    dev: false
-
-  github.com/Aonrud/ila-ui-elements/3409cd600d42972200d5bc6f5e4bbf970e1ca0d6:
-    resolution: {tarball: https://codeload.github.com/Aonrud/ila-ui-elements/tar.gz/3409cd600d42972200d5bc6f5e4bbf970e1ca0d6}
-    name: ila_ui_elements
-    version: 0.9.0
     dev: false
