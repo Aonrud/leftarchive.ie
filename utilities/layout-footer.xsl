@@ -66,7 +66,7 @@
 	<ul class="footer-icons list-unstyled">
 		<li><a href="/rss/" title="New Additions RSS feed" class="rss"><span class="fas fa-rss fa-fw"></span></a></li>
 		<li><a href="{$ila-activitypub-url}" rel="me" title="Irish Left Archive on the Fediverse" class="ila"><span class="fas fa-share-nodes fa-fw"></span></a></li>
-		<li><a href="{$ila-git-url}" rel="me" title="Irish Left Archive Git Repositories" class="github"><span class="fab fa-github fa-fw"></span></a></li>
+		<li><a href="{$ila-git-url}" rel="me" title="Irish Left Archive Git Repositories" class="git"><span class="fab fa-git-alt fa-fw"></span></a></li>
 		<li><a href="https://podcast.leftarchive.ie/" rel="me" title="Irish Left Archive Podcast" class="ila"><span class="fas fa-microphone fa-fw"></span></a></li>
 	</ul>	
 
