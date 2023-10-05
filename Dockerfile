@@ -1,6 +1,6 @@
 FROM php:7.4-apache
 
-ARG upload=128M
+ARG upload=256M
 
 RUN apt-get update \
     && apt-get install -y \
