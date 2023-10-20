@@ -1,0 +1,27 @@
+.social-header {
+	background: no-repeat url('https://posts.leftarchive.ie/static/header-3-2.jpeg');
+	background-size: cover;
+	padding: 0 0 2em 1em;
+	width: 100%;
+	a {
+		display: block;
+		background: #fff;
+		border: 1px solid #ccc;
+		border-top: none;
+		padding: 0.5em 1em 1em;
+		max-width: 100%;
+		width: fit-content;
+		h3 {
+			color: @grey-dark;
+		}
+		&:hover {
+			text-decoration: none;
+			h3 {
+				color: @grey;
+			}
+			p {
+				text-decoration: underline;
+			}
+		}
+	}
+}

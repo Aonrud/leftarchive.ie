@@ -1,0 +1,58 @@
+a img {
+    opacity: 1;
+    -moz-transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    //All below is to fix the pixel size glitch error.  Backface alone worked in older FF, but box-shadow now seems required.
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility:hidden;
+    box-shadow: #000 0em 0em 0em;
+    &:hover, &:active {
+        opacity: 0.85;
+        //All below is to fix the pixel size glitch error
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility:hidden;
+    }
+}
+
+.page-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Document image */
+@media (max-width: 767px) {
+    .doc-cover {
+        border: 1px solid #ddd;
+        margin: auto;
+    }
+} 
+
+.image-list {
+	list-style: none;
+	margin-left: -5px;
+	padding-left: 0;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 15px;
+	}
+}
+
+img.bordered {
+	border: 1px solid @mainBorder;
+	margin: 0;
+	padding: 0;
+}
+
+svg.icon {
+    width: 1em;
+    height: 1em;
+    //vertical-align: middle - doesn't line up well with the text
+    position: relative;
+    top: 0.125em;
+    a:hover & {
+        opacity: 0.85;
+    }
+}

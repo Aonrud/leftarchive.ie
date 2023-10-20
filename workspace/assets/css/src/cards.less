@@ -1,0 +1,60 @@
+@import 'bootstrap-local-vars.less';
+@import "../../../node_modules/bootstrap/less/mixins.less";
+@import "../../../node_modules/bootstrap/less/thumbnails.less";
+
+a.thumbnail, a.card {
+    .caption {
+        h1, h2, h3, h4, h5, h6 {
+            color: @main;
+            //TODO: Fix heading colour transition
+            // transition: border .2s ease-in-out;
+        }
+    }
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        border-color: @main;
+        img {
+            opacity: 0.85;
+        }
+        .caption {
+            h1, h2, h3, h4, h5, h6 {
+                color: darken(@main, 15%);
+                // transition: border .2s ease-in-out;
+            }
+        }
+    }
+}
+
+//TODO: Thumbnail and card classes are created in various versions throughout the site. They should be standardised.
+
+.card {
+    &:extend(.thumbnail);
+    .caption, figcaption {
+        padding: 1em;
+    }
+}
+
+.card[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+@media screen and (min-width: 992px) {
+    .card.horizontal-md {
+        display: flex;
+        flex-direction: row;
+        & > * {
+            width: 50%;
+            flex: 1 1 50%;
+        }
+        .caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

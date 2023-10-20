@@ -1,0 +1,208 @@
+id,name,start,end,endEstimate,become,split,merge,fork,links,colour
+WSM,Workers' Solidarity Movement (WSM),1984,2021,,,,,,,
+WSPL,Women's Social and Progressive League,1930,1945,true,,,,,,
+BAG,Belfast Anarchist Group,1968,,,BLG,,,,,
+BLG,Belfast Libertarian Group,1973,1974,,,,,,,
+AWA,Anarchist Workers' Alliance,1979,1982,,,,,,BAC DAG,
+AWG,Anarchist Workers Group,1984,1984,,,,WSM,,,
+AFA,Anti-Fascist Action (Ireland),1991,,,,,,,RA,
+DAG,Dublin Anarchist Group,1978,1979,,,,,,,
+ABC,Anarchist Bookshop Collective,1980,1981,,,,,,,
+DAC,Dublin Anarchist Collective,1982,1985,true,,,,,,
+RA,Red Action,1990,1997,,,,,,,
+WCA,Working Class Action,2001,2005,true,,,,,RA,
+IMTI,International Marxist Tendency in Ireland,2009,,,,,,,,
+FSR,Friends of Soviet Russia,1930,1931,,,,,,,
+BAC,Belfast Anarchist Collective,1978,1990,true,,,,,,
+AFI,Anarchist Federation in Ireland,1995,2003,,,,SolFed,,,
+RAG,Revolutionary Anarcha-Feminist Group (RAG),2005,2014,true,,,,,,
+IAN2022,Irish Anarchist Network,2022,,,,,,,,
+SWG,Socialist Women's Group,1975,,,BWC,,,,,
+BWC,Belfast Women's Collective,1977,1980,,,,,,,
+BAG2,Ballymena Anarchist Group,1981,,,organise,,,,,
+organise,Organise!,1992,,,SSN,,,,,
+SSN,Syndicalist Solidarity Network,1999,,,OASF,,,,,
+OASF,Organise! Anarcho-Syndicalist Federation,2001,,,SolFed,,,,,
+SolFed,Organise! Ireland (Solidarity Federation),2003,,,organise2,,,,,
+organise2,Organise!,2015,,,,,,,,
+JCWRC,James Connolly Workers' Republican Clubs,1932,1934,,,,,,,
+RSP,Revolutionary Socialist Party,1939,1949,,,,,,,
+WAI,Women Against Imperialism,1978,1981,,,BWC,,,,
+CW,Class War,1994,1996,true,,,,,,
+AAA,Anti-Austerity Alliance (AAA),2014,,,Solidarity,,,,SP,#FFF580
+Solidarity,Solidarity,2017,,,,,,,,
+BSG,Belfast Socialist Group,1949,,,SPI49,,,,,
+SPI49,Socialist Party of Ireland (1949),1949,,,WSP,,,,,
+WSP,World Socialist Party,1960,1991,true,,,,,,
+FC,Frontline Collective,1995,1997,,,,,,,
+LabAlt,Cross-Community Labour Alternative,2016,,,,,,,SP,
+IAIL,International Anti-Imperialist League,1930,1931,,,,,,,
+TV,The Vanguard,1944,1945,,,,,,,
+DG,Dawn Group,1974,1986,true,,,,,,
+CWIR,CWI Ireland,2019,,,MilLeft,SP,,,,
+MilLeft,Militant Left,2020,,,,,,,LabAlt,
+militant,Militant,1972,,,militantLab,,,,LP,#D51A21
+militantLab,Militant Labour,1989,,,SP,,,,LP,#D51A21
+SP,Socialist Party,1997,,,,,,,,#D51A21
+DTC,Dublin Trades Council,1923,1926,,,LP,LP,,,
+NLP44,National Labour Party,1944,1950,,,LP,LP,,,
+LTUCG,Labour & Trade Union Coordinating Group,1974,,,LTUG,,,,militant NILP,
+LTUG,Labour & Trade Union Group,1979,1997,,,,SP,,,
+WP-L5I,Workers Power,2005,2006,,,,,,,
+RISE,RISE,2019,2021,,,SP,PBP,,,
+LP,Labour Party,1912,,,,,,,,#ED1C24
+CSP,Cork Socialist Party,1945,1947,true,,LP,,,,
+NPD,National Progressive Democrats,1958,1963,,,,LP,,,
+LCLL,Liaison Committee of the Labour Left,1971,1977,,,,,LP SLP,LP,#adf
+SLP,Socialist Labour Party (SLP),1977,1982,,,,,,MSR IWG2 SWM LWR,#8F432B
+CUAG,Cork Unemployed Action Group,1983,1984,true,,,,,,
+SA,Socialist Alternative,2002,2004,true,,SWP,,,,
+PBP,People Before Profit (PBP),2005,,,,,,,SWP,#d62249
+SRP,Socialist Republican Party,1944,1949,,,,LP,,,
+IWG2,Irish Workers' Group,1976,2013,true,,SWM,,,,
+YS,Young Socialists,1967,,,,,,SWM RMG,LP,
+SWM,Socialist Workers' Movement (SWM),1971,,,SWP,,,,,#990000
+SWP,Socialist Workers' Party (SWP),1995,,,SWN,,,,,#990000
+SWN,Socialist Workers' Network (SWN),2018,,,,,,,PBP,#990000
+ILP,Independent Labour Party (UK),1893,1932,,,,,,,
+YSA,Young Socialists Alliance,1968,1969,,,,,,PD YS,
+RMG,Revolutionary Marxist Group (RMG),1971,,,MSR,,,,,
+MSR,Movement for a Socialist Republic,1976,1978,,,,PD,,,
+CWAG,Community and Workers Action Group,2004,2007,,,,PBP,,,
+UL,United Left,2013,2015,,,,,,ULA,
+SPNI,Socialist Party of Northern Ireland,1932,1940,,,ILP,,,NILP,
+SLAG,Socialist Labour Action Group,1970,,,SLA,,,,,#faa
+SLA,Socialist Labour Alliance,1971,1972,,,,,,SWM PD LWR RMG SE,#faa
+ULP,United Labour Party,1978,1987,,,,L87,,,
+IS,International Socialists,2000,2004,,,SWP,SD,,,
+CIL,Campaign for an Independent Left,2005,2007,true,,,,,CWAG WUAG ISN,
+ULA,United Left Alliance (ULA),2010,2014,,,,,,PBP SWP SP WUAG,
+AAAPBP,Anti-Austerity Alliance - People Before Profit,2015,,,S-PBP,,,,AAA PBP,
+S-PBP,Solidarity - People Before Profit,2017,,,PBPS,,,,Solidarity PBP,
+PBPS,People Before Profit/Solidarity,2020,,,,,,,PBP Solidarity,
+PD,People's Democracy,1968,,,SD,,,,NICRA,
+SD,Socialist Democracy,1996,,,,,,,,
+BSS,Belfast Socialist Society,1905,1912,,,,,,,
+CsnaP,Córas na Poblachta,1940,1943,true,,,,,,
+CnaP,Clann na Poblachta,1946,1965,,,,,,,
+LRG,Left Revolutionary Group,1976,,,RRP,PD,,,,
+RRP,Red Republican Party,1976,1978,,,,,,,
+LPNI,Labour Party of Northern Ireland (LPNI),1985,1987,,,,L87,,,
+LPNI2,Labour Party of Northern Ireland (LPNI),1998,2007,true,,LC,,,,
+IL,Independent Left,2019,,,,,,,,
+FL,Federation of Labour,1944,1949,,,NILP,LP,,,
+FU,Fianna Uladh,1953,1960,true,,,,,CnaP, 
+NICRA,Northern Ireland Civil RIghts Association (NICRA),1967,1972,,,,,,NILP CPNI SF,
+L87,Labour '87,1987,1989,,,,,,NLP,
+LC,Labour Coalition,1996,1998,,,,,,militantLab BICO NLP,#ff654e
+SEA,Socialist Environmental Alliance (SEA),2001,2008,,,,,,SWP NLP,
+LF,Left Forum,2013,,,,,,,,
+BLP,Belfast Labour Party,1892,1924,,,,NILP,,ILP,
+NILP,Northern Ireland Labour Party (NILP),1924,1987,,,,L87,,ILP,
+LPiNI,Labour Party in Northern Ireland,2008,,,,,,,,#e4003b
+ILP-IRE,Independent Labour Party (Ireland),1912,1914,,,,,,ILP SPI09,
+ICWPA,International Class War Prisoners Aid (ICWPA),1926,1930,true,,,,,,
+CLP,Commonwealth Labour Party,1942,1947,,,NILP,,,,
+NLP,Newtownabbey Labour Party,1974,2004,true,,NILP,,,,
+Coop,Co-operative Party in Northern Ireland,2009,,,,,,,LPiNI,#3f1d70
+UFL,United Front Labour,1936,1936,,,,,,NILP SPNI CPI1,
+ILG,Independent Labour Group,1958,1965,true,,,,,,
+SLISO,Sligo/Leitrim Independent Socialist Organisation,1974,1991,,,,LP,,,
+ARG-GL,An Rabharta Glas - Green Left,2021,,,,GP,,,,#68b2a0
+INUM,Irish National Unemployed Movement,1926,,,IUWM,,,,WPI,
+IUWM,Irish Unemployed Workers' Movement,1930,1935,,,,,,,
+WUAG,Workers' and Unemployed Action Group (WUAG),1985,,,,,,,,
+ISRP,Irish Socialist Republican Party,1896,1904,,,,,,,
+SPI09,Socialist Party of Ireland (1909),1909,1921,,CPI21,,,,ISRP,
+CPI21,Communist Party of Ireland (1921),1921,1924,,,,,,,
+LWR,League for a Workers' Republic (LWR),1968,1988,,,IWG1,,,,
+SGI,Spartacist Group of Ireland,1990,,,,,,,,
+JCWC,James Connolly Workers' Club,1924,,,WPI,,,,,
+WPI,Workers' Party of Ireland,1926,1927,,,,,,,
+LWV,League for a Workers' Vanguard,1970,,,WL,LWR,,,,
+WL,Workers' League,1972,1978,,,,,,,
+EP,Ecology Party,1981,,,GA,,,,,#00755B
+GA,Green Alliance,1983,,,GP,,,,,#00755B
+GP,Green Party,1987,,,,,,,,#00755B
+CPNI,Communist Party of Northern Ireland (CPNI),1941,1970,,,CPI1,CPI2,,,
+IMS,Irish Marxist Society,1976,1978,true,,CPI2,,,,
+NIEP,Northern Ireland Ecology Party,1983,,,GPNI,,,,,#00755B
+GPNI,Green Party in Northern Ireland,1985,2006,,,,GP,,,#00755B
+FN,Fís Nua,2010,,,,GP,,,,#4b7a00
+IWL23,Irish Worker League,1923,1932,true,,,,,,
+ICP,Irish Communist Party,2022,,,,CPI2,,,,
+RWP,Revolutionary Workers' Party,1930,1930,,RWG,,,,,
+RWG,Revolutionary Workers' Groups,1930,,,CPI1,,,,,
+CPI1,Communist Party of Ireland,1933,1941,,,,,,,
+IWL,Irish Workers' League,1948,,,IWP,,,,CPI1,
+IWP,Irish Workers' Party,1962,,,CPI2,,,,,
+CPI2,Communist Party of Ireland (CPI),1970,,,,,,,,
+CYM1,Connolly Youth Movement,1963,1991,,,,,,IWP,
+CYM2,Connolly Youth Movement,2002,,,,,,,CPI2 CYM1,
+IWG1,Irish Workers' Group,1966,1968,,,,,,,
+CCO,Cork Communist Organisation,1971,,,CWC,ICO,,,,
+CWC,Cork Workers' Club,1972,1989,true,,,,,,
+PC,Peace Coalition,1994,1995,,,,,,DL GPNI,
+SD2015,Social Democrats,2015,,,,,,,,#752f8b
+IWU,Irish Workers' Union,1960,,,ICG,,,,,
+ICG,Irish Communist Group,1964,,,,,,IWG1 ICO,,
+LA,Left Alliance,1975,1976,,,,,,OSF LCLL CPI2,#caa
+CLR,Campaign for Labour Representation,1978,1993,,,,,,BICO,
+IFEM,Independents for Equality Movement,2014,,,I4C,,,,,
+I4C,Independents 4 Change,2015,,,,,,,,
+ICO,Irish Communist Organisation (ICO),1965,,,BICO,,,,,
+BICO,British & Irish Communist Organisation (BICO),1971,1998,true,,,,,,
+OnePercentNetwork,The 1% Network,2010,2011,true,,,,,ISN WSM EIR,#c8211d
+RTOC,Right To Change,2020,,,,,,,,#ea3f3c
+SE31,Saor Éire (1931),1931,1932,,,,,,RWG IWFC,
+RC,Republican Congress,1934,1936,,,,,,,
+COBI,Communist Organisation in the British Isles (COBI),1974,,,CF,BICO,,,,
+CF,Communist Formation,1977,1980,true,,,,,,
+AHS,Aubane Historical Society,1987,,,,,,,BICO,
+IRF,Irish Revolutionary Forces (IRF),1965,,,SECork,,,,,
+SECork,Saor Éire (Cork),1968,1971,,,,ICO,,,
+LSO,Limerick Socialist Organisation,1972,1982,,,,DSP,,,
+PANA,Peace and Neutrality Alliance (PANA),1996,,,,,,,,
+ATL,Anti-Tribute League,1929,1929,,,,,,,
+IWFC,Irish Working Farmers' Congress,1930,1932,,,,,,ATL,
+SAN,Socialists Against Nationalism,1979,1982,,,,,,LSO BICO SPI,
+DSP,Democratic Socialist Party (DSP),1982,1990,,,,LP,,BICO,
+NA,New Agenda,1992,,,DL,WP,,,,red
+DL,Democratic Left,1992,1999,,,,LP,,,red
+ISN,Irish Socialist Network (ISN),2001,2017,true,,,,,WP ORM,
+LD,Lasair Dhearg,2018,,,,,,,,#ed1a11
+SPI,Socialist Party of Ireland (SPI),1971,1982,,,OSF,DSP,,,
+SRC,Socialist Republican Collective (SRC),1986,1992,,,,,,IRSP,
+Saoradh,Saoradh,2016,,,,,,,,
+IRSP,Irish Republican Socialist Party (IRSP),1974,,,,OSF,,,,#8AA3FF
+CrleNaP,Comhairle na Poblachta,1929,1930,,,,,,,
+ICSP,Irish Committee for a Socialist Programme,1976,,,ISP,IRSP,,,,
+ISP,Independent Socialist Party (ISP),1977,1978,,,,,,,
+WPP,Waterford People's Party,1985,1987,,,WP,WP,,,
+ORM,Official Republican Movement (ORM),1998,,,,WP,,,,
+OSF,Sinn Féin (Official),1969,,,SFWP,,,,,red
+SFWP,Sinn Féin The Workers' Party,1977,,,WP,,,,,red
+WP,The Workers' Party,1982,,,,,,,,red
+SF,Sinn Féin (Pre 1970),1905,,,,,,OSF PSF,,#040
+NE,New Earth,1973,1975,,,OSF,,,,
+LCR,League of Communist Republicans (LCR),1986,1991,,,PSF,,,,
+EIR,Éirígí,2006,,,,PSF,,,,#0faf4d
+PSF,Sinn Féin (Provisional),1969,,,,,,,,#080
+SE,Saor Éire,1967,1973,,,SF,,,,
+RS,Revolutionary Struggle,1975,1985,,,,,,,
+Aontu,Aontú,2019,,,,PSF,,,,
+RTC,Ripening of Time Collective,1976,1982,,,,,,RS,
+RNU,Republican Network for Unity,2007,,,,PSF,,,,
+RLP,Republican Labour Party (RLP),1963,1973,,,,,,,
+CSM32,32 County Sovereignty Movement,1997,,,,PSF,,,,
+NPF,National Political Front,1964,,,NP,,,,RLP,
+NP,National Party,1965,,,NDP,,,,,
+NDP,National Democratic Party,1965,1970,,,,,,,
+RSF,Republican Sinn Féin,1986,,,,PSF,,,,
+SDLP,Social Democratic & Labour Party (SDLP),1970,,,,,,,NDP,#006E51
+WTS,Wolfe Tone Society,1964,,,,,,,SF,
+Int,The Internationalists,1965,,,ICM-ML,,,,,
+ICM-ML,Irish Communist Movement (Marxist-Leninist),1969,,,CPI-ML,,,,,
+CPI-ML,Communist Party of Ireland (Marxist-Leninist) (CPI-ML),1972,2003,,,,,,,
+AIAI,Anti-Imperialist Action Ireland,2017,,,,,,,,#1c882c
+PUP,Progressive Unionist Party,1979,,,,,,,,#022a68 

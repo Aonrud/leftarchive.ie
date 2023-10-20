@@ -1,0 +1,387 @@
+//Colour variables
+@import 'colours.less';
+
+
+//Modules
+@import 'fonts.less';
+@import 'header.less';
+@import 'navigation.less';
+@import 'footer.less';
+@import 'grid.less';
+@import 'homepage.less';
+@import 'search.less';
+@import 'datatables.less';
+@import 'cards.less';
+@import 'images.less';
+@import 'subjects.less';
+@import 'iframes.less';
+@import 'redirect.less';
+@import 'inline-entries.less';
+@import 'podcast.less';
+@import 'text-cols.less';
+@import 'demonstrations.less';
+@import 'sidebar.less';
+@import 'tooltips.less';
+@import 'calendar.less';
+@import 'typography-general.less';
+
+//Font Awesome
+@import '../../../node_modules/@fortawesome/fontawesome-free/less/fontawesome.less';
+@import '../../../node_modules/@fortawesome/fontawesome-free/less/solid.less';
+@import '../../../node_modules/@fortawesome/fontawesome-free/less/regular.less';
+@import '../../../node_modules/@fortawesome/fontawesome-free/less/brands.less';
+@fa-font-path: "../fonts/fa";
+@import 'fa-corrections.less';
+
+//Overrides
+@import 'easy-autocomplete.less';
+@import 'bootstrap-slider.less';
+@import 'carousel-overrides.less';
+@import 'button-overrides.less';
+@import 'labels.less';
+@import 'ila-ui-elements-override.less';
+
+//Backport (this should be removed once moved to newer BS)
+@import 'backport.less';
+
+html,body {
+    height: 100%;
+}
+
+:focus-visible {
+    outline: 3px solid @main;
+}
+
+::selection {
+    background: @main;
+    color: #fff;
+}
+
+/* Replace bootstrap font stack */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    font-weight: 600;
+    font-style: normal;
+}
+
+.panel h3, .panel .h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.text-italics {
+	font-style: italic;
+}
+
+blockquote {
+    font-size: 16px; 
+    p {
+        font-size: 16px;
+    }
+}
+
+.page-header {
+    margin-top: 20px;
+}
+
+article aside {
+	padding-top: 15px;
+	&.panel {
+        padding-top: 0;
+    }
+}
+
+.external-link .fas {
+    font-size: 0.8em;
+    margin-left: 2px;
+}
+
+/*For some reason Opera uses the bold italic webfont on larger sizes unless explicitly told not to*/
+.lead {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.comment .media-body ul {
+    padding-left: 5px;
+    margin-top: 15px;
+    li {
+        border-left: 1px solid @grey-lighter;
+        padding-left: 10px;
+    }
+}
+
+.comment .media-body {
+    blockquote p {
+        font-size: 14px;
+    }
+    img.media-object {
+        border: 1px solid @grey-lighter;
+        border-radius: 3px;
+        padding: 3px;
+    }
+}
+
+/* Details - org,pub, doc */
+
+//Specific enough to over-ride bootstrap; not !important, so doesn't over-ride #docTable
+.table tbody tr th, .transcription { 
+    .fas, .fab {
+        color: @grey-light;
+    }
+    .fa-fw {
+        width: 15px;
+    }
+    text-indent: -20px;
+    padding-left: 35px;
+}
+
+.table-has-transcript {
+    border-bottom: 1px solid @grey-lighter;
+    margin-bottom: 10px;
+}
+
+.transciption {
+    line-height: 20px;
+}
+
+.year-list {
+    text-indent: -3.3em;
+    padding-left: 3.3em;
+}
+
+/* Breadcrumbs*/
+ol.breadcrumb {
+    background: none;
+}
+
+.breadcrumb li.active a {
+    color: @grey-light;
+    &:hover {
+        color: @grey-light;
+        text-decoration: none;
+    }
+}
+
+/* Used on timeline and view */
+.wrap-all {
+    height: 100%;
+    overflow: hidden;
+    .navbar-static-top {
+        margin: 0;
+    }
+}
+
+#doc-details {
+    position: absolute;
+    top: 50px;
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 2px #333;
+    box-shadow: 0 1px 2px #333;
+}
+
+/* Height calculations are escaped to stop Less parsing them and leaving to the CSS calc function */
+#doc-pdf {
+	width: 100%;
+	height: ~"-moz-calc(100% - 50px)";
+	height: ~"-webkit-calc(100% - 50px)";
+	height: ~"calc(100% - 50px)";
+}
+
+.segmented {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.delineated {
+    padding-bottom: 15px;
+    border-bottom: 1px solid @grey-lighter;
+}
+
+/* Indexes */
+
+.list-index .fas, .list-index .fab {
+    color: #999;
+    font-size: 0.9em;
+}
+
+a.minor-entry {
+    font-style: italic;
+}
+
+/*a.no-materials {
+    color: lighten(#428bca, 20%);
+}*/
+
+/* Collections */
+.collection-img {
+    margin-left: 20px; 
+    img {
+        border: 1px solid #ddd; 
+    }
+}
+
+.collection-default {
+    width: 120px;
+    height: 120px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.collection-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 175px;
+    .list-inline {
+        white-space: nowrap;
+    }
+}
+
+/*Page top */
+.page-fields { 
+    border-bottom: 3px solid @grey-lighter;
+    img {
+        margin: auto;
+    }
+}
+
+/* Document lists */
+
+.collapsed .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-left: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+.btn.collapsed .caret {
+    margin-left: 2px;
+    margin-right: -2px;
+}
+
+.doc-list h3 {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.doc-list .tab-pane .year-list {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+/* Comments */
+#reply-status {
+    border-radius: 0 0 4px 4px;
+    padding: 6px 12px;
+}
+
+input.with-reply {
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+}
+
+/* Aside */
+
+.indent-left {
+    padding-left: 10px;
+}
+
+/* Form margin */
+
+.wide-form {
+    margin-bottom: 15px;
+}
+
+/* Identifiers and links tables */
+table.identifiers, table.links {
+    th, td {
+        padding: 0.3em;
+    }
+}
+
+/* Articles */
+img.img-center {
+	margin: auto;
+}
+
+
+/* Blockquote */
+
+/* Over-rides Bootstraps use of <small> in <blockquote> as the citation. Bootstrap style will only apply if <small> is in a <cite> element. Allows use of <small> as normal tag in blockquote body */
+blockquote > small, blockquote p small {
+	display:inline;
+	&:before {
+		content: ''
+	}
+}
+
+/* General bordering utility */
+.bordered {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+article.bordered {
+    padding: 0;
+    position: relative;
+    header, footer, section {
+        margin: 0 0 15px;
+        padding: 0 15px;
+    }
+    header {
+        h1, h2, h3 {
+            margin: 0;
+            padding: 15px 0;
+        }
+    }
+}
+
+/* Overflow containment for uncontrolled html content */
+.contained {
+    & > *, img {
+        max-width: 100%;
+	}
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Space inline forms */
+@media screen and (min-width: 768px) {
+    .form-inline {
+        .form-group, .btn, label {
+            margin-right: 5px;
+        }
+    }
+}

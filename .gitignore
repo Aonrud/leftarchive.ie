@@ -5,3 +5,6 @@ config.php
 manifest/config.php
 node_modules/
 install/
+/workspace/documents/
+/workspace/submissions/
+/workspace/images/

@@ -1,0 +1,50 @@
+.page-top {
+	.page-fields;
+	padding-bottom: 15px;
+}
+
+.podcast-list {
+	margin-top: 3em;
+	> li {
+		margin-top: 3em;
+	}
+}
+
+figure.podcast-episode {
+	max-width: 100%;
+	img {
+		margin: auto;
+	}
+}
+
+@media (min-width: 768px) {
+	figure.podcast-episode {
+		max-width: 80%;
+	}
+}
+
+@media (min-width: 992px) {
+	figure.podcast-episode {
+		max-width: 50%;
+	}
+}
+
+.btn-spaced {
+	margin-bottom: 15px;
+}
+
+//Dynamic loader btn
+#podPg {
+	margin: 15px auto;
+}
+
+//Player over-rides
+.mejs__overlay-button {
+	background-image: url("../images/mejs-controls.svg") !important;
+}
+.mejs__overlay-loading-bg-img {
+	background-image: url("../images/mejs-controls.svg") !important;
+}
+.mejs__button > button {
+	background-image: url("../images/mejs-controls.svg") !important;
+} 

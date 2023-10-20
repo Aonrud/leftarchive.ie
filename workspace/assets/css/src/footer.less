@@ -1,0 +1,66 @@
+#footer {
+    margin: 15px 15px 0 15px;
+    padding: 15px 0;
+    background-color: @footer;
+    border-color: #002244;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: 0 -1px 2px @footer;
+    box-shadow: 0 -1px 2px @footer;
+    color: @footerText;
+    a {
+        color: #E6EEF7;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    small {
+        color: @footerText;
+    }
+    ul, p {
+        margin-left: 30px;
+    }
+    h4 {
+        .fas, .fab, .far {
+            color: @footerText;
+        }
+    }
+}
+
+.footer-icons {
+    margin-top: 15px;
+    li {
+        float: left;
+    }
+    a {
+        font-size: 36px;
+        display: block;
+        padding: 5px;
+        color: #fff;
+        border-radius: 3px;
+    }
+    a.twitter:hover {
+        background: @twitter;
+    }
+    a.facebook:hover {
+        background: @facebook;
+    }
+    a.rss:hover {
+        background: @rss;
+    }
+	a.mastodon:hover {
+		background: @mastodon;
+	}
+	a.gitlab:hover {
+        background: @gitlab;
+    }
+    a.github:hover {
+        background: @github;
+    }
+    a.git:hover {
+        background: @git;
+    }
+    a.ila:hover {
+        background: @main;
+    }
+}

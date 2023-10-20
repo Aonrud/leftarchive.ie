@@ -1,0 +1,93 @@
+.navbar-inverse {
+    background-color: @nav;
+    border-color: @navHighlight;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 1px 2px @nav;
+    box-shadow: 0 1px 2px @nav;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+    color: @mainSoft;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fff;
+}
+
+
+.navbar-inverse .input-group {
+    .form-control, .btn {
+        border-color: @navHighlight;
+    }    
+}
+
+/* Fixes search form dropping below in the navbar.  (Not need in FF or Ch. Applied to .input-group worked for Opera - switched to .navbar-form for rekonq/konquerer (and possibly other webkit browsers)) */
+@media (min-width: 992px) {
+    .navbar-inverse {
+        .navbar-form {
+            max-width: 270px;
+        }
+    }
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: @navHighlight;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover,.navbar-inverse .navbar-nav > .open > a:focus {
+   background-color: @navMinor;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: @nav;
+    border-color: @navHighlight;
+    &:hover, &:active, &:focus {
+        background-color: @navHighlight;
+    }
+}
+
+.navbar-brand {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/*Fix for scrollbar appearing on dropdown in <767px mode*/
+.navbar-collapse.in {
+    max-height: none;
+    overflow-y: visible;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: @mainSoft;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-collapse {
+        padding: 0 10px;
+    }
+
+    .navbar-form {
+        padding: 0 0 0 10px;
+    }
+    .navbar-nav > li > a {
+        padding: 15px 13px;
+    }
+
+    .navbar-form.navbar-right:last-child {
+        margin-right: 0;
+    }
+}
+
+.navbar-static-top {
+    margin: 0 -10px 15px;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .navbar-static-top .nav > li > a {
+        padding: 15px 12px;
+    }
+} 

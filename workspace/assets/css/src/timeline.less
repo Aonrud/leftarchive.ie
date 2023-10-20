@@ -1,0 +1,58 @@
+@timeline-stroke-color: #999;
+
+.page-container {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.info {
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	max-width: 400px;
+	font-size: 0.9em;
+	border: 3px solid lighten(@timeline-stroke-color, 20%);
+	border-radius: 3px;
+	background: #fff;
+	padding: 5px;
+	z-index: 30;
+}
+
+.entry {
+	background: #fff;
+	&.min {
+		color: #fff;
+	}
+}
+
+.entry-popover {
+	cursor: pointer;
+	background: #f2f2f2;
+	color: #111;
+	&.min {
+		color: #f2f2f2;
+	}
+}
+
+.timeline-image {
+	display: block;
+	max-width: 100%;
+	max-height: 250px;
+	margin: 5px auto;
+	background: #fff; //Catch transparent bg logos
+}
+
+.toggle-view {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: height 250ms ease-in-out;
+	&.visible {
+		display: block;
+		height: auto;
+	}
+}

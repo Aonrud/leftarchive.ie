@@ -1,0 +1,50 @@
+.dataTable th {
+    // min-width: 75px;
+    // text-indent: 0;
+    // padding-left: 8px;
+    .fas, .fab {
+        color: @grey-dark;
+    }
+}
+
+//Icon characters from font awesome
+.sorting {
+    position: relative;
+    &:after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 8px; //Default BS top padding
+        right: 0;
+        color: @grey-light;
+        content: "\f0dc";
+    }
+    &.sorting_asc:after {
+        content: "\f0dd";
+    }
+    &.sorting_desc:after {
+        content: "\f0de";
+    }
+}
+
+.dataTables_filter label {
+    padding: 20px 0;
+}
+
+.dataTables_info {
+    text-align: right;
+    font-style: italic;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .dataTables_filter label {
+        padding: 0;
+    }  
+    .pagination {
+        margin: 20px 0;
+    }
+} 
+
+.sorting {
+    cursor: pointer;
+}

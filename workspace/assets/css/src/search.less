@@ -1,0 +1,125 @@
+#checkboxes {
+    div {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0;
+        label {
+            font-weight: 400;
+            flex: 1 1 50%;
+        }
+        .fa-fw {
+            color: #ccc;
+            margin-left: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #checkboxes div label {
+        flex-basis: 33.333%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #checkboxes div label {
+        flex-basis: 25%;
+    }
+}
+
+#advanced-search {
+    legend {
+        font-size: 1em;
+        border-bottom: none;
+        width: auto;
+        margin-bottom: 5px;
+    }
+    legend, .legend {
+        font-variant: small-caps;
+    }
+    .panel-heading {
+        position: relative;
+        .panel-title {
+            display: inline;
+        }
+        a#search-tips {
+            color: #fff;
+        }
+        .popover {
+            color: @grey-dark;
+            font-size: 13px;
+            width: 300px;
+            max-width: 300px;
+            top: 31px !important;
+            left: auto !important;
+            right: 20px !important;
+            &.bottom .arrow {
+                left: 90%;
+            }
+        }
+    }
+}
+
+.results-list .media-body {
+    padding-left: 30px;
+    h4 {
+        margin-left: -30px;
+        span.fas, span.far, span.fab {
+            margin-right: 6px;
+        }
+    }
+}
+
+/* Autocomplete - fixes to jqueryui theme */
+ul.ui-autocomplete {
+    box-sizing: border-box !important;
+    padding: 0;
+    margin: 0;
+    border-color: #ddd !important;
+    li.ui-state-focus {
+        border-color: @grey-lighter;
+        background: #f5f5f5;
+    }
+}
+
+/* Fixes miscalculation of width under nav (causing vertical scroll) */
+@media (min-width: 992px) {
+    #nav-search-form .ui-autocomplete {
+        max-width: 236px !important;
+    }
+}
+
+/* Uses a wrapper to make absolute position usable (JS calculates from page, so variable with page length). */
+
+.help {
+    position: relative;
+    padding-right: 20px;
+    .popover {
+        width: 300px;
+        max-width: 300px;
+        top: 31px !important;
+        left: auto !important;
+        right: 20px !important;
+        &.bottom .arrow {
+            left: 90%;
+        }
+    }
+}
+
+#comment-help {
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .help {
+        text-align: right;
+        margin-bottom: 10px;
+        .popover {
+            right: 0px !important;
+        }
+    }
+    #comment-help {
+        float: none;
+    }
+}
