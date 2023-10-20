@@ -1,6 +1,3 @@
-[submodule "workspace"]
-	path = workspace
-	url = https://git.aonghus.org/Irish-Left-Archive/ila-workspace.git
 [submodule "site/extensions/akismet"]
 	path = site/extensions/akismet
 	url = https://github.com/symphonists/akismet.git
