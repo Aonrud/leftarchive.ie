@@ -17,7 +17,8 @@
     "recordsFiltered": <xsl:value-of select="/data/documents-dynamic/pagination/@total-entries" />,
     "data": [
         <xsl:apply-templates select="/data/documents-dynamic/entry" />
-    ]
+    ],
+    "column5Filter": "<xsl:value-of select="/data/params/url-columns5search.value" />"
 }
 </xsl:template>
 
@@ -26,7 +27,8 @@
         "&lt;strong&gt;&lt;a href=\"/document/<xsl:value-of select="@id" />/\"&gt;<xsl:call-template name="escape-quote"><xsl:with-param name="string" select="name" /></xsl:call-template>&lt;/a&gt; <xsl:apply-templates select="authors" />&lt;/strong&gt;",
         "<xsl:value-of select="year" /><xsl:if test="uncertain = 'Yes'"> c.</xsl:if>",
         "<xsl:value-of select="organisation/item/name" />",
-        "<xsl:value-of select="publication/item/name" />"
+        "<xsl:value-of select="publication/item/name" />",
+        "<xsl:value-of select="type/item" />"
     ]<xsl:if test="position() != last()">,</xsl:if>
 </xsl:template>
 

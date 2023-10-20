@@ -1,63 +1,21 @@
 <?php
 
-class datasourcedocuments_dynamic extends SectionDatasource
+class datasourcedocument_types extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'documents-dynamic';
-    public $dsParamORDER = 'asc';
-    public $dsParamPAGINATERESULTS = 'yes';
-    public $dsParamLIMIT = '{$url-length:30}';
-    public $dsParamSTARTPAGE = '{$url-page}';
+    public $dsParamROOTELEMENT = 'document-types';
+    public $dsParamORDER = 'desc';
+    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamLIMIT = '20';
+    public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'year';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-    public $dsParamFILTERS = array(
-        '303' => '{$url-type}',
-        '294' => 'regexp: {$url-search.value}',
-    );
-
     public $dsParamINCLUDEDELEMENTS = array(
-        'system:pagination',
-        'name',
-        'subtitle',
-        'organisation',
-        'publication',
-        'uncertain',
-        'year',
-        'authors',
         'type'
-    );
-    
-    public $dsParamINCLUDEDASSOCIATIONS = array(
-        'organisation' => array(
-            'section_id' => '4',
-            'field_id' => '13',
-            'elements' => array(
-                'name',
-                'minor',
-                'parent'
-            )
-        ),
-        'publication' => array(
-            'section_id' => '5',
-            'field_id' => '16',
-            'elements' => array(
-                'name',
-                'minor',
-                'parent'
-            )
-        ),
-        'authors' => array(
-            'section_id' => '19',
-            'field_id' => '144',
-            'elements' => array(
-                'name',
-                'sort-name'
-            )
-        )
     );
 
     public function __construct($env = null, $process_params = true)
@@ -69,19 +27,19 @@ class datasourcedocuments_dynamic extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Documents - Dynamic',
+            'name' => 'Document Types',
             'author' => array(
                 'name' => 'Aon Rud',
                 'website' => 'https://www.leftarchive.ie',
                 'email' => 'admin@leftarchive.ie'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2023-10-20T09:20:30+00:00'
+            'release-date' => '2023-10-20T10:32:31+00:00'
         );
     }
 
     public function getSource()
     {
-        return '6';
+        return '33';
     }
 
     public function allowEditorToParse()
