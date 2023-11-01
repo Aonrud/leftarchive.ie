@@ -6,7 +6,6 @@
 <xsl:import href="general-html.xsl"/>
 <xsl:import href="metadata-dublincore.xsl"/>
 <xsl:import href="metadata-general.xsl"/>
-<xsl:import href="metadata-matomo.xsl"/>
 <xsl:import href="metadata-umami.xsl"/>
 <xsl:import href="layout-navigation.xsl"/>
 <xsl:import href="entry.xsl" />
@@ -46,7 +45,6 @@
 			<link rel="shortcut icon" href="{$workspace}/assets/images/icons/favicon-32x32.png" />
 
 			<script src="{$workspace}/assets/js/jquery.min.js"></script>
-			<script src="{$workspace}/assets/js/cookies.min.js"></script>
 
 			<xsl:call-template name="head-insert" />
 
@@ -65,10 +63,6 @@
 					<xsl:text> t-image-overlay</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
-			<!--Add a class for each page type, so can be used as hooks for behaiour-->
-			
-		
-			<xsl:call-template name="matomo" />
 			
 			<!--Pages with type 'full' show no header, with full-width top navigation and full content area.
 				All others get default contained page layout-->

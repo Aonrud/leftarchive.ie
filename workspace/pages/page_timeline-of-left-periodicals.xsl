@@ -223,7 +223,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 
 		diagram.addEventListener('timelineFind', (e) => {
 			e.target.querySelector(`#${e.detail.id}`)._tippy.show();
-			_paq.push(['trackEvent', 'Timeline', 'Search', e.detail.name]);
 		});
 		
 		document.querySelectorAll("[data-toggle-target]").forEach( (el) => new Toggler(el, el.dataset.toggledText) );

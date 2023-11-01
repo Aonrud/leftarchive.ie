@@ -30,7 +30,6 @@ $(document).ready(function(){
                 $ssbtn.removeClass("btn-primary");
                 
                 if (response.result === 'success') {
-                    _paq.push(['trackEvent', 'Subject Suggestion', response.suggestion]);
                     umami.track('Subject Suggestion', { value: response.suggestion });
                     var message = '<p class="alert alert-success"><span class="fas fa-check"></span> Thanks! Your suggestion has been sent for review.</p>';
                     var form = $('#subject-suggestion').html();
@@ -39,7 +38,6 @@ $(document).ready(function(){
                         $(this).html(message).animate({'opacity': 1}, 400);    
                     });
                 } else {
-                    _paq.push(['trackEvent', 'Subject Suggestion', "Form Failure"]);
                     $ssbtn.addClass("btn-error");
                     $ssbtn.attr("disabled","disabled");
                 }

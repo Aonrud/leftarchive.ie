@@ -29,7 +29,6 @@
     "grunt-terser": "^2.0.0",
     "ila-ui-elements": "git+https://git.aonghus.org/Irish-Left-Archive/ila-ui-elements.git#semver:0.9.0",
     "jquery": "^3.7.0",
-    "js-cookie": "^3.0.5",
     "list.js": "^2.3.1",
     "timeline": "git+https://git.aonghus.org/aonrud/Timeline.js.git#semver:2.1.2",
     "tippy.js": "^6.3.7"

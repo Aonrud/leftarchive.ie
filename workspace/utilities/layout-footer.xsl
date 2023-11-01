@@ -25,7 +25,7 @@
 	<li><a href="/information/about-the-website/" title="About the Website">About the Website</a></li>
 	<li><a href="/information/content-submissions/" title="Submitting documents and content to the archive">Content Submissions</a></li>
 	<li><a href="/information/copyright/" title="Copyright and fair use in the archive">Copyright</a></li>
-	<li><a href="/information/privacy/" title="Privacy and cookies information">Privacy</a></li>
+	<li><a href="/information/privacy/" title="Privacy information">Privacy</a></li>
 	<li><a href="/information/news/" title="Latest updates on the Irish Left Archive project">News</a></li>
 	<li><a href="/information/publications-bibliography/" title="Bibliography of Irish left publications">Bibliography of Publications</a></li>
 	<li><a href="/information/further-resources/" title="Other online archives">Further Resources</a></li>

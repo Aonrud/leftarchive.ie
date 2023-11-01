@@ -18,7 +18,6 @@
     <link href="{$workspace}/assets/css/leftarchive.css?v=20180426" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<xsl:call-template name="matomo" />
 <div class="text-center">
 <h1><xsl:value-of select="$page-title"/></h1>
 <p>Sorry, the page you were looking for is not publicly accessible.</p>

@@ -83,10 +83,6 @@ module.exports = function(grunt) {
 						'node_modules/datatables.net/js/jquery.dataTables.min.js',
                         'node_modules/datatables.net-bs/js/dataTables.bootstrap.min.js'					
 					],
-					'assets/js/cookies.min.js': [
-						'node_modules/js-cookie/dist/js.cookie.js',
-						'assets/js/src/ila.cookie.js'
-					],
 					'assets/js/accounts.min.js': [
 						'assets/js/src/ila.accounts.js'
 					],
