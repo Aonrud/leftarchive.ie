@@ -41,7 +41,7 @@
             <xsl:text>item type-portrait</xsl:text>
             <xsl:if test="position() = 1"> active</xsl:if>
         </xsl:attribute>
-        <a href="/document/{@id}/">
+        <a href="/document/{@id}/" data-umami-event="hp-slide" data-umami-event-slide="On This Day: {name}">
             <h4 class="label"><xsl:call-template name="format-date"><xsl:with-param name="date" select="/data/params/today" /><xsl:with-param name="format" select="'D M'" /></xsl:call-template></h4>
             <img src="/image/2/430/460/2{cover-image/@path}/{cover-image/filename}" alt="{name} scan." />
             <div class="carousel-caption">
@@ -100,7 +100,7 @@
             <xsl:if test="position() = 1 and count(/data/documents-this-day/entry) = 0"> active</xsl:if>
         </xsl:attribute>
     
-        <a href="{$link}">
+        <a href="{$link}" data-umami-event="hp-slide" data-umami-event-slide="{label}: {$caption}">
 
             <!--If no image is set and the item is a document, use the cover image
                 JIT doesn't have a fit to canvas and fill option, which would solve for orgs.
