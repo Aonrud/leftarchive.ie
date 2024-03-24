@@ -93,6 +93,9 @@
 
 			<xsl:apply-templates select="/data/collections-list-document[entry]" /> 
 			
+			<!--Show the type, unless it's just the generic 'document'-->
+			<xsl:apply-templates select="/data/document-single/entry/type[item/type != 'Document']" />
+
 			<tr><th scope="row"><span class="fas fa-eye fa-fw"></span>  View:</th><td><span class="fas fa-file-pdf"></span><xsl:text> </xsl:text><a href="/document/view/{document-single/entry/@id}" title="View PDF of {document-single/entry/name}"> View Document</a></td></tr>
 			
 			<xsl:apply-templates select="document-single/entry/errata" />
@@ -286,6 +289,13 @@
 
 <xsl:template match="errata/key">
 	<li><xsl:value-of select="value" /></li>
+</xsl:template>
+
+<xsl:template match="document-single/entry/type">
+	<tr>
+		<th scope="row"><span class="fas fa-layer-group fa-fw"></span> Type:</th>
+		<td><xsl:value-of select="item/type" /></td>
+	</tr>
 </xsl:template>
 
 <xsl:template match="front-text">

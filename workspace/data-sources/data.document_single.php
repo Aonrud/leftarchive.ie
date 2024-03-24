@@ -135,6 +135,7 @@ class datasourcedocument_single extends SectionDatasource
             'section_id' => '33',
             'field_id' => '301',
             'elements' => array(
+                'type',
                 'meta'
             )
         )
