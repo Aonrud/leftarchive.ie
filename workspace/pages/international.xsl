@@ -8,6 +8,7 @@
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/general-year-range.xsl"/>
 <xsl:import href="../utilities/section-articles.xsl"/>
+<xsl:import href="../utilities/section-documents.xsl"/>
 <xsl:import href="../utilities/section-external-listings.xsl"/>
 <xsl:import href="../utilities/entry-identifiers.xsl"/>
 <xsl:import href="../utilities/entry-minor.xsl"/>
@@ -130,6 +131,17 @@
 				
 				<xsl:apply-templates select="/data/articles-intro[entry]" />
 				<xsl:apply-templates select="/data/external-listings[entry]" />
+
+				<!--Related - Subject-->
+				<xsl:if test="/data/documents-list-subject-linked/entry">
+					<section>
+						<h2 id="subject">Related Material</h2>
+						<p>Items about <xsl:value-of select="name" />.</p>
+                        <ul class="media-list">
+                            <xsl:apply-templates select="/data/documents-list-subject-linked/entry" mode="full" />
+                        </ul>
+					</section>
+				</xsl:if>
 				
 				<xsl:apply-templates select="/data/comments" />
 			</div>

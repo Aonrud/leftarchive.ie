@@ -21,6 +21,7 @@
     <xsl:variable name="path">
         <xsl:choose>
             <xsl:when test="linked/item/@section-handle = 'organisations'">/organisation</xsl:when>
+            <xsl:when test="linked/item/@section-handle = 'international'">/international</xsl:when>
             <xsl:when test="linked/item/@section-handle = 'people'">/people</xsl:when>
         </xsl:choose>
     </xsl:variable>
@@ -44,9 +45,8 @@
         <xsl:when test="$group = 'Election' or $group-handle = 'election'">calendar-check</xsl:when>
         <xsl:when test="$group = 'Referendum' or $group-handle = 'referendum'">calendar-check</xsl:when>
         <xsl:when test="$group = 'Organisation' or $group-handle = 'organisation'">users</xsl:when>
+        <xsl:when test="$group = 'International Organisations' or $group-handle = 'international-organisations'">globe-europe</xsl:when>
         <xsl:when test="$group = 'People' or $group-handle = 'people'">user</xsl:when>
-        <xsl:when test="$group = 'International Affairs' or $group-handle = 'international-affairs'">globe-europe</xsl:when>
-        <xsl:when test="$group = 'Local' or $group-handle = 'local'">map-marker</xsl:when>
     </xsl:choose>
 </xsl:template>
 

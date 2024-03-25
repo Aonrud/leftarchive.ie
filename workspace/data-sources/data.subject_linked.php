@@ -18,13 +18,13 @@ class datasourcesubject_linked extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '310' => '{$ds-organisation-single.system-id},{$ds-person-single.system-id}',
+        '310' => '{$ds-organisation-single.system-id},{$ds-international-single.system-id},{$ds-person-single.system-id}',
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-organisation-single.system-id', '$ds-person-single.system-id');
+        $this->_dependencies = array('$ds-organisation-single.system-id', '$ds-international-single.system-id', '$ds-person-single.system-id');
     }
 
     public function about()
