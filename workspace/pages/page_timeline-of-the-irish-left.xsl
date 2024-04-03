@@ -169,7 +169,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="L87" data-ila-id="1423" data-start="1987" data-end="1989" data-row="18" data-links="NLP">Labour '87</div>
 			<div id="LC" data-ila-id="1447" data-start="1996" data-end="1998" data-row="18" data-links="militantLab BICO NLP" data-colour="#ff654e">Labour Coalition</div>
 			<div id="SEA" data-ila-id="1440" data-start="2001" data-end="2008" data-links="SWP NLP" data-row="18">Socialist Environmental Alliance (SEA)</div>
-			<div id="LF" data-ila-id="1421" data-start="2013" data-row="18">Left Forum</div>
 
 			<div id="BLP" data-start="1892" data-merge="NILP" data-end="1924" data-row="19" data-links="ILP">Belfast Labour Party</div>
 			<div id="NILP" data-ila-id="1409" data-start="1924" data-merge="L87" data-end="1987" data-row="19" data-links="ILP">Northern Ireland Labour Party (NILP)</div>
