@@ -156,6 +156,7 @@
 
 <xsl:template name="metadata-sm-shared">
 	<meta property="og:site_name" content="Irish Left Archive" />
+	<meta name="fediverse:creator" content="@ILA@leftarchive.ie" />
 	<meta property="twitter:site" content="@IELeftArchive" />
 	<meta property="twitter:creator" content="@IELeftArchive" />
 	<meta property="twitter:card" content="{$metadata-twitter-card}" />
