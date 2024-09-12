@@ -67,7 +67,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dc="http://purl.org/dc/el
 			<div id="DAC" data-ila-id="1412" data-start="1982" data-row="2" data-end="1985" data-end-estimate="true">Dublin Anarchist Collective</div>
 			<div id="RA" data-ila-id="1438" data-start="1990" data-end="1997" data-row="2">Red Action</div>
 			<div id="WCA" data-ila-id="1439" data-start="2001" data-end="2005" data-end-estimate="true" data-row="2" data-links="RA">Working Class Action</div>
-			<div id="IMTI" data-ila-id="1871" data-start="2009" data-row="2">International Marxist Tendency in Ireland</div>
+			<div id="IMTI" data-ila-id="1871" data-start="2009" data-become="RCI" data-row="2">International Marxist Tendency in Ireland</div>
+			<div id="RCI" data-ila-id="7386" data-start="2024" data-row="2">Revolutionary Communists of Ireland</div>
 
 
 			<div id="FSR" data-start="1930" data-end="1931" data-row="3">Friends of Soviet Russia</div>
